@@ -24,7 +24,7 @@
 <meta name="author" content="Dyrehaugen Web Notebook" />
 
 
-<meta name="date" content="2021-02-22" />
+<meta name="date" content="2021-04-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,8 +32,8 @@
   
   
 <link rel="prev" href="index.html"/>
-<link rel="next" href="hypothesis-testing.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<link rel="next" href="vaccine.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -88,14 +88,25 @@
 <li class="chapter" data-level="2.2.1" data-path="fat-tails.html"><a href="fat-tails.html#power-law-distributions"><i class="fa fa-check"></i><b>2.2.1</b> Power Law Distributions</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="fat-tails.html"><a href="fat-tails.html#lindy-effect"><i class="fa fa-check"></i><b>2.3</b> Lindy Effect</a></li>
+<li class="chapter" data-level="2.4" data-path="fat-tails.html"><a href="fat-tails.html#superspreaders"><i class="fa fa-check"></i><b>2.4</b> Superspreaders</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>3</b> Hypothesis Testing</a>
+<li class="chapter" data-level="3" data-path="vaccine.html"><a href="vaccine.html"><i class="fa fa-check"></i><b>3</b> Vaccine</a></li>
+<li class="chapter" data-level="4" data-path="inequality.html"><a href="inequality.html"><i class="fa fa-check"></i><b>4</b> Inequality</a></li>
+<li class="chapter" data-level="5" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>5</b> Hypothesis Testing</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#connecting-to-theory"><i class="fa fa-check"></i><b>3.1</b> Connecting to Theory</a></li>
-<li class="chapter" data-level="3.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#glmm"><i class="fa fa-check"></i><b>3.2</b> GLMM</a></li>
-<li class="chapter" data-level="3.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#logit"><i class="fa fa-check"></i><b>3.3</b> Logit</a></li>
-<li class="chapter" data-level="3.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#probit"><i class="fa fa-check"></i><b>3.4</b> Probit</a></li>
+<li class="chapter" data-level="5.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#connecting-to-theory"><i class="fa fa-check"></i><b>5.1</b> Connecting to Theory</a></li>
+<li class="chapter" data-level="5.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#glmm"><i class="fa fa-check"></i><b>5.2</b> GLMM</a></li>
+<li class="chapter" data-level="5.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#logit"><i class="fa fa-check"></i><b>5.3</b> Logit</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#odds-ratio"><i class="fa fa-check"></i><b>5.3.1</b> Odd’s Ratio</a></li>
 </ul></li>
+<li class="chapter" data-level="5.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#probit"><i class="fa fa-check"></i><b>5.4</b> Probit</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="power-law.html"><a href="power-law.html"><i class="fa fa-check"></i><b>6</b> Power law</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="power-law.html"><a href="power-law.html#timescaling-rainfall"><i class="fa fa-check"></i><b>6.1</b> Timescaling Rainfall</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="syntetic-control.html"><a href="syntetic-control.html"><i class="fa fa-check"></i><b>7</b> Syntetic Control</a></li>
 <li class="part"><span><b>I Appendices</b></span></li>
 <li class="appendix"><span><b>Appendices</b></span></li>
 <li class="chapter" data-level="A" data-path="about.html"><a href="about.html"><i class="fa fa-check"></i><b>A</b> About</a></li>
@@ -354,6 +365,11 @@ The tail density needs to decay slower than Normal, <span class="math inline">\(
 The power law is an example of this -
 they’re the distributions with so much additional density in their tails
 that moments <span class="math inline">\(E[X^p]\)</span> are no longer finite.</p>
+<p><em>Zweig</em></p>
+<p>To be insurable, events must be non-subexponential i.e. the probability of exceeding some threshold must be due to a series of small events rather than a single large event. The Cramer condition must also be met (exponential moments of the rv must exist). Normally distributed events meet these conditions, but not thick tailed events. In the former case, exceeding some threshold is more likely to come from a series of events (increasingly so as you move into the tails due to exponential decay of tail probabilities)…hence focus on reducing frequency of events. In the latter case, exceeding some threshold is more likely to come from a single event, so focus must be on reducing impact.</p>
+<p>The Lucretius fallacy is when one assumes the worst event experienced in the past is the worst event that can happen in the future. Because an empirical distribution is necessarily censured by x_min and x_max, the empirical distribution is not empirical. Beyond the observed max, there is a hidden portion of the distribution not shown in past samples whose moments are unknown (and do not converge via the Glivenko-Cantelli theorem). This is a problem for Kolmogorov-Smirnoff tests. It is better to use MLE to get the ‘excess’ or ‘shadow’ mean (the mean beyond the sample max). Assuming you can estimate the tail exponent, this approach works better for out-of-sample inference than use of the sample mean (biased under thick tails). The lower the tail exponent and smaller the sample, the more the tail is hidden.</p>
+<p>The precautionary principle is necessary for higher order units (ecosystem, humanity, etc.) that do not “renew” the way lower order units do (individual people, animals, goods, etc.). With repeated exposure to a low-probability event, its probability of occurrence will approach 1 over time. If one’s exposure f(x) has an absorbing barrier, they must focus on time probability (path dependence) rather than ensemble probability (path independence). Since financial asset prices, particularly equities, are non-ergodic (time average &lt;&gt; ensemble average due to fat tails), one is not guaranteed the return of the market unconditionally. Hence the myopic loss aversion explanation (increased sensitivity to losses and less willingness to accept risk the more often you check performance) of the equity risk premium puzzle falls apart. Risks accumulate for individuals, making it rational to be loss averse and avoid tail risks.</p>
+<p><a href="https://www.amazon.com/review/RMD3OUG0WQWWY/ref=cm_cr_srp_d_rdp_perm?ie=UTF8&amp;ASIN=1544508050">Zweig: Suimmary of Talebs ‘Fat Tails’</a></p>
 <div id="power-law-distributions" class="section level3" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Power Law Distributions</h3>
 <div id="pareto-distribution" class="section level4" number="2.2.1.1">
@@ -408,6 +424,67 @@ the usefulness of which decreases as if you acquire additional relevant informat
 <p><a href="https://alevchuk.medium.com/statistical-testing-of-the-lindy-effect-with-real-data-4f55a5a9a2f0">Levchuk: Testing Lindy</a></p>
 
 </div>
+<div id="superspreaders" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Superspreaders</h2>
+<p><em>Wong</em></p>
+<p>Superspreading has been recognized as an important phenomenon arising from heterogeneity in individual disease transmission patterns (1). The role of superspreading as a significant source of disease transmission has been appreciated in outbreaks of measles, influenza, rubella, smallpox, Ebola, monkeypox, SARS, and SARS-CoV-2 (1, 2). A basic definition of an nth-percentile superspreading event (SSE) has been proposed to be any infected individual who infects more people than does the nth-percentile of other infected individuals (1). Hence, if the number of secondary cases is randomly distributed, then for large n, SSEs can be viewed as right-tail events. A natural language for understanding the tail events of random distributions is extreme value theory, which has been applied to contexts as diverse as insurance (3) and contagious diseases (4). Here, we apply extreme value theory to empirical data on superspreading in order to gain insight into this critical phenomenon impacting the current COVID-19 pandemic.</p>
+<p><img src="fig/Wong_Superspreader.jpg" /></p>
+<p>Figure: SARS-CoV and SARS-CoV-2 SSEs correspond to fat tails.
+(A) Histogram of Z for 60 SSEs.
+(B) Subsample of 20 diverse SARS-CoV and SARS-CoV-2 SSEs. *See Dataset S1 for details.
+(C) Zipf plots of SSEs (blue) and 10,000 samples of a negative binomial distribution
+with parameters (R0,k) = (3,0.1), conditioned on Z &gt; 6 (yellow).
+(D) Meplots corresponding to C.
+(E) Plots of <span class="math inline">\(\hat{ξ}\)</span>, the Hill estimator for ξ, for the samples in C.
+(F) Different extreme value distribution fits to the distribution of SSEs.
+(G) One-sample Kolmogorov–Smirnov and <span class="math inline">\(χ^{2}\)</span> goodness-of-fit test results for the fits in F.
+(H) Robustness of results, accounting for noise (Left) and incomplete data (Right).
+(I) Inconsistency of the maxima of 10,000 samples of a negative binomial distribution (yellow)
+with the SSEs in A, accounting for variability in (R0,k) and data merging and imputation,
+in contrast to the maxima of 30 samples from a fat-tailed (Fréchet) distribution (blue)
+with tail parameter α = 1.7 and mean R0 = 3.
+The numbers of samples in each case were determined so that
+the sample mean of maxima is equal to the sample mean from A.
+(J–K) Generality of inferred <span class="math inline">\(ξ\)</span> to 14 additional SSEs from news sources
+(J) and a dataset of 1,347 secondary cases arising from 5,165 primary cases in South Korea
+(K).</p>
+<p>The Zipf plot shown in Fig.1C is a log-log plot of the survival function against the number
+of secondary cases, and the linearly decreasing behavior it shows
+suggests a power-law scaling of the form $Pr(Z&gt;t)~t^{α} for large t.
+The value of the power-law coefficient, <span class="math inline">\(α≈1.45\)</span> (95% CI: [1.38,1.51]), is greater than 1.
+Equivalently, this observation indicates that the tails of <span class="math inline">\(Z\)</span> —as quantified by the threshold
+exceedance values <span class="math inline">\({Z_{i–u} | Z_{i} ≥u}\)</span> —can be described by the generalized Pareto distribution,
+withcorresponding tail index <span class="math inline">\(ξ=1/α ≈ 0.7\)</span> (95% CI: [0.62,0.76]).
+That <span class="math inline">\(ξ≤1\)</span> is significant,
+since all moments higher than <span class="math inline">\(1/ξ\)</span> diverge for a generalized Pareto distribution.
+The Zipf plot can be complemented by computing
+the mean excess function of <span class="math inline">\(Z\)</span>, <span class="math inline">\(e(u) = E(Z–u | Z≥u)\)</span>, which
+for a generalized Pareto distribution is linear in <span class="math inline">\(u\)</span> with slope <span class="math inline">\(ξ/(1–ξ)\)</span>.
+Hence, checking for linearity in a plot of <span class="math inline">\(u\)</span> against <span class="math inline">\(e(u) — a\)</span> mean excess plot — above some threshold u allows one to verify the existence
+of fat tails. We observed in a meplot that for u&gt;10, e(u) indeed increases approximately linearly with a
+slope of ~1.11 (Fig.1D; 95% CI: [1.02,1.20]; adjusted <span class="math inline">\(R^{2}\)</span> : 0.91),
+suggesting a value of <span class="math inline">\(ξ≈0.5\)</span>, which is
+qualitatively consistent with the Zipf plot of Fig.1C</p>
+<p>The Hill estimator of the tail index <span class="math inline">\(ξ\)</span> is</p>
+<p><span class="math display">\[\hat{ξ}(k) = \frac{1}{k} \sum_{i=1}^{k} log \frac{Z_{i,n}}{Z_{k,n}}\]</span></p>
+<p>where 2≤k≤n and Z n,n ≤Z n-1,n ≤…≤Z 1,n are order statistics of the sample {Z i }. Plotting <span class="math inline">\(ξ\)</span> against <span class="math inline">\(k\)</span>, we find
+that the value of <span class="math inline">\(ξ ≈0.6\)</span> (95% CI: [0.4,1.0]) observed for a broad range of <span class="math inline">\(k\)</span> is similar to the estimates
+above (Fig.1E).
+We found similar values of <span class="math inline">\(ξ\)</span> for two other estimators, the Pickands and
+Dekkers-Einmahl-de Haan estimators.
+A negative binomial distribution of Z, with its exponential tail, would have
+predicted the distribution of SSEs to be Gumbel-like if each SSE were indeed
+a maximum of samples of <span class="math inline">\(Z\)</span>.
+This assertion can be proven by verifying the conditions</p>
+<p><span class="math display">\[\underset{n\to \infty}{\lim} \frac{\sum_{n}^{\infty} P_{j}}{\sum_{n+1}^{\infty} P_{j}} = const\]</span></p>
+<p><span class="math display">\[\underset{n\to \infty}{\lim} \sum_{n+2}^{\infty} \frac{P_{j}}{P_{n+1}}-\sum_{n+1}^{\infty}\frac{P_{j}}{P_{n}}= 0\]</span></p>
+<p>where <span class="math inline">\(P_{j} =Pr(Z=j)\)</span>, sufficient for any discrete distribution to lie in a Gumbel-like domain of attraction.
+These considerations provide additional evidence suggesting that Z is not negative binomial.</p>
+<p><a href="coronavirus%20superspreading%20is%20fat-tailed">Wong (2021) Coronavirus superspreading is fat-tailed (PNAS)</a>
+<a href="pdf/Wong_2021_Corona_Superspreader_Fat-tailed.pdf">(pdf)</a>
+<a href="pdf/Wong_2021_Corona_Superspreader_Fat-tailed_SM.pdf">(pdf SM)</a></p>
+
+</div>
 </div>
             </section>
 
@@ -415,7 +492,7 @@ the usefulness of which decreases as if you acquire additional relevant informat
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="hypothesis-testing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="vaccine.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
