@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 P test | Statistics</title>
+  <meta name="description" content="7 P test | Statistics" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 P test | Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="dyrehaugen/rsts" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 P test | Statistics" />
+  
+  
+  
+
+<meta name="author" content="Dyrehaugen Web Notebook" />
+
+
+<meta name="date" content="2021-06-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="hypothesis-testing.html"/>
+<link rel="next" href="spurious-correlation.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Statistics</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#pandemic-risk-management"><i class="fa fa-check"></i><b>1.1</b> Pandemic Risk Management</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#quarantine-fatigue-thins-fat-tailed-impacts"><i class="fa fa-check"></i><b>1.2</b> Quarantine fatigue thins fat-tailed impacts</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#herd-immunity-impossible-with-new-mutants"><i class="fa fa-check"></i><b>1.3</b> Herd Immunity impossible with new Mutants</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#danish-mask-study"><i class="fa fa-check"></i><b>1.4</b> Danish Mask Study</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="fat-tails.html"><a href="fat-tails.html"><i class="fa fa-check"></i><b>2</b> Fat Tails</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="fat-tails.html"><a href="fat-tails.html#extremes"><i class="fa fa-check"></i><b>2.1</b> Extremes</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="fat-tails.html"><a href="fat-tails.html#catastrophe-principle"><i class="fa fa-check"></i><b>2.1.1</b> Catastrophe Principle</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="fat-tails.html"><a href="fat-tails.html#statistical-consequences-of-fat-tails"><i class="fa fa-check"></i><b>2.2</b> Statistical Consequences of Fat Tails</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="fat-tails.html"><a href="fat-tails.html#power-law-distributions"><i class="fa fa-check"></i><b>2.2.1</b> Power Law Distributions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="fat-tails.html"><a href="fat-tails.html#lindy-effect"><i class="fa fa-check"></i><b>2.3</b> Lindy Effect</a></li>
+<li class="chapter" data-level="2.4" data-path="fat-tails.html"><a href="fat-tails.html#superspreaders"><i class="fa fa-check"></i><b>2.4</b> Superspreaders</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="vaccine.html"><a href="vaccine.html"><i class="fa fa-check"></i><b>3</b> Vaccine</a></li>
+<li class="chapter" data-level="4" data-path="inequality.html"><a href="inequality.html"><i class="fa fa-check"></i><b>4</b> Inequality</a></li>
+<li class="chapter" data-level="5" data-path="causation.html"><a href="causation.html"><i class="fa fa-check"></i><b>5</b> Causation</a></li>
+<li class="chapter" data-level="6" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>6</b> Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#connecting-to-theory"><i class="fa fa-check"></i><b>6.1</b> Connecting to Theory</a></li>
+<li class="chapter" data-level="6.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#glmm"><i class="fa fa-check"></i><b>6.2</b> GLMM</a></li>
+<li class="chapter" data-level="6.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#logit"><i class="fa fa-check"></i><b>6.3</b> Logit</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#odds-ratio"><i class="fa fa-check"></i><b>6.3.1</b> Odd’s Ratio</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="p-test.html"><a href="p-test.html"><i class="fa fa-check"></i><b>7</b> P test</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="p-test.html"><a href="p-test.html#p-value-hacking"><i class="fa fa-check"></i><b>7.1</b> P-Value Hacking</a></li>
+<li class="chapter" data-level="7.2" data-path="p-test.html"><a href="p-test.html#probit"><i class="fa fa-check"></i><b>7.2</b> Probit</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="spurious-correlation.html"><a href="spurious-correlation.html"><i class="fa fa-check"></i><b>8</b> Spurious Correlation</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="spurious-correlation.html"><a href="spurious-correlation.html#trending-variables"><i class="fa fa-check"></i><b>8.1</b> Trending Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="power-law.html"><a href="power-law.html"><i class="fa fa-check"></i><b>9</b> Power law</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="power-law.html"><a href="power-law.html#timescaling-rainfall"><i class="fa fa-check"></i><b>9.1</b> Timescaling Rainfall</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="syntetic-control.html"><a href="syntetic-control.html"><i class="fa fa-check"></i><b>10</b> Syntetic Control</a></li>
+<li class="chapter" data-level="11" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>11</b> Econometrics</a></li>
+<li class="part"><span><b>I Appendices</b></span></li>
+<li class="appendix"><span><b>Appendices</b></span></li>
+<li class="chapter" data-level="A" data-path="about.html"><a href="about.html"><i class="fa fa-check"></i><b>A</b> About</a></li>
+<li class="chapter" data-level="B" data-path="links.html"><a href="links.html"><i class="fa fa-check"></i><b>B</b> Links</a></li>
+<li class="chapter" data-level="C" data-path="news.html"><a href="news.html"><i class="fa fa-check"></i><b>C</b> NEWS</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/dyrehaugen/rsts" target="blank">On Github</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="p-test" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> P test</h1>
+<div id="p-value-hacking" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> P-Value Hacking</h2>
+<p>Results from a study can be analyzed in a variety of ways, and p-hacking refers to a practice where researchers select the analysis that yields a pleasing result. The p refers to the p-value, a ridiculously complicated statistical entity that’s essentially a measure of how surprising the results of a study would be if the effect you’re looking for wasn’t there.</p>
+<p>P-hacking as a term came into use as psychology and some other fields of science were experiencing a kind of existential crisis. Seminal findings were failing to replicate. Absurd results (ESP is real!) were passing peer review at well-respected academic journals. Efforts were underway to test the literature for false positives and the results weren’t looking good. Researchers began to realize that the problem might be woven into some long-standing and basic research practices</p>
+<p>Exploiting what they called “researcher degrees of freedom”: the little decisions that scientists make as they’re designing a study and collecting and analyzing data. These choices include things like which observations to measure, which variables to compare, which factors to combine, and which ones to control for. Unless researchers have committed to a methodology and analysis plan in advance by preregistering a study, they are, in practice, free to make (or even change) these calls as they go.</p>
+<p>This kind of fiddling around allows researchers to manipulate their study conditions until they get the answer that they want.</p>
+<p>Even if you don’t cheat, it’s still a moral error to misanalyze data on a problem of consequence.</p>
+<p>At its core, p-hacking is really about confirmation bias—the human tendency to seek and preferentially find evidence that confirms what we’d like to believe, while turning a blind eye to things that might contradict our preferred truths.</p>
+<p>People in power don’t understand the inevitability of p-hacking in the absence of safeguards against it.</p>
+<p>We all p-hack, to some extent, every time we set out to understand the evidence in the world around us. If there’s a takeaway here, it’s that science is hard—and sometimes our human foibles make it even harder.</p>
+<p><a href="https://www.wired.com/story/were-all-p-hacking-now/">Wired</a></p>
+<p>Testing abused to create misleading results. This is a technique known colloquially as ‘p-hacking.’ It is a misuse of data analysis to find patterns in data that can be presented as statistically significant when in fact there is no real underlying effect.</p>
+<p>One of the most common ways in which data analysis is misused to generate statistically significant results where none exists, and is one which everyone reporting on science should remain vigilant against.</p>
+<p><a href="https://scienceinthenewsroom.org/resources/statistical-p-hacking-explained/">Statistical P-hacking explained</a></p>
+<p><em>Taleb</em></p>
+<p>We present the expected values from p-value hack-
+ing as a choice of the minimum p-value among m independents
+tests, which can be considerably lower than the “true” p-value,
+even with a single trial, owing to the extreme skewness of the
+meta-distribution.
+We first present an exact probability distribution (meta-
+distribution) for p-values across ensembles of statistically iden-
+tical phenomena. We derive the distribution for small samples
+2 &lt; n ≤ n ∗ ≈ 30 as well as the limiting one as the sample size n
+becomes large. We also look at the properties of the “power” of
+a test through the distribution of its inverse for a given p-value
+and parametrization.
+The formulas allow the investigation of the stability of the
+reproduction of results and “p-hacking” and other aspects of
+meta-analysis.
+P-values are shown to be extremely skewed and volatile,
+regardless of the sample size n, and vary greatly across repetitions
+of exactly same protocols under identical stochastic copies of the
+phenomenon; such volatility makes the minimum p value diverge
+significantly from the “true” one. Setting the power is shown to
+offer little remedy unless sample size is increased markedly or
+the p-value is lowered by at least one order of magnitude.</p>
+<p><a href="pdf/Taleb_2018_P-Value-Hacking.pdf">Taleb (2018) P-Value Hacling (pdf)</a></p>
+<p><em>Simmons</em></p>
+<p>In this article, we accomplish two things. First, we show that despite empirical psychologists’ nominal endorsement of a low rate
+of false-positive findings (≤ .05), flexibility in data collection, analysis, and reporting dramatically increases actual false-positive
+rates. In many cases, a researcher is more likely to falsely find evidence that an effect exists than to correctly find evidence
+that it does not. We present computer simulations and a pair of actual experiments that demonstrate how unacceptably easy
+it is to accumulate (and report) statistically significant evidence for a false hypothesis. Second, we suggest a simple, low-cost,
+and straightforwardly effective disclosure-based solution to this problem. The solution involves six concrete requirements for
+authors and four guidelines for reviewers, all of which impose a minimal burden on the publication process.</p>
+<p><a href="pdf/Simmons_2011_False_Positive_Psychology.pdf">Simmons (2011) False positive psychology (pdf)</a></p>
+<p><em>Simonsohn</em></p>
+<p>Because scientists tend to report only studies (publication bias) or analyses (p-hacking) that “work,” readers must ask, “Are these effects true, or do they merely reflect selective reporting?” We introduce p-curve as a way to answer this question. P-curve is the distribution of statistically significant p-values for a set of studies (ps &lt; .05). Because only true effects are expected to generate right-skewed p-curves – containing more low (.01s) than high (.04s) significant p-values – only right-skewed p-curves are diagnostic of evidential value. By telling us whether we can rule out selective reporting as the sole explanation for a set of findings, p-curve offers a solution to the age-old inferential problems caused by file-drawers of failed studies and analyses.</p>
+<p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2256237">Simonsohn (2014) P-Curve</a>
+<a href="pdf/Simonsohm_2014_P-curve.pdf">(pdf)</a></p>
+<p><em>Wikipedia</em></p>
+<p>Data dredging (or data fishing, data snooping, data butchery), also known as significance chasing, significance questing, selective inference, and p-hacking[1] is the misuse of data analysis to find patterns in data that can be presented as statistically significant, thus dramatically increasing and understating the risk of false positives. This is done by performing many statistical tests on the data and only reporting those that come back with significant results.</p>
+<p>The process of data dredging involves testing multiple hypotheses using a single data set by exhaustively searching—perhaps for combinations of variables that might show a correlation, and perhaps for groups of cases or observations that show differences in their mean or in their breakdown by some other variable.</p>
+<p>Conventional tests of statistical significance are based on the probability that a particular result would arise if chance alone were at work, and necessarily accept some risk of mistaken conclusions of a certain type (mistaken rejections of the null hypothesis). This level of risk is called the significance. When large numbers of tests are performed, some produce false results of this type; hence 5% of randomly chosen hypotheses might be (erroneously) reported to be statistically significant at the 5% significance level, 1% might be (erroneously) reported to be statistically significant at the 1% significance level, and so on, by chance alone. When enough hypotheses are tested, it is virtually certain that some will be reported to be statistically significant (even though this is misleading), since almost every data set with any degree of randomness is likely to contain (for example) some spurious correlations. If they are not cautious, researchers using data mining techniques can be easily misled by these results.</p>
+<p>Data dredging is an example of disregarding the multiple comparisons problem. One form is when subgroups are compared without alerting the reader to the total number of subgroup comparisons examined.</p>
+<p><a href="https://en.wikipedia.org/wiki/Data_dredging">Wikipedia: Data dredging</a></p>
+<p><em>Head</em></p>
+<p>A focus on novel, confirmatory, and statistically significant results leads to substantial bias
+in the scientific literature. One type of bias, known as “p-hacking,” occurs when researchers
+collect or select data or statistical analyses until nonsignificant results become significant.
+Here, we use text-mining to demonstrate that p-hacking is widespread throughout science.
+We then illustrate how one can test for p-hacking when performing a meta-analysis and
+show that, while p-hacking is probably common, its effect seems to be weak relative to the
+real effect sizes being measured. This result suggests that p-hacking probably does not
+drastically alter scientific consensuses drawn from meta-analyses.</p>
+<p><a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002106">Head (2015) Extent of P-Hacking</a>
+<a href="pdf/Head_2015_Extent_of_P-Hacking.pdf">(pdf)</a></p>
+
+</div>
+<div id="probit" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Probit</h2>
+<p>A standard linear model (e.g., a simple regression model) can be thought of as having two ‘parts.’
+These are called the structural component and the random component.
+For example:</p>
+<p><span class="math display">\[Y=β_0+β_1 X+ε\]</span></p>
+<p>where</p>
+<p><span class="math inline">\(ε∼N(0,σ^2)\)</span></p>
+<p>The first two terms (that is, <span class="math inline">\(β_0 + β_1 X\)</span>) constitute the structural component,
+and the <span class="math inline">\(ε\)</span> (which indicates a normally distributed error term) is the random component.</p>
+<p>When the response variable is not normally distributed
+(for example, if your response variable is binary) this approach may no longer be valid.</p>
+<p>The generalized linear model (GLiM) was developed to address such cases,
+and logit and probit models are special cases of GLiMs that are appropriate for binary variables
+(or multi-category response variables with some adaptations to the process).</p>
+<p>A GLiM has three parts, a <em>structural component</em>, a <em>link function</em>, and a <em>response distribution</em>.</p>
+<p>For example:</p>
+<p><span class="math display">\[g(μ)=β_0+β_1 X\]</span></p>
+<p>Here <span class="math inline">\(β_0 + β_1 X\)</span> is again the structural component, <span class="math inline">\(g()\)</span> is the link function,
+and <span class="math inline">\(μ\)</span> is a mean of a conditional response distribution at a given point in the covariate space.</p>
+<p>The way we think about the structural component here doesn’t really differ from how we think about it
+with standard linear models; in fact, that’s one of the great advantages of GLiMs.
+Because for many distributions the variance is a function of the mean,
+having fit a conditional mean (and given that you stipulated a response distribution),
+you have automatically accounted for the analog of the random component in a linear model
+(N.B.: this can be more complicated in practice).</p>
+<p>The link function is the key to GLiMs:
+since the distribution of the response variable is non-normal,
+it’s what lets us connect the structural component to the response–
+it ‘links’ them (hence the name).
+It’s also the key to your question, since the logit and probit are links,
+and understanding link functions will allow us to intelligently choose when to use which one.
+Although there can be many link functions that can be acceptable,
+often there is one that is special.
+Without wanting to get too far into the weeds (this can get very technical) the predicted mean, <span class="math inline">\(μ\)</span>,
+will not necessarily be mathematically the same as
+the response distribution’s canonical location parameter;
+the link function that does equate them is the canonical link function.
+The advantage of this "is that a minimal sufficient statistic for <span class="math inline">\(β\)</span>.
+The canonical link for binary response data (more specifically, the binomial distribution) is the logit.
+However, there are lots of functions that can map the structural component onto the interval (0,1)(0,1),
+and thus be acceptable; the probit is also popular, but there are yet
+other options that are sometimes used (such as the <em>complementary log log</em>, <span class="math inline">\(ln(−ln(1−μ))\)</span>,
+often called <em>cloglog</em>).
+Thus, there are lots of possible link functions and
+the choice of link function can be very important.
+The choice should be made based on some combination of:</p>
+<ol style="list-style-type: decimal">
+<li>Knowledge of the response distribution,</li>
+<li>Theoretical considerations, and</li>
+<li>Empirical fit to the data.</li>
+</ol>
+<p>These considerations can be used to guide your choice of link.
+To start with, if your response variable is the outcome of a Bernoulli trial (that is, 0 or 1),
+your response distribution will be binomial,
+and what you are actually modeling is the probability of an observation being a 1
+(that is, <span class="math inline">\(π(Y=1)\)</span>.
+As a result, any function that maps the real number line, <span class="math inline">\((−∞,+∞)\)</span>
+to the interval <span class="math inline">\((0,1)\)</span> will work.</p>
+<p>If you are thinking of your covariates as directly connected to the probability of success,
+then you would typically choose logistic regression
+because it is the canonical link.
+However, consider the following example:
+You are asked to model high_Blood_Pressure as a function of some covariates.
+Blood pressure itself is normally distributed in the population.
+Clinicians dichotomized it during the study
+(that is, they only recorded ‘high-BP’ or ‘normal’).
+In this case, probit would be preferable a-priori for theoretical reasons.
+Your binary outcome depends on a hidden Gaussian variable.
+Another consideration is that both logit and probit are symmetrical,
+if you believe that the probability of success rises slowly from zero,
+but then tapers off more quickly as it approaches one, the cloglog is called for.</p>
+<p>Lastly, note that the empirical fit of the model to the data is
+unlikely to be of assistance in selecting a link,
+unless the shapes of the link functions in question differ substantially
+(of which, the logit and probit do not).
+For instance, consider the following simulation:</p>
+<pre><code>set.seed(1)
+probLower = vector(length=1000)
+
+for(i in 1:1000){      
+    x = rnorm(1000)
+    y = rbinom(n=1000, size=1, prob=pnorm(x))
+
+    logitModel  = glm(y~x, family=binomial(link=&quot;logit&quot;))
+    probitModel = glm(y~x, family=binomial(link=&quot;probit&quot;))
+
+    probLower[i] = deviance(probitModel)&lt;deviance(logitModel)
+}
+
+sum(probLower)/1000
+[1] 0.695</code></pre>
+<p>Even when we know the data were generated by a probit model, and we have 1000 data points,
+the probit model only yields a better fit 70% of the time, and even then,
+often by only a trivial amount.
+Consider the last iteration:</p>
+<pre><code>deviance(probitModel)
+[1] 1025.759
+deviance(logitModel)
+[1] 1026.366
+deviance(logitModel)-deviance(probitModel)
+[1] 0.6076806</code></pre>
+<p>The reason for this is simply that the logit and probit link functions
+yield very similar outputs when given the same inputs.</p>
+<p><img src="fig/glmm_probit_StackOverflow.png" /></p>
+<p>The logit and probit functions are practically identical,
+except that the logit is slightly further from the bounds when they ‘turn the corner.’
+(Note that to get the logit and the probit to align optimally,
+the logit’s <span class="math inline">\(β_1\)</span> must be <span class="math inline">\(≈1.7\)</span> times the corresponding slope value for the probit.
+In addition, I could have shifted the cloglog over slightly
+so that they would lay on top of each other more,
+but I left it to the side to keep the figure more readable.
+Notice that the cloglog is asymmetrical whereas the others are not;
+it starts pulling away from 0 earlier, but more slowly,
+and approaches close to 1 and then turns sharply.</p>
+<p>A couple more things can be said about link functions.
+First, considering the <em>identity function</em> <span class="math inline">\((g(η)=ηg(\eta)=\eta)\)</span>
+as a link function allows us to understand the standard linear model
+as a special case of the generalized linear model
+(that is, the response distribution is normal, and the link is the identity function).
+It’s also important to recognize that whatever transformation the link instantiates
+is properly applied to the parameter governing the response distribution (that is, <span class="math inline">\(μ\)</span>),
+not the actual response data.
+Finally, because in practice we never have the underlying parameter to transform,
+in discussions of these models,
+often what is considered to be the actual link is left implicit and
+the model is represented by the inverse of the link function
+applied to the structural component instead.
+That is:</p>
+<p><span class="math display">\[μ=g^{−1}(β_0+β_1 X)\]</span></p>
+<p>For instance, logistic regression is usually represented:</p>
+<p><span class="math display">\[π(Y)=\frac{exp(β_0 + β_1 X)}{1+exp(β_0 + β_1 X)}\]</span></p>
+<p>instead of:</p>
+<p><span class="math display">\[ln(\frac{(π(Y)}{1−π(Y)}) = β_0 + β_1 X\]</span></p>
+<p>For a quick and clear, but solid, overview of the generalized linear model,
+see chapter 10 of Fitzmaurice, Laird, &amp; Ware (2004),
+For how to fit these models in R, check out the documentation for the function ?glm in the base package.</p>
+<p>(One final note added later:) I occasionally hear people say that
+you shouldn’t use the probit, because it can’t be interpreted.
+This is not true, although the interpretation of the betas is less intuitive.
+With logistic regression, a one unit change in <span class="math inline">\(X_1\)</span> is associated with
+a <span class="math inline">\(β_1\)</span> change in the log odds of ‘success’
+(alternatively, an <span class="math inline">\(exp(β_1)\)</span>-fold change in the odds), all else being equal.
+With a probit, this would be a change of <span class="math inline">\(β_1 z\)</span>’s.
+(Think of two observations in a dataset with <span class="math inline">\(z\)</span>-scores of 1 and 2, for example.)
+To convert these into predicted <em>probabilities</em>,
+you can pass them through the normal CDF, or look them up on a <span class="math inline">\(z\)</span>-table.</p>
+<p><a href="https://stats.stackexchange.com/questions/20523/difference-between-logit-and-probit-models/30909#30909">StackOverFlow</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="hypothesis-testing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="spurious-correlation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dyrehaugen/rsts/edit/master/202-p-value.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["rsts.pdf", "rsts.epub", "rsts.mobi"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

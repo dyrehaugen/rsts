@@ -86,7 +86,7 @@
 
 \title{Statistics}
 \author{Dyrehaugen Web Notebook}
-\date{2021-04-26}
+\date{2021-06-27}
 
 \begin{document}
 \maketitle
@@ -907,6 +907,22 @@ the ubiquity of hierarchical organization in human societies.
 \href{https://osf.io/u95dk/}{Blair Fix (2018) Hierarchy Power Law Income Distribution}
 \href{pdf/Blair_Fix_2018_Hierarchy_Power_law.pdf}{(pdf)}
 
+\hypertarget{causation}{%
+\chapter{Causation}\label{causation}}
+
+\emph{Altman Abstract}
+
+Correlation implies association, but not causation.
+Conversely, causation implies association, but not correlation.
+
+Associations can arise between variables in the presence (i.e., X causes Y) and
+absence (i.e., they have a common cause) of a causal relationship
+
+In everyday language, dependence, association and correlation are used interchangeably. Technically, however, association is synonymous with dependence and is different from correlation
+
+\href{https://www.nature.com/articles/nmeth.3587}{Altman (2015) Association Correlation Causation}
+\href{pdf/Altman_2015_Association_Correlation_and_Causation.pdf}{(pdf)}
+
 \hypertarget{hypothesis-testing}{%
 \chapter{Hypothesis Testing}\label{hypothesis-testing}}
 
@@ -1111,6 +1127,108 @@ the predicted classification according to some probability threshold that needs 
 
 \href{https://stats.stackexchange.com/questions/8661/logistic-regression-in-r-odds-ratio}{StackOverFlow}
 
+\hypertarget{p-test}{%
+\chapter{P test}\label{p-test}}
+
+\hypertarget{p-value-hacking}{%
+\section{P-Value Hacking}\label{p-value-hacking}}
+
+Results from a study can be analyzed in a variety of ways, and p-hacking refers to a practice where researchers select the analysis that yields a pleasing result. The p refers to the p-value, a ridiculously complicated statistical entity that's essentially a measure of how surprising the results of a study would be if the effect you're looking for wasn't there.
+
+P-hacking as a term came into use as psychology and some other fields of science were experiencing a kind of existential crisis. Seminal findings were failing to replicate. Absurd results (ESP is real!) were passing peer review at well-respected academic journals. Efforts were underway to test the literature for false positives and the results weren't looking good. Researchers began to realize that the problem might be woven into some long-standing and basic research practices
+
+Exploiting what they called ``researcher degrees of freedom'': the little decisions that scientists make as they're designing a study and collecting and analyzing data. These choices include things like which observations to measure, which variables to compare, which factors to combine, and which ones to control for. Unless researchers have committed to a methodology and analysis plan in advance by preregistering a study, they are, in practice, free to make (or even change) these calls as they go.
+
+This kind of fiddling around allows researchers to manipulate their study conditions until they get the answer that they want.
+
+Even if you don't cheat, it's still a moral error to misanalyze data on a problem of consequence.
+
+At its core, p-hacking is really about confirmation bias---the human tendency to seek and preferentially find evidence that confirms what we'd like to believe, while turning a blind eye to things that might contradict our preferred truths.
+
+People in power don't understand the inevitability of p-hacking in the absence of safeguards against it.
+
+We all p-hack, to some extent, every time we set out to understand the evidence in the world around us. If there's a takeaway here, it's that science is hard---and sometimes our human foibles make it even harder.
+
+\href{https://www.wired.com/story/were-all-p-hacking-now/}{Wired}
+
+Testing abused to create misleading results. This is a technique known colloquially as `p-hacking'. It is a misuse of data analysis to find patterns in data that can be presented as statistically significant when in fact there is no real underlying effect.
+
+One of the most common ways in which data analysis is misused to generate statistically significant results where none exists, and is one which everyone reporting on science should remain vigilant against.
+
+\href{https://scienceinthenewsroom.org/resources/statistical-p-hacking-explained/}{Statistical P-hacking explained}
+
+\emph{Taleb}
+
+We present the expected values from p-value hack-
+ing as a choice of the minimum p-value among m independents
+tests, which can be considerably lower than the ``true'' p-value,
+even with a single trial, owing to the extreme skewness of the
+meta-distribution.
+We first present an exact probability distribution (meta-
+distribution) for p-values across ensembles of statistically iden-
+tical phenomena. We derive the distribution for small samples
+2 \textless{} n ≤ n ∗ ≈ 30 as well as the limiting one as the sample size n
+becomes large. We also look at the properties of the ``power'' of
+a test through the distribution of its inverse for a given p-value
+and parametrization.
+The formulas allow the investigation of the stability of the
+reproduction of results and ``p-hacking'' and other aspects of
+meta-analysis.
+P-values are shown to be extremely skewed and volatile,
+regardless of the sample size n, and vary greatly across repetitions
+of exactly same protocols under identical stochastic copies of the
+phenomenon; such volatility makes the minimum p value diverge
+significantly from the ``true'' one. Setting the power is shown to
+offer little remedy unless sample size is increased markedly or
+the p-value is lowered by at least one order of magnitude.
+
+\href{pdf/Taleb_2018_P-Value-Hacking.pdf}{Taleb (2018) P-Value Hacling (pdf)}
+
+\emph{Simmons}
+
+In this article, we accomplish two things. First, we show that despite empirical psychologists' nominal endorsement of a low rate
+of false-positive findings (≤ .05), flexibility in data collection, analysis, and reporting dramatically increases actual false-positive
+rates. In many cases, a researcher is more likely to falsely find evidence that an effect exists than to correctly find evidence
+that it does not. We present computer simulations and a pair of actual experiments that demonstrate how unacceptably easy
+it is to accumulate (and report) statistically significant evidence for a false hypothesis. Second, we suggest a simple, low-cost,
+and straightforwardly effective disclosure-based solution to this problem. The solution involves six concrete requirements for
+authors and four guidelines for reviewers, all of which impose a minimal burden on the publication process.
+
+\href{pdf/Simmons_2011_False_Positive_Psychology.pdf}{Simmons (2011) False positive psychology (pdf)}
+
+\emph{Simonsohn}
+
+Because scientists tend to report only studies (publication bias) or analyses (p-hacking) that ``work'', readers must ask, ``Are these effects true, or do they merely reflect selective reporting?'' We introduce p-curve as a way to answer this question. P-curve is the distribution of statistically significant p-values for a set of studies (ps \textless{} .05). Because only true effects are expected to generate right-skewed p-curves -- containing more low (.01s) than high (.04s) significant p-values -- only right-skewed p-curves are diagnostic of evidential value. By telling us whether we can rule out selective reporting as the sole explanation for a set of findings, p-curve offers a solution to the age-old inferential problems caused by file-drawers of failed studies and analyses.
+
+\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2256237}{Simonsohn (2014) P-Curve}
+\href{pdf/Simonsohm_2014_P-curve.pdf}{(pdf)}
+
+\emph{Wikipedia}
+
+Data dredging (or data fishing, data snooping, data butchery), also known as significance chasing, significance questing, selective inference, and p-hacking{[}1{]} is the misuse of data analysis to find patterns in data that can be presented as statistically significant, thus dramatically increasing and understating the risk of false positives. This is done by performing many statistical tests on the data and only reporting those that come back with significant results.
+
+The process of data dredging involves testing multiple hypotheses using a single data set by exhaustively searching---perhaps for combinations of variables that might show a correlation, and perhaps for groups of cases or observations that show differences in their mean or in their breakdown by some other variable.
+
+Conventional tests of statistical significance are based on the probability that a particular result would arise if chance alone were at work, and necessarily accept some risk of mistaken conclusions of a certain type (mistaken rejections of the null hypothesis). This level of risk is called the significance. When large numbers of tests are performed, some produce false results of this type; hence 5\% of randomly chosen hypotheses might be (erroneously) reported to be statistically significant at the 5\% significance level, 1\% might be (erroneously) reported to be statistically significant at the 1\% significance level, and so on, by chance alone. When enough hypotheses are tested, it is virtually certain that some will be reported to be statistically significant (even though this is misleading), since almost every data set with any degree of randomness is likely to contain (for example) some spurious correlations. If they are not cautious, researchers using data mining techniques can be easily misled by these results.
+
+Data dredging is an example of disregarding the multiple comparisons problem. One form is when subgroups are compared without alerting the reader to the total number of subgroup comparisons examined.
+
+\href{https://en.wikipedia.org/wiki/Data_dredging}{Wikipedia: Data dredging}
+
+\emph{Head}
+
+A focus on novel, confirmatory, and statistically significant results leads to substantial bias
+in the scientific literature. One type of bias, known as ``p-hacking,'' occurs when researchers
+collect or select data or statistical analyses until nonsignificant results become significant.
+Here, we use text-mining to demonstrate that p-hacking is widespread throughout science.
+We then illustrate how one can test for p-hacking when performing a meta-analysis and
+show that, while p-hacking is probably common, its effect seems to be weak relative to the
+real effect sizes being measured. This result suggests that p-hacking probably does not
+drastically alter scientific consensuses drawn from meta-analyses.
+
+\href{https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002106}{Head (2015) Extent of P-Hacking}
+\href{pdf/Head_2015_Extent_of_P-Hacking.pdf}{(pdf)}
+
 \hypertarget{probit}{%
 \section{Probit}\label{probit}}
 
@@ -1301,6 +1419,66 @@ you can pass them through the normal CDF, or look them up on a \(z\)-table.
 
 \href{https://stats.stackexchange.com/questions/20523/difference-between-logit-and-probit-models/30909\#30909}{StackOverFlow}
 
+\hypertarget{spurious-correlation}{%
+\chapter{Spurious Correlation}\label{spurious-correlation}}
+
+\hypertarget{trending-variables}{%
+\section{Trending Variables}\label{trending-variables}}
+
+\emph{Tambonthongchai}
+
+THE SOURCE DATA SHOW A STRONG STATISTICALLY SIGNIFICANT CORRELATION OF CORR=0.75 BETWEEN ANNUAL CHANGES IN MLO CO2 AND ANNUAL EMISSIONS. THIS CORRELATION APPEARS TO SUPPORT THE USUAL ASSUMPTION THAT CHANGES IN ATMOSPHERIC CO2 CONCENTRATION ARE CAUSED BY FOSSIL FUEL EMISSIONS AND THAT THEREFORE THESE CHANGES CAN BE MODERATED WITH CLIMATE ACTION TO CONTROL AND REDUCE THE RATE OF WARMING.
+
+HOWEVER, IT IS KNOWN THAT SOURCE DATA CORRELATION BETWEEN TIME SERIES DATA DERIVE FROM TWO SOURCES. THESE ARE (1) SHARED TRENDS WITH NO CAUSATION IMPLICATION AND (2) RESPONSIVENESS AT THE TIME SCALE OF INTEREST. HERE THE TIME SCALE OF INTEREST IS ANNUAL BECAUSE THE THEORY REQUIRES THAT ANNUAL CHANGES IN ATMOSPHERIC CO2 CONCENTRATION ARE CAUSED BY ANNUAL FOSSIL FUEL EMISSIONS. THIS TEST IS MADE BY REMOVING THE SHARED TREND THAT IS KNOWN TO HAVE NO CAUSATION INFORMATION OR IMPLICATION. HERE WE FIND THAT WHEN THE SHARED TREND IS REMOVED THE OBSERVED CORRELATION DISAPPPEARS. THE APPARENT CORRELATION BETWEEN EMISSIONS AND CHANGES IN ATMOSPHERIC CO2 CONCENTRATION IS THUS FOUND TO BE SPURIOUS.
+
+THE DATA FOR ANNUAL FOSSIL FUEL EMISSIONS AND ANNUAL CHANGES IN ATMOSPHERIC CO2 CONCENTRATION DO NOT SHOW THAT FOSSIL FUEL EMISSIONS CAUSE ATMOSPHERIC CO2 CONCENTRATION TO CHANGE. THE FINDING IMPLIES THAT THERE IS NO EMPIRICAL EVIDENCE IN SUPPORT OF THE THEORY OF CLIMATE ACTION. THIS THEORY HOLDS THAT MOVING THE GLOBAL ENERGY INFRASTRUCTURE FROM FOSSIL FUELS TO RENEWABLES WILL MODERATE THE RATE OF INCREASE IN ATMOSPHERIC CO2 AND THEREBY MODERATE THE RATE OF WARMING.
+
+\href{https://tambonthongchai.com/2020/11/11/annual-changes-in-mlo-co2/}{Tambonthongchai: Climate Data Case (via Arve)}
+
+\emph{Munshi Abstract}
+
+\textbf{Abstract:} Unrelated time series data can show spurious correlations by virtue of a shared drift in the long term trend. The
+spuriousness of such correlations is demonstrated with examples. The SP500 stock market index, GDP at current prices for the
+USA, and the number of homicides in England and Wales in the sample period 1968 to 2002 are used for this demonstration.
+Detrended analysis shows the expected result that at an annual time scale the GDP and SP500 series are related and that
+neither of these time series is related to the homicide series. Correlations between the source data and those between
+cumulative values show spurious correlations of the two financial time series with the homicide series.
+These results have implications for empirical evidence that attributes changes in temperature and carbon dioxide levels in the surface-atmosphere system to fossil fuel emissions
+
+\emph{Munshi Memo}
+
+Spurious correlations of this nature are sometimes found in published research. For example, climate
+science attributes the rise in atmospheric carbon dioxide to fossil fuel emissions and cites correlations
+between the data as empirical evidence (IPCC, 2007) (IPCC, 2014) (Canadell, 2007) (Kheshgi, 2005).
+Detrended analysis shows that correlations between emissions and atmospheric CO2 and oceanic CO2
+are spurious because they disappear when the data are detrended (Munshi, Responsiveness of
+Atmospheric CO2 to Anthropogenic Emissions, 2015) (Munshi, Fossil Fuel Emissions and Ocean
+Acidification, 2015). These anomalous results likely derive from large and perhaps unquantifiable
+uncertainties in natural flows of carbon dioxide in the surface-atmosphere system (Munshi, Uncertain
+Flow Accounting and the IPCC Carbon Budget, 2015).
+
+\href{https://www.researchgate.net/publication/306376553_Spurious_Correlations_in_Time_Series_Data_A_Note}{Munshi (2016) Spurious Correlations in Time Series Data: A Note}
+{[}(pdf){[}pdf/Munshi\_2016\_Spurious\_Time\_Series.pdf)
+
+\emph{Munshi Abstract}
+
+A statistically significant correlation between annual anthropogenic CO2 emissions and the annual rate of accumulation of CO2 in the atmosphere over a 53-year sample period from 1959-2011 is likely to be spurious because it vanishes when the two series are detrended. The results do not indicate a measurable year to year effect of annual anthropogenic emissions on the annual rate of CO2 accumulation in the atmosphere.
+
+\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2642639}{Munshi 82015) Spurious Anthropogenic CO2}
+\href{pdf/Munshi_2015_Spurious_Antropogenic_CO2.pdf}{(pdf)}
+
+\emph{Wu Abstract}
+
+This paper examines three types of spurious regressions where both the dependent and
+independent variables contain deterministic trends, stochastic trends, or breaking trends. We
+show that the problem of spurious regression disappears if the trend functions are included as
+additional regressors. In the presence of autocorrelation, we show that using a Feasible General
+Least Square (FGLS) estimator can help alleviate or eliminate the problem. Our theoretical
+results are clearly reflected in finite samples. As an illustration, we apply our methods to revisit
+the seminal study of Yule (1926).
+
+\href{pdf/Wu_2007_Spurious_Trending.pdf}{Wu (2007) On spurious regressions with trending variables (pdf)}
+
 \hypertarget{power-law}{%
 \chapter{Power law}\label{power-law}}
 
@@ -1352,6 +1530,27 @@ Similarly, in ``\href{https://www.sciencedirect.com/science/article/pii/S0167268
 \href{pdf/Abadie_Synthetic_Control_Methods.pdf}{Abadie: Syntetic Control Methods (pdf)}
 
 \href{pdf/Abadie_Using_Synthetic_Controls.pdf}{Abadie: Using Syntetic Controls (pdf)}
+
+\hypertarget{econometrics}{%
+\chapter{Econometrics}\label{econometrics}}
+
+\emph{Goldsmith-Pinkham}
+
+\textbf{Gary Chamberlain}
+
+This document contains the set of lecture notes from the late Gary Chamberlain's 2010 Econometrics class (EC2120) that I (Paul Goldsmith-Pinkham) took during my economics Ph.D.~at Harvard University. Gary was a remarkable teacher and this class was an amazing experience for me as a young economist.
+
+A few things worth noting from my experience taking this course:
+
+\begin{verbatim}
+The course is somewhat unique in not introducing any inference until Lecture 7 (halfway through the course). The focus prior to this is exclusively on estimation using regression.
+The lectures are linked together in groups (even though they are not marked this way). Lectures 1-3 reflect the underlying setup in notation and framework for the rest of the course. Lectures 6-9 setup inference. Lecture 9-11 discuss a general framework for using moment conditions.
+During my semester, we never got through lectures 13-15, which suggests that this is a lot of material for a single semester.
+Gary would continually refer back to Lecture 4 and Lecture 9 (indeed, I have Gary's voice saying "if we think back to the Note 9 framework..." burned into my brain. As a result, these are also some of the longest and densest lectures.
+The last 4 sections are review problems that Gary provided for preparation for the final exam. These are very fun problems, but we were not provided solutions. So, you'll have to figure them out on your own!
+\end{verbatim}
+
+\href{https://github.com/paulgp/GaryChamberlainLectureNotes}{Chamberlain Lecture Notes (Github)}
 
 \hypertarget{part-appendices}{%
 \part{Appendices}\label{part-appendices}}
