@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Fat Tails | Statistics</title>
-  <meta name="description" content="2 Fat Tails | Statistics" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <title>3 Fat Tails | Statistics</title>
+  <meta name="description" content="3 Fat Tails | Statistics" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Fat Tails | Statistics" />
+  <meta property="og:title" content="3 Fat Tails | Statistics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="dyrehaugen/rsts" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Fat Tails | Statistics" />
+  <meta name="twitter:title" content="3 Fat Tails | Statistics" />
   
   
   
@@ -24,17 +24,17 @@
 <meta name="author" content="Dyrehaugen Web Notebook" />
 
 
-<meta name="date" content="2021-06-27" />
+<meta name="date" content="2021-10-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
+<link rel="prev" href="probability.html"/>
 <link rel="next" href="vaccine.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,6 +50,10 @@
 
 
 
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 
@@ -70,53 +74,63 @@
 <li><a href="./">Statistics</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Statistics</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Statistics</a></li>
+<li class="chapter" data-level="2" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>2</b> Probability</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#pandemic-risk-management"><i class="fa fa-check"></i><b>1.1</b> Pandemic Risk Management</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#quarantine-fatigue-thins-fat-tailed-impacts"><i class="fa fa-check"></i><b>1.2</b> Quarantine fatigue thins fat-tailed impacts</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#herd-immunity-impossible-with-new-mutants"><i class="fa fa-check"></i><b>1.3</b> Herd Immunity impossible with new Mutants</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#danish-mask-study"><i class="fa fa-check"></i><b>1.4</b> Danish Mask Study</a></li>
+<li class="chapter" data-level="2.1" data-path="probability.html"><a href="probability.html#intuition-for-probability"><i class="fa fa-check"></i><b>2.1</b> Intuition for Probability</a></li>
+<li class="chapter" data-level="2.2" data-path="probability.html"><a href="probability.html#pandemic-risk-management"><i class="fa fa-check"></i><b>2.2</b> Pandemic Risk Management</a></li>
+<li class="chapter" data-level="2.3" data-path="probability.html"><a href="probability.html#quarantine-fatigue-thins-fat-tailed-impacts"><i class="fa fa-check"></i><b>2.3</b> Quarantine fatigue thins fat-tailed impacts</a></li>
+<li class="chapter" data-level="2.4" data-path="probability.html"><a href="probability.html#herd-immunity-impossible-with-new-mutants"><i class="fa fa-check"></i><b>2.4</b> Herd Immunity impossible with new Mutants</a></li>
+<li class="chapter" data-level="2.5" data-path="probability.html"><a href="probability.html#danish-mask-study"><i class="fa fa-check"></i><b>2.5</b> Danish Mask Study</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="fat-tails.html"><a href="fat-tails.html"><i class="fa fa-check"></i><b>2</b> Fat Tails</a>
+<li class="chapter" data-level="3" data-path="fat-tails.html"><a href="fat-tails.html"><i class="fa fa-check"></i><b>3</b> Fat Tails</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="fat-tails.html"><a href="fat-tails.html#extremes"><i class="fa fa-check"></i><b>2.1</b> Extremes</a>
+<li class="chapter" data-level="3.1" data-path="fat-tails.html"><a href="fat-tails.html#extremes"><i class="fa fa-check"></i><b>3.1</b> Extremes</a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="fat-tails.html"><a href="fat-tails.html#catastrophe-principle"><i class="fa fa-check"></i><b>2.1.1</b> Catastrophe Principle</a></li>
+<li class="chapter" data-level="3.1.1" data-path="fat-tails.html"><a href="fat-tails.html#catastrophe-principle"><i class="fa fa-check"></i><b>3.1.1</b> Catastrophe Principle</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="fat-tails.html"><a href="fat-tails.html#statistical-consequences-of-fat-tails"><i class="fa fa-check"></i><b>2.2</b> Statistical Consequences of Fat Tails</a>
+<li class="chapter" data-level="3.2" data-path="fat-tails.html"><a href="fat-tails.html#statistical-consequences-of-fat-tails"><i class="fa fa-check"></i><b>3.2</b> Statistical Consequences of Fat Tails</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="fat-tails.html"><a href="fat-tails.html#power-law-distributions"><i class="fa fa-check"></i><b>2.2.1</b> Power Law Distributions</a></li>
+<li class="chapter" data-level="3.2.1" data-path="fat-tails.html"><a href="fat-tails.html#power-law-distributions"><i class="fa fa-check"></i><b>3.2.1</b> Power Law Distributions</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="fat-tails.html"><a href="fat-tails.html#lindy-effect"><i class="fa fa-check"></i><b>2.3</b> Lindy Effect</a></li>
-<li class="chapter" data-level="2.4" data-path="fat-tails.html"><a href="fat-tails.html#superspreaders"><i class="fa fa-check"></i><b>2.4</b> Superspreaders</a></li>
+<li class="chapter" data-level="3.3" data-path="fat-tails.html"><a href="fat-tails.html#lindy-effect"><i class="fa fa-check"></i><b>3.3</b> Lindy Effect</a></li>
+<li class="chapter" data-level="3.4" data-path="fat-tails.html"><a href="fat-tails.html#superspreaders"><i class="fa fa-check"></i><b>3.4</b> Superspreaders</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="vaccine.html"><a href="vaccine.html"><i class="fa fa-check"></i><b>3</b> Vaccine</a></li>
-<li class="chapter" data-level="4" data-path="inequality.html"><a href="inequality.html"><i class="fa fa-check"></i><b>4</b> Inequality</a></li>
-<li class="chapter" data-level="5" data-path="causation.html"><a href="causation.html"><i class="fa fa-check"></i><b>5</b> Causation</a></li>
-<li class="chapter" data-level="6" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>6</b> Hypothesis Testing</a>
+<li class="chapter" data-level="4" data-path="vaccine.html"><a href="vaccine.html"><i class="fa fa-check"></i><b>4</b> Vaccine</a></li>
+<li class="chapter" data-level="5" data-path="inequality.html"><a href="inequality.html"><i class="fa fa-check"></i><b>5</b> Inequality</a></li>
+<li class="chapter" data-level="6" data-path="causation.html"><a href="causation.html"><i class="fa fa-check"></i><b>6</b> Causation</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#connecting-to-theory"><i class="fa fa-check"></i><b>6.1</b> Connecting to Theory</a></li>
-<li class="chapter" data-level="6.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#glmm"><i class="fa fa-check"></i><b>6.2</b> GLMM</a></li>
-<li class="chapter" data-level="6.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#logit"><i class="fa fa-check"></i><b>6.3</b> Logit</a>
+<li class="chapter" data-level="6.1" data-path="causation.html"><a href="causation.html#liang-causality"><i class="fa fa-check"></i><b>6.1</b> Liang Causality</a></li>
+<li class="chapter" data-level="6.2" data-path="causation.html"><a href="causation.html#causation-in-chaotic-dynamic-systems"><i class="fa fa-check"></i><b>6.2</b> Causation in Chaotic Dynamic Systems</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>7</b> Hypothesis Testing</a>
 <ul>
-<li class="chapter" data-level="6.3.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#odds-ratio"><i class="fa fa-check"></i><b>6.3.1</b> Odd’s Ratio</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="p-test.html"><a href="p-test.html"><i class="fa fa-check"></i><b>7</b> P test</a>
+<li class="chapter" data-level="7.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#connecting-to-theory"><i class="fa fa-check"></i><b>7.1</b> Connecting to Theory</a></li>
+<li class="chapter" data-level="7.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#glmm"><i class="fa fa-check"></i><b>7.2</b> GLMM</a></li>
+<li class="chapter" data-level="7.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#logit"><i class="fa fa-check"></i><b>7.3</b> Logit</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="p-test.html"><a href="p-test.html#p-value-hacking"><i class="fa fa-check"></i><b>7.1</b> P-Value Hacking</a></li>
-<li class="chapter" data-level="7.2" data-path="p-test.html"><a href="p-test.html#probit"><i class="fa fa-check"></i><b>7.2</b> Probit</a></li>
+<li class="chapter" data-level="7.3.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#odds-ratio"><i class="fa fa-check"></i><b>7.3.1</b> Odd’s Ratio</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="spurious-correlation.html"><a href="spurious-correlation.html"><i class="fa fa-check"></i><b>8</b> Spurious Correlation</a>
+</ul></li>
+<li class="chapter" data-level="8" data-path="p-test.html"><a href="p-test.html"><i class="fa fa-check"></i><b>8</b> P test</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="spurious-correlation.html"><a href="spurious-correlation.html#trending-variables"><i class="fa fa-check"></i><b>8.1</b> Trending Variables</a></li>
+<li class="chapter" data-level="8.1" data-path="p-test.html"><a href="p-test.html#p-value-hacking"><i class="fa fa-check"></i><b>8.1</b> P-Value Hacking</a></li>
+<li class="chapter" data-level="8.2" data-path="p-test.html"><a href="p-test.html#probit"><i class="fa fa-check"></i><b>8.2</b> Probit</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="power-law.html"><a href="power-law.html"><i class="fa fa-check"></i><b>9</b> Power law</a>
+<li class="chapter" data-level="9" data-path="spurious-correlation.html"><a href="spurious-correlation.html"><i class="fa fa-check"></i><b>9</b> Spurious Correlation</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="power-law.html"><a href="power-law.html#timescaling-rainfall"><i class="fa fa-check"></i><b>9.1</b> Timescaling Rainfall</a></li>
+<li class="chapter" data-level="9.1" data-path="spurious-correlation.html"><a href="spurious-correlation.html#trending-variables"><i class="fa fa-check"></i><b>9.1</b> Trending Variables</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="syntetic-control.html"><a href="syntetic-control.html"><i class="fa fa-check"></i><b>10</b> Syntetic Control</a></li>
-<li class="chapter" data-level="11" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>11</b> Econometrics</a></li>
+<li class="chapter" data-level="10" data-path="stationarity.html"><a href="stationarity.html"><i class="fa fa-check"></i><b>10</b> Stationarity</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="stationarity.html"><a href="stationarity.html#record-events"><i class="fa fa-check"></i><b>10.1</b> Record Events</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="power-law.html"><a href="power-law.html"><i class="fa fa-check"></i><b>11</b> Power law</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="power-law.html"><a href="power-law.html#timescaling-rainfall"><i class="fa fa-check"></i><b>11.1</b> Timescaling Rainfall</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="syntetic-control.html"><a href="syntetic-control.html"><i class="fa fa-check"></i><b>12</b> Syntetic Control</a></li>
+<li class="chapter" data-level="13" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>13</b> Econometrics</a></li>
 <li class="part"><span><b>I Appendices</b></span></li>
 <li class="appendix"><span><b>Appendices</b></span></li>
 <li class="chapter" data-level="A" data-path="about.html"><a href="about.html"><i class="fa fa-check"></i><b>A</b> About</a></li>
@@ -142,22 +156,22 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="fat-tails" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> Fat Tails</h1>
+<div id="fat-tails" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Fat Tails</h1>
 <pre><code>Extremes      
     Catastrophe Principle  
 Statistical Consequences of Fat Tails  
 Power Law Distributions  
     Pareto Distribution  
 Pandemic Risk Management</code></pre>
-<p>Science uses statistics &amp;, as per Popper, doesn’t really “accept,”
+<p>Science uses statistics &amp;, as per Popper, doesn’t really “accept”,
 just fails to reject at some significance.
 It’s fundamentally disconfirmatory.
 Stat. “evidence” is inherently probabilistic and
 cannot be “degenerate” (i.e. provide certainties).
 (Taleb)</p>
-<div id="extremes" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Extremes</h2>
+<div id="extremes" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Extremes</h2>
 <p>The field of Extreme Value Theory focuses on tail properties,
 not the mean or statistical inference.</p>
 <p>It is vastly more effective
@@ -166,8 +180,8 @@ than try to figure them out in the required details
 (the inferential errors under fat tails are huge).
 So it is more solid, much wiser, more ethical, and more effective to focus on
 detection heuristics and policies rather than fabricate statistical properties.</p>
-<div id="catastrophe-principle" class="section level3" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> Catastrophe Principle</h3>
+<div id="catastrophe-principle" class="section level3" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Catastrophe Principle</h3>
 <p><em>Memo Taleb (DarwinCollege):</em></p>
 <p>Where a Pareto distribution
 prevails (among many), and randomly select two people with
@@ -350,8 +364,8 @@ This is much, much simpler than probability.</p>
 <p><a href="/pdf/Taleb_2017_Extremes_DarwinCollege.pdf">Taleb (2017) Darwin Colleges(pdf)</a></p>
 </div>
 </div>
-<div id="statistical-consequences-of-fat-tails" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Statistical Consequences of Fat Tails</h2>
+<div id="statistical-consequences-of-fat-tails" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Statistical Consequences of Fat Tails</h2>
 <blockquote>
 <p>Conventional statistics fail to cover fat tails;
 physicists who use power laws do not usually produce statistical estimators.</p>
@@ -380,10 +394,10 @@ that moments <span class="math inline">\(E[X^p]\)</span> are no longer finite.</
 <p>The Lucretius fallacy is when one assumes the worst event experienced in the past is the worst event that can happen in the future. Because an empirical distribution is necessarily censured by x_min and x_max, the empirical distribution is not empirical. Beyond the observed max, there is a hidden portion of the distribution not shown in past samples whose moments are unknown (and do not converge via the Glivenko-Cantelli theorem). This is a problem for Kolmogorov-Smirnoff tests. It is better to use MLE to get the ‘excess’ or ‘shadow’ mean (the mean beyond the sample max). Assuming you can estimate the tail exponent, this approach works better for out-of-sample inference than use of the sample mean (biased under thick tails). The lower the tail exponent and smaller the sample, the more the tail is hidden.</p>
 <p>The precautionary principle is necessary for higher order units (ecosystem, humanity, etc.) that do not “renew” the way lower order units do (individual people, animals, goods, etc.). With repeated exposure to a low-probability event, its probability of occurrence will approach 1 over time. If one’s exposure f(x) has an absorbing barrier, they must focus on time probability (path dependence) rather than ensemble probability (path independence). Since financial asset prices, particularly equities, are non-ergodic (time average &lt;&gt; ensemble average due to fat tails), one is not guaranteed the return of the market unconditionally. Hence the myopic loss aversion explanation (increased sensitivity to losses and less willingness to accept risk the more often you check performance) of the equity risk premium puzzle falls apart. Risks accumulate for individuals, making it rational to be loss averse and avoid tail risks.</p>
 <p><a href="https://www.amazon.com/review/RMD3OUG0WQWWY/ref=cm_cr_srp_d_rdp_perm?ie=UTF8&amp;ASIN=1544508050">Zweig: Suimmary of Talebs ‘Fat Tails’</a></p>
-<div id="power-law-distributions" class="section level3" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> Power Law Distributions</h3>
-<div id="pareto-distribution" class="section level4" number="2.2.1.1">
-<h4><span class="header-section-number">2.2.1.1</span> Pareto Distribution</h4>
+<div id="power-law-distributions" class="section level3" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Power Law Distributions</h3>
+<div id="pareto-distribution" class="section level4" number="3.2.1.1">
+<h4><span class="header-section-number">3.2.1.1</span> Pareto Distribution</h4>
 <p>Pareto discovered that 20% percent of taxpayers had 80% of the income across countries in Europe.
 One parameter of the Pareto power law distribution is α, which is known as the <em>tail index</em>.
 Pareto’s 80-20 example corresponds to α = 1.16.
@@ -402,8 +416,8 @@ The tails get thicker as α gets smaller.</p>
 </div>
 </div>
 </div>
-<div id="lindy-effect" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Lindy Effect</h2>
+<div id="lindy-effect" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Lindy Effect</h2>
 <p><em>Increasing lifetime expections</em></p>
 <blockquote>
 <p>If a book has been in print for forty years, I can expect it to be in print for another forty years. But, and that is the main difference, if it survives another decade, then it will be expected to be in print another fifty years. This, simply, as a rule, tells you why things that have been around for a long time are not “aging” like persons, but “aging” in reverse. Every year that passes without extinction doubles the additional life expectancy. This is an indicator of some robustness. The robustness of an item is proportional to its life! (<em>Taleb</em>)</p>
@@ -434,8 +448,8 @@ the usefulness of which decreases as if you acquire additional relevant informat
 <p><a href="https://alevchuk.medium.com/statistical-testing-of-the-lindy-effect-with-real-data-4f55a5a9a2f0">Levchuk: Testing Lindy</a></p>
 
 </div>
-<div id="superspreaders" class="section level2" number="2.4">
-<h2><span class="header-section-number">2.4</span> Superspreaders</h2>
+<div id="superspreaders" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Superspreaders</h2>
 <p><em>Wong</em></p>
 <p>Superspreading has been recognized as an important phenomenon arising from heterogeneity in individual disease transmission patterns (1). The role of superspreading as a significant source of disease transmission has been appreciated in outbreaks of measles, influenza, rubella, smallpox, Ebola, monkeypox, SARS, and SARS-CoV-2 (1, 2). A basic definition of an nth-percentile superspreading event (SSE) has been proposed to be any infected individual who infects more people than does the nth-percentile of other infected individuals (1). Hence, if the number of secondary cases is randomly distributed, then for large n, SSEs can be viewed as right-tail events. A natural language for understanding the tail events of random distributions is extreme value theory, which has been applied to contexts as diverse as insurance (3) and contagious diseases (4). Here, we apply extreme value theory to empirical data on superspreading in order to gain insight into this critical phenomenon impacting the current COVID-19 pandemic.</p>
 <p><img src="fig/Wong_Superspreader.jpg" /></p>
@@ -501,7 +515,7 @@ These considerations provide additional evidence suggesting that Z is not negati
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="probability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="vaccine.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -525,6 +539,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -545,6 +560,10 @@ gitbook.start({
 "text": null
 },
 "download": ["rsts.pdf", "rsts.epub", "rsts.mobi"],
+"search": {
+"engine": "lunr",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

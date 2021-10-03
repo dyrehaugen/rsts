@@ -1,4 +1,6 @@
 statistics
+probability
+intuition-for-probability
 pandemic-risk-management
 quarantine-fatigue-thins-fat-tailed-impacts
 herd-immunity-impossible-with-new-mutants
@@ -14,6 +16,8 @@ superspreaders
 vaccine
 inequality
 causation
+liang-causality
+causation-in-chaotic-dynamic-systems
 hypothesis-testing
 connecting-to-theory
 glmm
@@ -24,6 +28,8 @@ p-value-hacking
 probit
 spurious-correlation
 trending-variables
+stationarity
+record-events
 power-law
 timescaling-rainfall
 syntetic-control

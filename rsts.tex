@@ -4,8 +4,8 @@
 %
 \documentclass[
 ]{book}
-\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
+\usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
@@ -41,8 +41,7 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
-\usepackage{longtable,booktabs,array}
-\usepackage{calc} % for calculating minipage widths
+\usepackage{longtable,booktabs}
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
 \makeatletter
@@ -78,15 +77,12 @@
 \makeatother
 
 \renewcommand\chaptername{}
-\ifluatex
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
 \title{Statistics}
 \author{Dyrehaugen Web Notebook}
-\date{2021-06-27}
+\date{2021-10-03}
 
 \begin{document}
 \maketitle
@@ -99,6 +95,77 @@
 \chapter{Statistics}\label{statistics}}
 
 \includegraphics{fig/zelda.jpg}
+
+\hypertarget{probability}{%
+\chapter{Probability}\label{probability}}
+
+\hypertarget{intuition-for-probability}{%
+\section{Intuition for Probability}\label{intuition-for-probability}}
+
+\emph{Fix}
+
+The human instinct for probability. By most accounts, this instinct is terrible. And that should strike you as odd. As a rule, evolution does not produce glaring flaws. (It slowly removes them.) So if you see flaws everywhere, it's a good sign that you're observing an organism in a foreign environment, a place to which it is not adapted.
+
+When it comes to probability, I argue that humans now live in a foreign environment. But it is of our own creation. Our intuition, I propose, was shaped by observing probability in short samples --- the information gleaned from a single human lifetime. But with the tools of mathematics, we now see probability as what happens in the infinite long run. It's in this foreign mathematical environment that our intuition now lives.
+
+Unsurprisingly, when we compare our intuition to our mathematics, we find a mismatch. But that doesn't mean our intuition is wrong. Perhaps it is just solving a different problem --- one not usually posed by mathematics. Our intuition, I hypothesize, is designed to predict probability in the short run. And on that front, it may be surprisingly accurate.
+
+As a rule, evolutionary biologists don't look for `bias' in animal behavior. That's because they assume that organisms have evolved to fit their environment. When flaws do appear, it's usually because the organism is in a foreign place --- an environment where its adaptations have become liabilities.3
+
+As an example, take a deer's tendency to freeze when struck by headlights. This suicidal flaw is visible because the deer lives in a foreign environment. Deer evolved to have excellent night vision in a world without steel death machines attached to spotlights. In this world, the transition from light to dark happened slowly, so there was no need for fast pupil reflexes. Nor was there a need to flee from bright light. The evolutionary result is that when struck by light, deer freeze until their eyes adjust. It's a perfectly good behavior \ldots{} in a world without cars. In the industrial world, it's a fatal flaw.
+
+Back to humans and our `flawed' intuition for probability. I suspect that many apparent `biases' in our probability intuition stem from a change in our social environment, a change in the way we view `chance'.
+
+\textbf{The gambler's fallacy}
+
+On August 18, 1913, a group of gamblers at the Monte Carlo Casino lost their shirts. It happened at a roulette table, which had racked up a conspicuous streak of blacks. As the streak grew longer, the gamblers became convinced that red was `due'. And yet, with each new roll they were wrong. The streak finally ended after 26 blacks in a row. By then, nearly everyone had gone broke.
+
+These poor folks fell victim to what we now call the gambler's fallacy --- the belief that if an event happens more frequently than normal during the past, it is less likely to happen in the future. It is a `fallacy' because in games like roulette, each event is `independent'. It doesn't matter if a roulette ball landed on black 25 times in a row. On the next toss, the probability of landing on black remains the same (18/37 on a European wheel, or 18/38 on an American wheel).
+
+Many gamblers know that roulette outcomes are independent events, meaning the past cannot affect the future. And yet their intuition consistently tells them the opposite. Gamblers at the Monte Carlo Casino had an overwhelming feeling that after 25 blacks, the ball had to land on red.
+
+The mathematics tell us that this intuition is wrong. So why would evolution give us such a faulty sense of probability?
+
+It is in `games of chance' (like roulette) that flaws in our probability intuition are most apparent. Curiously, it is in these same games where the mathematics of probability are best understood. I doubt this is a coincidence.
+
+The Monte Carlo gamblers who lost their shirts misled by their instinct.
+We \emph{recognize} our flaws. We know that our instinct misguides us because we've developed formal tools for understanding probability. Importantly, these tools were forged in the very place where our intuition is faulty --- by studying games of chance.
+
+The crux of the problem. To get an accurate sense for innate probability, you need an absurdly large number of observations. And yet humans typically observe probability in short windows. This mismatch may be why our intuition appears wrong. It's been shaped to predict probability within small samples.
+
+The trouble is, this `long run' is impossibly long.
+
+\includegraphics{fig/innate_probability.png}
+
+If observers see a few hundred tosses of the coin, they will deduce the wrong probability of heads.
+Even after a few thousand tosses, observers will be misled. In this simulation, it takes about 100,000 tosses before the `observed' probability converges (with reasonable accuracy) to the `innate' probability.
+
+Few people observe 100,000 tosses of a real coin. And that means their experience can mislead. They may conclude that a coin is `biased' when it is actually not. Nassim Nicholas Taleb calls this mistake getting \href{https://en.wikipedia.org/wiki/Fooled_by_Randomness}{`fooled by randomness'}.
+
+For outcomes that were frequent, we could develop an accurate intuition. We are excellent, for instance, at using facial expressions to judge emotions --- obviously because such judgment is a ubiquitous part of social life. But for outcomes that were rare (things like droughts and floods), patterns would be nearly impossible to see.
+
+As a social species, our most significant interactions are with things that do have a memory (i.e.~other humans). So a good rule of thumb may be to project memory onto everything with which we interact.
+
+It could be that our probability intuition is not actually flawed, but is instead a correct interpretation of the evidence \ldots{} as we see it.
+
+Remember that our intuition has no access to the god's eye view of `innate' probability. Our intuition evolved based only on what our ancestors observed. What's important is that humans typically observe probability in short windows. (For instance, we watch a few dozen tosses of a coin.) Interestingly, over these short windows, independent random events \emph{do} have a memory. Or so it appears.
+
+In his article \href{https://jasoncollins.blog/arent-we-smart-fellow-behavioural-scientists/}{`Aren't we smart, fellow behavioural scientists'}, Jason Collins shows you how to give a coin a `memory'. Just toss it 3 times and watch what follows a heads. Repeat this experiment over and over, and you'll conclude that the coin has a memory. After a heads, the coin is more likely to return a tails.
+
+\includegraphics{fig/tails_after_head_by_multi_tosses.png}
+
+The data shouts at us that the coin has a `memory'. Yet we know this is impossible. What's happening?
+The coin's apparent `memory' is actually an artifact of our observation window of 3 tosses. As we lengthen this window, the coin's memory disappears.
+
+Here's the take-home message. If you flip a coin a few times (and do this repeatedly), the evidence will suggest that the coin has a `memory'. Increase your observation window, though, and the `memory' will disappear.
+
+When the sample size is small, assuming the coin has a memory is a good way to make predictions.
+
+So what is the evolutionary context of our probability intuition? It is random events viewed through a limited window --- the length of a human life. In this context, it's not clear that our probability intuition is actually biased.
+
+Yes, we tend to project `memory' onto random events that are actually independent. And yet when the sample size is small, projecting memory on these events is actually a good way to make predictions.
+
+\href{https://economicsfromthetopdown.com/2021/07/09/is-human-probability-intuition-actually-biased/}{Fix (2021) Is Human Probability Intuition Actually `Biased'?}
 
 \hypertarget{pandemic-risk-management}{%
 \section{Pandemic Risk Management}\label{pandemic-risk-management}}
@@ -339,8 +406,7 @@ fit = elrm(pcrpos/n ~ treatment, ~ treatment,
 r=2, iter=400000, burnIn=1000,
 dataset=data.frame(treatment=factor(c(“masks”, “control”)), pcrpos=c(0, 5), n=c(2392, 2470)) )
 fit$p.values # p value = 0.06, ie just about not significant at the 0.05 level
-fit$p.values.se # standard error on p value = 0.0003
-# this is very close to the 2-sided Fisher exact test p value
+fit$p.values.se # standard error on p value = 0.0003 # this is very close to the 2-sided Fisher exact test p value
 fisher.test(cbind(c(0,2392), c(5,2470-5))) # p value = 0.06
 
 For the 0 vs 15 result:
@@ -923,6 +989,201 @@ In everyday language, dependence, association and correlation are used interchan
 \href{https://www.nature.com/articles/nmeth.3587}{Altman (2015) Association Correlation Causation}
 \href{pdf/Altman_2015_Association_Correlation_and_Causation.pdf}{(pdf)}
 
+\hypertarget{liang-causality}{%
+\section{Liang Causality}\label{liang-causality}}
+
+\textbf{Information Flow-Based Causality}
+
+\emph{Liang (2016) Abstract}
+
+Information flow or information transfer the widely applicable
+general physics notion can be rigorously derived
+from first principles, rather than axiomatically proposed as an ansatz.
+Its logical association with causality is firmly rooted in the dynamical
+system that lies beneath.
+The principle of nil causality that reads, an event is not causal to another
+if the evolution of the latter is independent of the former,
+which transfer entropy analysis and Granger causality test fail to verify
+in many situations, turns out to be a proven theorem here.
+
+Established in this study are the information flows among the components of
+time-discrete mappings and time-continuous dynamical systems,
+both deterministic and stochastic.
+They have been obtained explicitly in closed form, and put to applications
+with the benchmark systems such as the Kaplan-Yorke map, Rössler system,
+baker transformation, Hénon map, and stochastic potential flow.
+
+Besides unraveling the causal relations as expected from the respective systems,
+some of the applications show that the information flow structure underlying a
+complex trajectory pattern could be tractable.
+
+For linear systems, the resulting remarkably concise formula asserts analytically that
+causation implies correlation,
+while correlation does not imply causation,
+providing a mathematical basis for the long-standing philosophical debate
+over causation versus correlation.
+
+\href{https://journals.aps.org/pre/abstract/10.1103/PhysRevE.94.052201}{Liang (2016) Information flow and causality as rigorous notions \emph{ab initio}}
+\href{pdf/Liang_2016_Information_Flow_Causality.pdf}{(pdf)}
+
+\emph{Liang (2021) Abstract}
+
+Causality analysis is an important problem lying at the heart of science, and is of particular
+importance in data science and machine learning. An endeavor during the past 16 years viewing
+causality as a real physical notion so as to formulate it from first principles, however, seems to
+have gone unnoticed. This study introduces to the community this line of work, with a long-due
+generalization of the information flow-based bivariate time series causal inference to multivariate
+series, based on the recent advance in theoretical development. The resulting formula is transparent,
+and can be implemented as a computationally very efficient algorithm for application. It can be
+normalized and tested for statistical significance. Different from the previous work along this line
+where only information flows are estimated, here an algorithm is also implemented to quantify the
+influence of a unit to itself. While this forms a challenge in some causal inferences, here it comes
+naturally, and hence the identification of self-loops in a causal graph is fulfilled automatically as the
+causalities along edges are inferred. To demonstrate the power of the approach, presented here are
+two applications in extreme situations. The first is a network of multivariate processes buried in
+heavy noises (with the noise-to-signal ratio exceeding 100), and the second a network with nearly
+synchronized chaotic oscillators. In both graphs, confounding processes exist. While it seems to be a
+challenge to reconstruct from given series these causal graphs, an easy application of the algorithm
+immediately reveals the desideratum. Particularly, the confounding processes have been accurately
+differentiated. Considering the surge of interest in the community, this study is very timely.
+
+\href{https://www.mdpi.com/1099-4300/23/6/679}{Liang (2021) Normalized Multivariate Time Series Causality Analysis and Causal Graph Reconstruction}
+\href{pdf/Liang_2021_Time_Series_Causality.pdf}{(pdf)}
+
+\emph{Liang (2014) Abstract}
+
+Given two time series, can one faithfully tell, in a rigorous and
+quantitative way, the cause and effect between them?
+Based on a recently rigorized physical notion, namely, information flow,
+we solve an inverse problem and give this important and challenging question,
+which is of interest in a wide variety of disciplines, a positive answer.
+Here causality is measured by the time rate of information flowing
+from one series to the other.
+The resulting formula is tight in form, involving only commonly used statistics,
+namely, sample covariances;
+an immediate corollary is that causation implies correlation,
+but correlation does not imply causation.
+It has been validated with touchstone linear and nonlinear series,
+purportedly generated with one-way causality that evades the traditional approaches.
+It has also been applied successfully to the investigation of real-world problems;
+an example presented here is the cause-and-effect relation between
+the two climate modes, El Niño and the Indian Ocean Dipole (IOD),
+which have been linked to hazards in far-flung regions of the globe.
+In general, the two modes are mutually causal, but the causality is asymmetric:
+El Niño tends to stabilize IOD, while IOD functions to make El Niño more uncertain.
+To El Niño, the information flowing from IOD manifests itself as a propagation
+of uncertainty from the Indian Ocean.
+
+\href{https://journals.aps.org/pre/abstract/10.1103/PhysRevE.90.052150}{Liang (2014) Unraveling the cause-effect relation between time series}
+\href{pdf/Liang_2014_Unraveling_Cause_Effect.pdf}{(pdf)}
+
+\emph{Hagan (2019) Abstract}
+
+The interaction between the land surface and the atmosphere is of significant importance in the climate system because it is a key driver of the exchanges of energy and water. Several important relations to heat waves, floods, and droughts exist that are based on the interaction of soil moisture and, for instance, air temperature and humidity. Our ability to separate the elements of this coupling, identify the exact locations where they are strongest, and quantify their strengths is, therefore, of paramount importance to their predictability. A recent rigorous causality formalism based on the Liang--Kleeman (LK) information flow theory has been shown, both theoretically and in real-world applications, to have the necessary asymmetry to infer the directionality and magnitude within geophysical interactions. However, the formalism assumes stationarity in time, whereas the interactions within the land surface and atmosphere are generally nonstationary; furthermore, it requires a sufficiently long time series to ensure statistical sufficiency. In this study, we remedy this difficulty by using the square root Kalman filter to estimate the causality based on the LK formalism to derive a time-varying form. Results show that the new formalism has similar properties compared to its time-invariant form. It is shown that it is also able to capture the time-varying causality structure within soil moisture--air temperature coupling. An advantage is that it does not require very long time series to make an accurate estimation. Applying a wavelet transform to the results also reveals the full range of temporal scales of the interactions.
+
+\href{https://journals.ametsoc.org/view/journals/clim/32/21/jcli-d-18-0881.1.xml}{Hagan (2019) Causality Formalism}
+\href{pdf/Hagan_2019_Causality_Formalism.pdf}{(pdf)}
+
+(See also rclm/CO2-lag: Stips)
+
+\hypertarget{causation-in-chaotic-dynamic-systems}{%
+\section{Causation in Chaotic Dynamic Systems}\label{causation-in-chaotic-dynamic-systems}}
+
+\emph{Palus Abstract}
+
+Using several methods for detection of causality in time series we show in a numerical study that coupled
+chaotic dynamical systems violate the first principle of Granger causality that the cause precedes the effect.
+While such a violation can be observed in formal applications of time series analysis methods, it cannot occur in
+nature, due to the relation between entropy production and temporal irreversibility. The obtained knowledge,
+however, can help to understand the type of causal relations observed in experimental data, namely can help
+to distinguish linear transfer of time-delayed signals from nonlinear interactions. We illustrate these findings
+in causality detected in experimental time series from the climate system and mammalian cardio-respiratory
+interactions.
+
+\emph{Palus Memo}
+
+Chaotic dynami-
+cal systems are mathematical models reflecting
+very complicated behaviour. Recently, cooperative
+phenomena have been observed in coupled
+chaotic systems due to their ability to synchronize.
+On the way to synchronization, the question
+which system influences other systems emerges.
+To answer this question, researches successfully
+applied the Granger causality methods. In this
+study we demonstrate that chaotic dynamical systems
+do not respect the principle of the effect fol-
+lowing the cause. We explain, however, that such
+principle violation cannot occur in nature, only in
+mathematical models which, on the other hand,
+can help us to understand the mechanisms behind
+the experimentally observed causalities.
+
+Probably the first approach to de-
+scribe causality in measurable, mathematically expressible
+terms can be traced to the 1950's work of the father
+of cybernetics, Norbert Wiener 1 who wrote: For two
+simultaneously measured signals, if we can predict the first
+signal better by using the past information from the second one than by using the information without it, then we
+call the second signal causal to the first one. Later, this
+concept has been introduced into time series analysis by
+C. W. J. Granger, the 2003 Nobel prize winner in economy.
+In his Nobel lecture 2 he recalled the inspiration by
+the Wiener's work and identified two components of the
+statement about causality:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  The cause occurs before the effect; and
+\item
+  The cause contains information about the effect
+\end{enumerate}
+
+that is unique, and is in no other variable.
+According to Granger, a consequence of these statements
+is that the causal variable can help to forecast
+the effect variable after other data has been first used. 2
+This restricted sense of causality, referred to as Granger
+causality, GC thereafter, characterizes the extent to
+which a process \(X_t\) is leading another process, \(Y_t\) , and
+builds upon the notion of incremental predictability. It
+is said that the process \(X_t\) Granger causes process \(Y_t\) if
+future values of \(Y_t\) can be better predicted using the past
+values of \(X_t\) and \(Y_t\) rather then only past values of \(Y_t\) .
+
+Due to possible nonlinear dependence in time series from
+real-world processes, many authors have proposed vari-
+ous nonlinear generalizations of the GC principle.
+
+In the
+following we will particularly discuss the generalization
+of GC based on probability functionals from information
+theory. The information-theoretic functionals, in their
+general formulation, are applicable to a broad range of
+nonlinear processes, however, we will focus on time
+series generated by nonlinear, possibly chaotic dynamical
+systems. The observation that the chaotic dynamical systems
+generate information had led to an interesting and
+fruitful symbiosis of ergodic theory of dynamical systems
+and information theory.
+
+that chaotic systems are not reversible in time.
+Therefore the observed violation of the causality principle can
+occur only in a numerical study but not in real-world
+systems. The time reversal in causality analysis can help
+to distinguish between a linear transfer of a time-delayed
+signal and nonlinear interactions of dynamical systems.
+Any detection of causality, however, should be accompa-
+nied by a battery of time series analysis methods, namely
+tests for nonlinearity and synchronization should be performed,
+as well as standard spectral analysis enhanced by
+time-frequency analysis since causal links can occur in or
+between different time scales of multiscale processes
+
+\href{https://www.researchgate.net/publication/326475420_Causality_dynamical_systems_and_the_arrow_of_time}{Palus (2018) Causality, dynamical systems and the arrow of time}
+\href{pdf/Palus_2018_Causality_Dynamical_Systems_Time_Arrow.pdf}{(pdf)}
+
 \hypertarget{hypothesis-testing}{%
 \chapter{Hypothesis Testing}\label{hypothesis-testing}}
 
@@ -1478,6 +1739,32 @@ results are clearly reflected in finite samples. As an illustration, we apply ou
 the seminal study of Yule (1926).
 
 \href{pdf/Wu_2007_Spurious_Trending.pdf}{Wu (2007) On spurious regressions with trending variables (pdf)}
+
+\hypertarget{stationarity}{%
+\chapter{Stationarity}\label{stationarity}}
+
+\hypertarget{record-events}{%
+\section{Record Events}\label{record-events}}
+
+Whenever there is a new record-breaking weather event, such as record-high temperatures, it is natural to ask whether the occurrence of such an event is due to a climate change. Before we proceed, it may be useful to define the term `statistically stationary', the meaning here being that statistical aspects of the weather (means, standard deviation etc.) aren't changing. In statistics, there is a large volume of literature on record-breaking behaviour, and statistically stationary systems will produce new record-breaking events from time to time. On the other hand, one would expect to see more new record-breaking events in a changing climate: when the mean temperature level rises new temperatures will surpass past record-highs.
+
+\href{https://www.realclimate.org/index.php/archives/2005/08/on-record-high-temperatures/}{Benestad (2005) On record-breaking events (RealClimate.org)}
+
+*Abstract Benestad)
+
+This study applies a simple framework for analysing the incidence of record events. A
+test of this method on the global mean temperature yields results consistent with a global warming,
+where record-warm events are more frequent than for a stationary series. The record event analysis
+suggests that the number of record-warm monthly global mean temperatures is higher than
+expected, and that the number of record events in the absolute monthly maximum and minimum
+temperatures in the Nordic countries is slightly higher than expected from a null hypothesis of a sta-
+tionary behaviour. Because the different station series are not strictly independent, it is difficult to
+resolve whether there is a significant trend in the warmest absolute monthly minimum temperatures
+in the Nordic countries. The behaviour of the maximum monthly 24 h precipitation is not distin-
+guishable from the null hypothesis that the series consists of independent and identically distributed
+random variables.
+
+\href{pdf/Benestad_2003_How_often_record_event.pdf}{Benestad (2003) How often can we expect a record event? (Climate Resarch) (pdf)}
 
 \hypertarget{power-law}{%
 \chapter{Power law}\label{power-law}}

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>C NEWS | Statistics</title>
   <meta name="description" content="C NEWS | Statistics" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
   <meta property="og:title" content="C NEWS | Statistics" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Dyrehaugen Web Notebook" />
 
 
-<meta name="date" content="2021-06-27" />
+<meta name="date" content="2021-10-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,8 @@
   
 <link rel="prev" href="links.html"/>
 
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,6 +50,10 @@
 
 
 
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 
@@ -70,53 +74,63 @@
 <li><a href="./">Statistics</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Statistics</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Statistics</a></li>
+<li class="chapter" data-level="2" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>2</b> Probability</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#pandemic-risk-management"><i class="fa fa-check"></i><b>1.1</b> Pandemic Risk Management</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#quarantine-fatigue-thins-fat-tailed-impacts"><i class="fa fa-check"></i><b>1.2</b> Quarantine fatigue thins fat-tailed impacts</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#herd-immunity-impossible-with-new-mutants"><i class="fa fa-check"></i><b>1.3</b> Herd Immunity impossible with new Mutants</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#danish-mask-study"><i class="fa fa-check"></i><b>1.4</b> Danish Mask Study</a></li>
+<li class="chapter" data-level="2.1" data-path="probability.html"><a href="probability.html#intuition-for-probability"><i class="fa fa-check"></i><b>2.1</b> Intuition for Probability</a></li>
+<li class="chapter" data-level="2.2" data-path="probability.html"><a href="probability.html#pandemic-risk-management"><i class="fa fa-check"></i><b>2.2</b> Pandemic Risk Management</a></li>
+<li class="chapter" data-level="2.3" data-path="probability.html"><a href="probability.html#quarantine-fatigue-thins-fat-tailed-impacts"><i class="fa fa-check"></i><b>2.3</b> Quarantine fatigue thins fat-tailed impacts</a></li>
+<li class="chapter" data-level="2.4" data-path="probability.html"><a href="probability.html#herd-immunity-impossible-with-new-mutants"><i class="fa fa-check"></i><b>2.4</b> Herd Immunity impossible with new Mutants</a></li>
+<li class="chapter" data-level="2.5" data-path="probability.html"><a href="probability.html#danish-mask-study"><i class="fa fa-check"></i><b>2.5</b> Danish Mask Study</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="fat-tails.html"><a href="fat-tails.html"><i class="fa fa-check"></i><b>2</b> Fat Tails</a>
+<li class="chapter" data-level="3" data-path="fat-tails.html"><a href="fat-tails.html"><i class="fa fa-check"></i><b>3</b> Fat Tails</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="fat-tails.html"><a href="fat-tails.html#extremes"><i class="fa fa-check"></i><b>2.1</b> Extremes</a>
+<li class="chapter" data-level="3.1" data-path="fat-tails.html"><a href="fat-tails.html#extremes"><i class="fa fa-check"></i><b>3.1</b> Extremes</a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="fat-tails.html"><a href="fat-tails.html#catastrophe-principle"><i class="fa fa-check"></i><b>2.1.1</b> Catastrophe Principle</a></li>
+<li class="chapter" data-level="3.1.1" data-path="fat-tails.html"><a href="fat-tails.html#catastrophe-principle"><i class="fa fa-check"></i><b>3.1.1</b> Catastrophe Principle</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="fat-tails.html"><a href="fat-tails.html#statistical-consequences-of-fat-tails"><i class="fa fa-check"></i><b>2.2</b> Statistical Consequences of Fat Tails</a>
+<li class="chapter" data-level="3.2" data-path="fat-tails.html"><a href="fat-tails.html#statistical-consequences-of-fat-tails"><i class="fa fa-check"></i><b>3.2</b> Statistical Consequences of Fat Tails</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="fat-tails.html"><a href="fat-tails.html#power-law-distributions"><i class="fa fa-check"></i><b>2.2.1</b> Power Law Distributions</a></li>
+<li class="chapter" data-level="3.2.1" data-path="fat-tails.html"><a href="fat-tails.html#power-law-distributions"><i class="fa fa-check"></i><b>3.2.1</b> Power Law Distributions</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="fat-tails.html"><a href="fat-tails.html#lindy-effect"><i class="fa fa-check"></i><b>2.3</b> Lindy Effect</a></li>
-<li class="chapter" data-level="2.4" data-path="fat-tails.html"><a href="fat-tails.html#superspreaders"><i class="fa fa-check"></i><b>2.4</b> Superspreaders</a></li>
+<li class="chapter" data-level="3.3" data-path="fat-tails.html"><a href="fat-tails.html#lindy-effect"><i class="fa fa-check"></i><b>3.3</b> Lindy Effect</a></li>
+<li class="chapter" data-level="3.4" data-path="fat-tails.html"><a href="fat-tails.html#superspreaders"><i class="fa fa-check"></i><b>3.4</b> Superspreaders</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="vaccine.html"><a href="vaccine.html"><i class="fa fa-check"></i><b>3</b> Vaccine</a></li>
-<li class="chapter" data-level="4" data-path="inequality.html"><a href="inequality.html"><i class="fa fa-check"></i><b>4</b> Inequality</a></li>
-<li class="chapter" data-level="5" data-path="causation.html"><a href="causation.html"><i class="fa fa-check"></i><b>5</b> Causation</a></li>
-<li class="chapter" data-level="6" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>6</b> Hypothesis Testing</a>
+<li class="chapter" data-level="4" data-path="vaccine.html"><a href="vaccine.html"><i class="fa fa-check"></i><b>4</b> Vaccine</a></li>
+<li class="chapter" data-level="5" data-path="inequality.html"><a href="inequality.html"><i class="fa fa-check"></i><b>5</b> Inequality</a></li>
+<li class="chapter" data-level="6" data-path="causation.html"><a href="causation.html"><i class="fa fa-check"></i><b>6</b> Causation</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#connecting-to-theory"><i class="fa fa-check"></i><b>6.1</b> Connecting to Theory</a></li>
-<li class="chapter" data-level="6.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#glmm"><i class="fa fa-check"></i><b>6.2</b> GLMM</a></li>
-<li class="chapter" data-level="6.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#logit"><i class="fa fa-check"></i><b>6.3</b> Logit</a>
+<li class="chapter" data-level="6.1" data-path="causation.html"><a href="causation.html#liang-causality"><i class="fa fa-check"></i><b>6.1</b> Liang Causality</a></li>
+<li class="chapter" data-level="6.2" data-path="causation.html"><a href="causation.html#causation-in-chaotic-dynamic-systems"><i class="fa fa-check"></i><b>6.2</b> Causation in Chaotic Dynamic Systems</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>7</b> Hypothesis Testing</a>
 <ul>
-<li class="chapter" data-level="6.3.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#odds-ratio"><i class="fa fa-check"></i><b>6.3.1</b> Odd’s Ratio</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="p-test.html"><a href="p-test.html"><i class="fa fa-check"></i><b>7</b> P test</a>
+<li class="chapter" data-level="7.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#connecting-to-theory"><i class="fa fa-check"></i><b>7.1</b> Connecting to Theory</a></li>
+<li class="chapter" data-level="7.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#glmm"><i class="fa fa-check"></i><b>7.2</b> GLMM</a></li>
+<li class="chapter" data-level="7.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#logit"><i class="fa fa-check"></i><b>7.3</b> Logit</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="p-test.html"><a href="p-test.html#p-value-hacking"><i class="fa fa-check"></i><b>7.1</b> P-Value Hacking</a></li>
-<li class="chapter" data-level="7.2" data-path="p-test.html"><a href="p-test.html#probit"><i class="fa fa-check"></i><b>7.2</b> Probit</a></li>
+<li class="chapter" data-level="7.3.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#odds-ratio"><i class="fa fa-check"></i><b>7.3.1</b> Odd’s Ratio</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="spurious-correlation.html"><a href="spurious-correlation.html"><i class="fa fa-check"></i><b>8</b> Spurious Correlation</a>
+</ul></li>
+<li class="chapter" data-level="8" data-path="p-test.html"><a href="p-test.html"><i class="fa fa-check"></i><b>8</b> P test</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="spurious-correlation.html"><a href="spurious-correlation.html#trending-variables"><i class="fa fa-check"></i><b>8.1</b> Trending Variables</a></li>
+<li class="chapter" data-level="8.1" data-path="p-test.html"><a href="p-test.html#p-value-hacking"><i class="fa fa-check"></i><b>8.1</b> P-Value Hacking</a></li>
+<li class="chapter" data-level="8.2" data-path="p-test.html"><a href="p-test.html#probit"><i class="fa fa-check"></i><b>8.2</b> Probit</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="power-law.html"><a href="power-law.html"><i class="fa fa-check"></i><b>9</b> Power law</a>
+<li class="chapter" data-level="9" data-path="spurious-correlation.html"><a href="spurious-correlation.html"><i class="fa fa-check"></i><b>9</b> Spurious Correlation</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="power-law.html"><a href="power-law.html#timescaling-rainfall"><i class="fa fa-check"></i><b>9.1</b> Timescaling Rainfall</a></li>
+<li class="chapter" data-level="9.1" data-path="spurious-correlation.html"><a href="spurious-correlation.html#trending-variables"><i class="fa fa-check"></i><b>9.1</b> Trending Variables</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="syntetic-control.html"><a href="syntetic-control.html"><i class="fa fa-check"></i><b>10</b> Syntetic Control</a></li>
-<li class="chapter" data-level="11" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>11</b> Econometrics</a></li>
+<li class="chapter" data-level="10" data-path="stationarity.html"><a href="stationarity.html"><i class="fa fa-check"></i><b>10</b> Stationarity</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="stationarity.html"><a href="stationarity.html#record-events"><i class="fa fa-check"></i><b>10.1</b> Record Events</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="power-law.html"><a href="power-law.html"><i class="fa fa-check"></i><b>11</b> Power law</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="power-law.html"><a href="power-law.html#timescaling-rainfall"><i class="fa fa-check"></i><b>11.1</b> Timescaling Rainfall</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="syntetic-control.html"><a href="syntetic-control.html"><i class="fa fa-check"></i><b>12</b> Syntetic Control</a></li>
+<li class="chapter" data-level="13" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>13</b> Econometrics</a></li>
 <li class="part"><span><b>I Appendices</b></span></li>
 <li class="appendix"><span><b>Appendices</b></span></li>
 <li class="chapter" data-level="A" data-path="about.html"><a href="about.html"><i class="fa fa-check"></i><b>A</b> About</a></li>
@@ -142,7 +156,7 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="news" class="section level1" number="14">
+<div id="news" class="section level1" number="16">
 <h1><span class="header-section-number">C</span> NEWS</h1>
 
 </div>
@@ -175,6 +189,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -195,6 +210,10 @@ gitbook.start({
 "text": null
 },
 "download": ["rsts.pdf", "rsts.epub", "rsts.mobi"],
+"search": {
+"engine": "lunr",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
