@@ -82,7 +82,7 @@
 
 \title{Statistics}
 \author{Dyrehaugen Web Notebook}
-\date{2021-10-03}
+\date{2021-11-02}
 
 \begin{document}
 \maketitle
@@ -1766,8 +1766,83 @@ random variables.
 
 \href{pdf/Benestad_2003_How_often_record_event.pdf}{Benestad (2003) How often can we expect a record event? (Climate Resarch) (pdf)}
 
-\hypertarget{power-law}{%
-\chapter{Power law}\label{power-law}}
+\hypertarget{power-laws}{%
+\chapter{Power laws}\label{power-laws}}
+
+\hypertarget{generative-models}{%
+\section{Generative Models}\label{generative-models}}
+
+\emph{Mitzenmacher Abstract}
+
+Recently, I became interested in a current debate over whether file size
+distributions are best modelled by a power law distribution or a lognormal distribution.
+In trying to learn enough about these distributions to settle the question, I found a rich
+and long history, spanning many fields. Indeed, several recently proposed models from
+the computer science community have antecedents in work from decades ago. Here,
+I briefly survey some of this history, focusing on underlying generative models that
+lead to these distributions. One finding is that lognormal and power law distributions
+connect quite naturally, and hence, it is not surprising that lognormal distributions
+have arisen as a possible alternative to power law distributions across many fields.
+
+\emph{Mitzenmacher Memo}
+
+\href{pdf/Mitzenmacher_2004_Generative_Models_Power_Law.pdf}{Mitzenmacher(2004) A Brief History of Generative Models for Power Law and Lognormal Distributions (pdf)}
+
+\hypertarget{income-distribution-power-law}{%
+\section{Income Distribution Power Law}\label{income-distribution-power-law}}
+
+\emph{Fix Abstract}
+
+Although the determinants of income are complex, the results are surprisingly uniform. To a first approximation, top incomes follow a power-law distribution, and the redistribution of income corresponds to a change in the power-law exponent. Given the messiness of the struggle for resources, why is the outcome so simple?
+
+This paper explores the idea that the (re)distribution of top incomes is uniform because it is shaped by a ubiquitous feature of social life, namely hierarchy. Using a model first developed by Herbert Simon and Harold Lydall, I show that hierarchy can explain the power-law distribution of top incomes, including how income gets redistributed as the rich get richer.
+
+\emph{Fix Memo}
+
+Although the causal mechanisms may appear complex, the mathematical mechanisms for generating power laws are surprisingly simple. I will discuss two main routes. (For a review of mechanisms for generating power laws, see Mitzenmacher, 2004.)
+
+The first route to a power law is through income dynamics. Suppose an individual starts out with annual income I . Over time, their income grows and shrinks for reasons that we do not understand. But what we do know is that this income change can be modelled as a random number. After t years, the person's new income is the product of successive random growth rates, g :
+
+\(I_t = I_1 * g_1 * g_2 * ... * g_t\)
+
+Now suppose that everyone's income behaves the same way: it is the product of a series of random growth rates. After many growth iterations, the resulting distribution of income will follow a lognormal distribution --- a fact discovered by Robert Gibrat (\href{https://economicsfromthetopdown.com/2021/10/24/redistributing-income-through-hierarchy/\#ref-gibrat_les_1931}{1931}).
+
+To get a power-law distribution, we introduce one more requirement: a lower `wall' that limits the smallness of incomes. If anyone's income gets below this lower threshold, it gets `reflected' in the opposite direction. After many growth iterations, income will be distributed according to a power law.
+
+This `stochastic' model of income was first articulated by David Champernowne (\href{https://economicsfromthetopdown.com/2021/10/24/redistributing-income-through-hierarchy/\#ref-champernowne_model_1953}{1953}). While the model's mathematics are beyond dispute, many political economists find its appeal to `randomness' troubling. After all, incomes have definite causes (or so we believe). But to be fair to the Champernowne model, it does not claim that income dynamics are actually random, only that we can model them as such.
+
+The Champernowne model tells us that we can understand the power-law distribution of top incomes without knowing anything about the complexities of human behavior. All that we need are general assumptions about the dynamics of income. I find this result fascinating because it is counter-intuitive. Yet it is also underwhelming because it does not tell us why people earn what they do. For that reason, I will focus on a second route to power laws --- a route that can be tied to social structure.
+
+The second route to a power law comes from merging two different exponential functions. Suppose two variables, \(x\) and \(y\) , are both exponential functions of a third variable, \(t\) :
+
+\[x = e^{a*t}\]
+
+\[y = e^{b*t}\]
+
+If we combine these two functions and eliminate t , we find that x and y are related by a power law:
+
+\[y = x ^{b/a}\]
+
+So we can create a power law by merging two exponential functions.
+The question is, why would such functions apply to income?
+The answer, I propose, is simple.
+These are the equations that describe income in a hierarchy.
+
+Because Simon and Lydall's pioneering research was completed a half century ago, one would think that today there would be a burgeoning literature on the distributional consequences of hierarchy. Sadly, this is not the case. Instead, shortly after Simon and Lydall published their work, the study of income distribution became dominated by human capital theory, which focused on personal traits and neglected `structural' explanations of income.
+
+Treating CEOs as canaries in the coal mine. I propose that the exploding pay of CEOs is part of a wider redistribution of income within hierarchies. It is evidence that US firms are becoming more \emph{despotic}:
+Rulers can use their power to benefit the group. But they can also use their power to enrich themselves. The more they do so, the more `\emph{despotic}' the hierarchy.
+The more despotic the hierarchy becomes, the more rapidly income will increase with hierarchical power.
+
+It makes sense, then, to use the scaling of income with hierarchical power, D , as a measure of the `degree of hierarchical despotism'. The greater the value of D , the more despotic the hierarchy.
+
+\[relative income \propto (hierarchical power)^D\]
+
+\includegraphics{fig/despotism_diagram.png}
+
+In large hierarchies, the value of \(D\) affects top incomes dramatically. For instance, when \(D=0.1\) , a CEO with one million subordinates will earn only about 4 times more than a bottom-ranked worker. But when \(D=1\) , the same CEO will earn a million times more than an entry-level employee.
+
+\href{https://economicsfromthetopdown.com/2021/10/24/redistributing-income-through-hierarchy/}{Fix (2021) Redistributing Income Through Hierarchy}
 
 \hypertarget{timescaling-rainfall}{%
 \section{Timescaling Rainfall}\label{timescaling-rainfall}}

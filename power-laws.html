@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>13 Econometrics | Statistics</title>
-  <meta name="description" content="13 Econometrics | Statistics" />
+  <title>11 Power laws | Statistics</title>
+  <meta name="description" content="11 Power laws | Statistics" />
   <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="13 Econometrics | Statistics" />
+  <meta property="og:title" content="11 Power laws | Statistics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="dyrehaugen/rsts" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="13 Econometrics | Statistics" />
+  <meta name="twitter:title" content="11 Power laws | Statistics" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="syntetic-control.html"/>
-<link rel="next" href="about.html"/>
+<link rel="prev" href="stationarity.html"/>
+<link rel="next" href="syntetic-control.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -158,33 +158,83 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="econometrics" class="section level1" number="13">
-<h1><span class="header-section-number">13</span> Econometrics</h1>
-<p><em>Goldsmith-Pinkham</em></p>
-<p><strong>Gary Chamberlain</strong></p>
-<p>This document contains the set of lecture notes from the late Gary Chamberlain’s 2010 Econometrics class (EC2120) that I (Paul Goldsmith-Pinkham) took during my economics Ph.D. at Harvard University. Gary was a remarkable teacher and this class was an amazing experience for me as a young economist.</p>
-<p>A few things worth noting from my experience taking this course:</p>
-<pre><code>The course is somewhat unique in not introducing any inference until Lecture 7 (halfway through the course). The focus prior to this is exclusively on estimation using regression.
-The lectures are linked together in groups (even though they are not marked this way). Lectures 1-3 reflect the underlying setup in notation and framework for the rest of the course. Lectures 6-9 setup inference. Lecture 9-11 discuss a general framework for using moment conditions.
-During my semester, we never got through lectures 13-15, which suggests that this is a lot of material for a single semester.
-Gary would continually refer back to Lecture 4 and Lecture 9 (indeed, I have Gary&#39;s voice saying &quot;if we think back to the Note 9 framework...&quot; burned into my brain. As a result, these are also some of the longest and densest lectures.
-The last 4 sections are review problems that Gary provided for preparation for the final exam. These are very fun problems, but we were not provided solutions. So, you&#39;ll have to figure them out on your own!</code></pre>
-<p><a href="https://github.com/paulgp/GaryChamberlainLectureNotes">Chamberlain Lecture Notes (Github)</a></p>
+<div id="power-laws" class="section level1" number="11">
+<h1><span class="header-section-number">11</span> Power laws</h1>
+<div id="generative-models" class="section level2" number="11.1">
+<h2><span class="header-section-number">11.1</span> Generative Models</h2>
+<p><em>Mitzenmacher Abstract</em></p>
+<p>Recently, I became interested in a current debate over whether file size
+distributions are best modelled by a power law distribution or a lognormal distribution.
+In trying to learn enough about these distributions to settle the question, I found a rich
+and long history, spanning many fields. Indeed, several recently proposed models from
+the computer science community have antecedents in work from decades ago. Here,
+I briefly survey some of this history, focusing on underlying generative models that
+lead to these distributions. One finding is that lognormal and power law distributions
+connect quite naturally, and hence, it is not surprising that lognormal distributions
+have arisen as a possible alternative to power law distributions across many fields.</p>
+<p><em>Mitzenmacher Memo</em></p>
+<p><a href="pdf/Mitzenmacher_2004_Generative_Models_Power_Law.pdf">Mitzenmacher(2004) A Brief History of Generative Models for Power Law and Lognormal Distributions (pdf)</a></p>
+</div>
+<div id="income-distribution-power-law" class="section level2" number="11.2">
+<h2><span class="header-section-number">11.2</span> Income Distribution Power Law</h2>
+<p><em>Fix Abstract</em></p>
+<p>Although the determinants of income are complex, the results are surprisingly uniform. To a first approximation, top incomes follow a power-law distribution, and the redistribution of income corresponds to a change in the power-law exponent. Given the messiness of the struggle for resources, why is the outcome so simple?</p>
+<p>This paper explores the idea that the (re)distribution of top incomes is uniform because it is shaped by a ubiquitous feature of social life, namely hierarchy. Using a model first developed by Herbert Simon and Harold Lydall, I show that hierarchy can explain the power-law distribution of top incomes, including how income gets redistributed as the rich get richer.</p>
+<p><em>Fix Memo</em></p>
+<p>Although the causal mechanisms may appear complex, the mathematical mechanisms for generating power laws are surprisingly simple. I will discuss two main routes. (For a review of mechanisms for generating power laws, see Mitzenmacher, 2004.)</p>
+<p>The first route to a power law is through income dynamics. Suppose an individual starts out with annual income I . Over time, their income grows and shrinks for reasons that we do not understand. But what we do know is that this income change can be modelled as a random number. After t years, the person’s new income is the product of successive random growth rates, g :</p>
+<p><span class="math inline">\(I_t = I_1 * g_1 * g_2 * ... * g_t\)</span></p>
+<p>Now suppose that everyone’s income behaves the same way: it is the product of a series of random growth rates. After many growth iterations, the resulting distribution of income will follow a lognormal distribution — a fact discovered by Robert Gibrat (<a href="https://economicsfromthetopdown.com/2021/10/24/redistributing-income-through-hierarchy/#ref-gibrat_les_1931">1931</a>).</p>
+<p>To get a power-law distribution, we introduce one more requirement: a lower ‘wall’ that limits the smallness of incomes. If anyone’s income gets below this lower threshold, it gets ‘reflected’ in the opposite direction. After many growth iterations, income will be distributed according to a power law.</p>
+<p>This ‘stochastic’ model of income was first articulated by David Champernowne (<a href="https://economicsfromthetopdown.com/2021/10/24/redistributing-income-through-hierarchy/#ref-champernowne_model_1953">1953</a>). While the model’s mathematics are beyond dispute, many political economists find its appeal to ‘randomness’ troubling. After all, incomes have definite causes (or so we believe). But to be fair to the Champernowne model, it does not claim that income dynamics are actually random, only that we can model them as such.</p>
+<p>The Champernowne model tells us that we can understand the power-law distribution of top incomes without knowing anything about the complexities of human behavior. All that we need are general assumptions about the dynamics of income. I find this result fascinating because it is counter-intuitive. Yet it is also underwhelming because it does not tell us why people earn what they do. For that reason, I will focus on a second route to power laws — a route that can be tied to social structure.</p>
+<p>The second route to a power law comes from merging two different exponential functions. Suppose two variables, <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> , are both exponential functions of a third variable, <span class="math inline">\(t\)</span> :</p>
+<p><span class="math display">\[x = e^{a*t}\]</span></p>
+<p><span class="math display">\[y = e^{b*t}\]</span></p>
+<p>If we combine these two functions and eliminate t , we find that x and y are related by a power law:</p>
+<p><span class="math display">\[y = x ^{b/a}\]</span></p>
+<p>So we can create a power law by merging two exponential functions.
+The question is, why would such functions apply to income?
+The answer, I propose, is simple.
+These are the equations that describe income in a hierarchy.</p>
+<p>Because Simon and Lydall’s pioneering research was completed a half century ago, one would think that today there would be a burgeoning literature on the distributional consequences of hierarchy. Sadly, this is not the case. Instead, shortly after Simon and Lydall published their work, the study of income distribution became dominated by human capital theory, which focused on personal traits and neglected ‘structural’ explanations of income.</p>
+<p>Treating CEOs as canaries in the coal mine. I propose that the exploding pay of CEOs is part of a wider redistribution of income within hierarchies. It is evidence that US firms are becoming more <em>despotic</em>:
+Rulers can use their power to benefit the group. But they can also use their power to enrich themselves. The more they do so, the more ‘<em>despotic</em>’ the hierarchy.
+The more despotic the hierarchy becomes, the more rapidly income will increase with hierarchical power.</p>
+<p>It makes sense, then, to use the scaling of income with hierarchical power, D , as a measure of the ‘degree of hierarchical despotism’. The greater the value of D , the more despotic the hierarchy.</p>
+<p><span class="math display">\[relative income \propto (hierarchical power)^D\]</span></p>
+<p><img src="fig/despotism_diagram.png" /></p>
+<p>In large hierarchies, the value of <span class="math inline">\(D\)</span> affects top incomes dramatically. For instance, when <span class="math inline">\(D=0.1\)</span> , a CEO with one million subordinates will earn only about 4 times more than a bottom-ranked worker. But when <span class="math inline">\(D=1\)</span> , the same CEO will earn a million times more than an entry-level employee.</p>
+<p><a href="https://economicsfromthetopdown.com/2021/10/24/redistributing-income-through-hierarchy/">Fix (2021) Redistributing Income Through Hierarchy</a></p>
+</div>
+<div id="timescaling-rainfall" class="section level2" number="11.3">
+<h2><span class="header-section-number">11.3</span> Timescaling Rainfall</h2>
+<p><em>Abstract Benestad</em></p>
+<p>Abstract
+A simple formula for estimating approximate values of return levels for sub-daily rainfall is
+presented and tested. It was derived from a combination of simple mathematical principles,
+approximations and fitted to 10 year return levels taken from intensity-duration-frequency (IDF)
+curves representing 14 sites in Oslo. The formula was subsequently evaluated against IDF curves
+from independent sites elsewhere in Norway. Since it only needs 24 h rain gauge data as input, it
+can provide approximate estimates for the IDF curves used to describe sub-daily rainfall return
+levels. In this respect, it can be considered as means of downscaling with respect to timescale, given
+an approximate power-law dependency between temporal scales. One clear benefit with this
+framework is that observational data is far more abundant for 24 h rain gauge records than for
+sub-daily measurements. Furthermore, it does not assume stationarity, and is well-suited for
+projecting IDF curves for a future climate.</p>
+<p><img src="fig/Benestad_Timescaling.jpg" /></p>
+<p><a href="https://iopscience.iop.org/article/10.1088/1748-9326/abd4ab">Benestad (2021) Intensity-Duration-frequency Rainfall</a>
+<a href="pdf/Benestad_2021_Intensity_Duration_Frequency.pdf">(pdf)</a></p>
 
 </div>
-
-
-
-
-
-
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="syntetic-control.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="about.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="stationarity.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="syntetic-control.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -216,7 +266,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dyrehaugen/rsts/edit/master/510-econometrics.Rmd",
+"link": "https://github.com/dyrehaugen/rsts/edit/master/310-power-law.Rmd",
 "text": "Edit"
 },
 "history": {

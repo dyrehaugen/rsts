@@ -30,7 +30,9 @@ spurious-correlation
 trending-variables
 stationarity
 record-events
-power-law
+power-laws
+generative-models
+income-distribution-power-law
 timescaling-rainfall
 syntetic-control
 econometrics
