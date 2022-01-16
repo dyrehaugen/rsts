@@ -82,7 +82,7 @@
 
 \title{Statistics}
 \author{Dyrehaugen Web Notebook}
-\date{2021-11-02}
+\date{2022-01-16}
 
 \begin{document}
 \maketitle
@@ -95,6 +95,18 @@
 \chapter{Statistics}\label{statistics}}
 
 \includegraphics{fig/zelda.jpg}
+
+\begin{quote}
+The problem with thinking quantitative data and statistics provide proven ``results'' in ``science'' and ``research'' is that you need to be able to obtain precise and accurate data to begin with.
+Amid the complexity of real life and inter-related systems, that's nearly impossible.
+\end{quote}
+
+\begin{quote}
+Most of the things that matter for daily living don't have stationary statistical distributions, unlike games of chance.
+Two lessons:
+a) don't model everything statistically.
+b) if you do model something statistically, don't use a stationary process as your model.
+\end{quote}
 
 \hypertarget{probability}{%
 \chapter{Probability}\label{probability}}
@@ -223,6 +235,15 @@ longer to converge as it is itself a fat-tailed variable.
 
 \href{https://necsi.edu/systemic-risk-of-pandemic-via-novel-pathogens-coronavirus-\%20a-note}{Norman/Bar-Yam/Taleb Note}
 \href{/pdf/Joseph_Norman_2020_Systemic_Risk_of_Pandemic_via_Novel_Pathogenes.pdf}{(pdf)}
+
+\hypertarget{big-data-paradox}{%
+\chapter{Big Data Paradox}\label{big-data-paradox}}
+
+\emph{Bradley Abstract}
+
+Surveys are a crucial tool for understanding public opinion and behaviour, and their accuracy depends on maintaining statistical representativeness of their target populations by minimizing biases from all sources. Increasing data size shrinks confidence intervals but magnifies the effect of survey bias: an instance of the Big Data Paradox1. Here we demonstrate this paradox in estimates of first-dose COVID-19 vaccine uptake in US adults from 9 January to 19 May 2021 from two large surveys: Delphi--Facebook2,3 (about 250,000 responses per week) and Census Household Pulse4 (about 75,000 every two weeks). In May 2021, Delphi--Facebook overestimated uptake by 17 percentage points (14--20 percentage points with 5\% benchmark imprecision) and Census Household Pulse by 14 (11--17 percentage points with 5\% benchmark imprecision), compared to a retroactively updated benchmark the Centers for Disease Control and Prevention published on 26 May 2021. Moreover, their large sample sizes led to miniscule margins of error on the incorrect estimates. By contrast, an Axios--Ipsos online panel5 with about 1,000 responses per week following survey research best practices6 provided reliable estimates and uncertainty quantification. We decompose observed error using a recent analytic framework1 to explain the inaccuracy in the three surveys. We then analyse the implications for vaccine hesitancy and willingness. We show how a survey of 250,000 respondents can produce an estimate of the population mean that is no more accurate than an estimate from a simple random sample of size 10. Our central message is that data quality matters more than data quantity, and that compensating the former with the latter is a mathematically provable losing proposition.
+
+\href{https://www.nature.com/articles/s41586-021-04198-4}{Bradley (2021) Unrepresentative big surveys significantly overestimated US vaccine uptake}
 
 \hypertarget{quarantine-fatigue-thins-fat-tailed-impacts}{%
 \section{Quarantine fatigue thins fat-tailed impacts}\label{quarantine-fatigue-thins-fat-tailed-impacts}}
@@ -480,6 +501,13 @@ Power Law Distributions
     Pareto Distribution  
 Pandemic Risk Management
 \end{verbatim}
+
+Fat tails and ergodicity tell you the same thing.
+You're not going to find the truth through evidence.
+You find it through time.
+Academia and science currently are missing this point.
+Popper. Falsification works in theory but gets hijacked by money and politics in practice.
+(Portesi)
 
 Science uses statistics \&, as per Popper, doesn't really ``accept'',
 just fails to reject at some significance.
@@ -1490,6 +1518,25 @@ drastically alter scientific consensuses drawn from meta-analyses.
 \href{https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002106}{Head (2015) Extent of P-Hacking}
 \href{pdf/Head_2015_Extent_of_P-Hacking.pdf}{(pdf)}
 
+\hypertarget{bootstrapping-instead-of-p-values}{%
+\section{Bootstrapping instead of p-values}\label{bootstrapping-instead-of-p-values}}
+
+\emph{Buisson}
+
+P-values don't mean what people think they mean; they rely on hidden assumptions that are unlikely to be fulfilled; they detract from the real questions. Here's how to use the Bootstrap in R and Python instead
+
+There are many reasons why you should abandon p-values, and I'll examine three of the main ones here:
+
+\begin{verbatim}
+They don’t mean what people think they mean
+
+They rely on hidden assumptions that are unlikely to be fulfilled
+
+They detract from the real questions
+\end{verbatim}
+
+\href{https://towardsdatascience.com/ditch-p-values-use-bootstrap-confidence-intervals-instead-bba56322b522}{Buisson (2021) Ditch p-values. Use Bootstrap confidence intervals instead}
+
 \hypertarget{probit}{%
 \section{Probit}\label{probit}}
 
@@ -1768,6 +1815,18 @@ random variables.
 
 \hypertarget{power-laws}{%
 \chapter{Power laws}\label{power-laws}}
+
+\begin{quote}
+Recent advances in
+network science show that many growing associations -- including those whose evolution is
+often thought of as spontaneous and voluntary, from the internet and World Wide Web, to
+aviation routes and NGO ties, to production chains, academic publications and terrorist organ-
+izations -- end up developing into so-called scale-free networks. The term `scale-free' here in-
+dicates that the size of the nodes, measured by the number of their connections, does not have
+`typical' scale. Instead of following a bell-shaped distribution, it obeys power laws, with a small
+number of very large hubs dominating a countless mass of smaller nodes. So here too we have
+hierarchy. (Bichler \& Nitzan (2021) Growing through Sabotage)
+\end{quote}
 
 \hypertarget{generative-models}{%
 \section{Generative Models}\label{generative-models}}

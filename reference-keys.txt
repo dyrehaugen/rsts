@@ -2,6 +2,7 @@ statistics
 probability
 intuition-for-probability
 pandemic-risk-management
+big-data-paradox
 quarantine-fatigue-thins-fat-tailed-impacts
 herd-immunity-impossible-with-new-mutants
 danish-mask-study
@@ -25,6 +26,7 @@ logit
 odds-ratio
 p-test
 p-value-hacking
+bootstrapping-instead-of-p-values
 probit
 spurious-correlation
 trending-variables
