@@ -82,7 +82,7 @@
 
 \title{Statistics}
 \author{Dyrehaugen Web Notebook}
-\date{2022-01-16}
+\date{2022-06-30}
 
 \begin{document}
 \maketitle
@@ -106,6 +106,22 @@ Most of the things that matter for daily living don't have stationary statistica
 Two lessons:
 a) don't model everything statistically.
 b) if you do model something statistically, don't use a stationary process as your model.
+\end{quote}
+
+\begin{quote}
+The most important thing about a statistical model is not what it does with the data but what data it uses, and
+\end{quote}
+
+\begin{quote}
+Often what makes a statistical method useful is that it can make use of more data,
+\end{quote}
+
+\begin{quote}
+Statistical methods exist within a social context: it's the method and also how it's used.
+\end{quote}
+
+\begin{quote}
+Pure prediction has fundamental limitations when your goal is to learn about latent properties.
 \end{quote}
 
 \hypertarget{probability}{%
@@ -1000,6 +1016,60 @@ the ubiquity of hierarchical organization in human societies.
 
 \href{https://osf.io/u95dk/}{Blair Fix (2018) Hierarchy Power Law Income Distribution}
 \href{pdf/Blair_Fix_2018_Hierarchy_Power_law.pdf}{(pdf)}
+
+\hypertarget{autocorrelation}{%
+\chapter{Autocorrelation}\label{autocorrelation}}
+
+\emph{Fix}
+
+Autocorrelation occurs when you correlate a variable with itself. For instance, if I measure the height of 10 people, I'll find that each person's height correlates perfectly with itself. If this sounds like circular reasoning, that's because it is. Autocorrelation is the statistical equivalent of stating that 5 = 5.
+
+When framed this way, the idea of autocorrelation sounds absurd. No competent scientist would correlate a variable with itself. And that's true for the pure form of autocorrelation. But what if a variable gets mixed into both sides of an equation, where it is forgotten? In that cause, autocorrelation is more difficult to spot.
+
+We define a variable called z, which is correlated strongly with x. The problem is that z happens to be the sum x + y. So we are correlating x with itself. The variable y adds statistical noise.
+
+That's how autocorrelation happens --- forgetting that you've got the same variable on both sides of a correlation.
+
+\href{https://economicsfromthetopdown.com/2022/04/08/the-dunning-kruger-effect-is-autocorrelation/}{Fix: The Dunning-Kruger Effect is Autocorrelation}
+
+\hypertarget{dunning-kruger-is-autocorrelation}{%
+\section{Dunning-Kruger is Autocorrelation}\label{dunning-kruger-is-autocorrelation}}
+
+\emph{Fix}
+
+Have you heard of the `Dunning-Kruger effect'? It's the (apparent) tendency for unskilled people to overestimate their competence. Discovered in 1999 by psychologists Justin Kruger and David Dunning, the effect has since become famous.
+
+And you can see why.
+
+It's the kind of idea that is too juicy to not be true. Everyone `knows' that idiots tend to be unaware of their own idiocy. Or as John Cleese puts it:
+
+\begin{verbatim}
+If you’re very very stupid, how can you possibly realize that you’re very very stupid? 
+\end{verbatim}
+
+Of course, psychologists have been careful to make sure that the evidence replicates. But sure enough, every time you look for it, the Dunning-Kruger effect leaps out of the data. So it would seem that everything's on sound footing.
+
+Except there's a problem.
+
+The Dunning-Kruger effect also emerges from data in which it shouldn't. For instance, if you carefully craft random data so that it does not contain a Dunning-Kruger effect, you will still find the effect. The reason turns out to be embarrassingly simple: the Dunning-Kruger effect has nothing to do with human psychology.1 It is a statistical artifact --- a stunning example of autocorrelation.
+
+In 1999, Dunning and Kruger reported the results of a simple experiment. They got a bunch of people to complete a skills test. (Actually, Dunning and Kruger used several tests, but that's irrelevant for my discussion.) Then they asked each person to assess their own ability. What Dunning and Kruger (thought they) found was that the people who did poorly on the skills test also tended to overestimate their ability. That's the `Dunning-Kruger effect'.
+
+To interpret the Dunning-Kruger chart, we (implicitly) look at the difference between the two curves. That corresponds taking `perceived ability' and subtracting from it `actual test score'. In my notation, that difference is y -- x (indicated by the double-headed arrow). When we judge this difference as a function of the horizontal axis, we are implicitly comparing y -- x to x. Since x is on both sides of the comparison, the result will be an autocorrelation.
+
+We're comparing x with the negative version of itself. That is textbook autocorrelation. It means that we can throw random numbers into x and y --- numbers which could not possibly contain the Dunning-Kruger effect --- and yet out the other end, the effect will still emerge.
+
+What's interesting is how long it took for researchers to realize the flaw in Dunning and Kruger's analysis. Dunning and Kruger published their results in 1999. But it took until 2016 for the mistake to be fully understood. To my knowledge, Edward Nuhfer and colleagues were the first to exhaustively debunk the Dunning-Kruger effect. (See their joint papers in \href{https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1188\&context=numeracy}{2016} and \href{https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1215\&context=numeracy}{2017}.) In 2020, Gilles Gignac and Marcin Zajenkowski published a similar \href{https://www.gwern.net/docs/iq/2020-gignac.pdf}{critique}.
+
+The problem with the Dunning-Kruger chart is that it violates a fundamental principle in statistics. If you're going to correlate two sets of data, they must be measured independently.
+
+What's important here is that people's `skill' is measured independently from their test performance and self assessment.
+
+Mistakes happen. So in that sense, we should not fault Dunning and Kruger for having erred. However, there is a delightful irony to the circumstances of their blunder. Here are two Ivy League professors7 arguing that unskilled people have a `dual burdon': not only are unskilled people `incompetent' \ldots{} they are unaware of their own incompetence.
+
+The irony is that the situation is actually reversed. In their seminal paper, Dunning and Kruger are the ones broadcasting their (statistical) incompetence by conflating autocorrelation for a psychological effect. In this light, the paper's title may still be appropriate. It's just that it was the authors (not the test subjects) who were `unskilled and unaware of it'.
+
+\href{https://economicsfromthetopdown.com/2022/04/08/the-dunning-kruger-effect-is-autocorrelation/}{Fix: The Dunning-Kruger Effect is Autocorrelation}
 
 \hypertarget{causation}{%
 \chapter{Causation}\label{causation}}

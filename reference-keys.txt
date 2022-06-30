@@ -16,6 +16,8 @@ lindy-effect
 superspreaders
 vaccine
 inequality
+autocorrelation
+dunning-kruger-is-autocorrelation
 causation
 liang-causality
 causation-in-chaotic-dynamic-systems
