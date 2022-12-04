@@ -13,6 +13,7 @@ statistical-consequences-of-fat-tails
 power-law-distributions
 pareto-distribution
 lindy-effect
+reinsurance
 superspreaders
 vaccine
 inequality
@@ -21,6 +22,7 @@ dunning-kruger-is-autocorrelation
 causation
 liang-causality
 causation-in-chaotic-dynamic-systems
+causal-inference
 hypothesis-testing
 connecting-to-theory
 glmm
