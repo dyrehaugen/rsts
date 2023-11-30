@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Fat Tails | Statistics</title>
   <meta name="description" content="4 Fat Tails | Statistics" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Fat Tails | Statistics" />
   <meta property="og:type" content="book" />
-  
   
   
   <meta name="github-repo" content="dyrehaugen/rsts" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Dyrehaugen Web Notebook" />
 
 
-<meta name="date" content="2022-12-04" />
+<meta name="date" content="2023-09-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="big-data-paradox.html"/>
 <link rel="next" href="inequality.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,13 +49,16 @@
 
 
 
-
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -110,15 +112,20 @@
 <ul>
 <li class="chapter" data-level="7.1" data-path="causation.html"><a href="causation.html#liang-causality"><i class="fa fa-check"></i><b>7.1</b> Liang Causality</a></li>
 <li class="chapter" data-level="7.2" data-path="causation.html"><a href="causation.html#causation-in-chaotic-dynamic-systems"><i class="fa fa-check"></i><b>7.2</b> Causation in Chaotic Dynamic Systems</a></li>
-<li class="chapter" data-level="7.3" data-path="causation.html"><a href="causation.html#causal-inference"><i class="fa fa-check"></i><b>7.3</b> Causal Inference</a></li>
+<li class="chapter" data-level="7.3" data-path="causation.html"><a href="causation.html#causal-inference"><i class="fa fa-check"></i><b>7.3</b> Causal Inference</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="causation.html"><a href="causation.html#causal-inference-with-spatio-temporal-data"><i class="fa fa-check"></i><b>7.3.1</b> Causal Inference with Spatio-Temporal Data</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>8</b> Hypothesis Testing</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#connecting-to-theory"><i class="fa fa-check"></i><b>8.1</b> Connecting to Theory</a></li>
-<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#glmm"><i class="fa fa-check"></i><b>8.2</b> GLMM</a></li>
-<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#logit"><i class="fa fa-check"></i><b>8.3</b> Logit</a>
+<li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#r-testing"><i class="fa fa-check"></i><b>8.1</b> R Testing</a></li>
+<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#connecting-to-theory"><i class="fa fa-check"></i><b>8.2</b> Connecting to Theory</a></li>
+<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#placebo-powerless"><i class="fa fa-check"></i><b>8.3</b> Placebo Powerless</a></li>
+<li class="chapter" data-level="8.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#glmm"><i class="fa fa-check"></i><b>8.4</b> GLMM</a></li>
+<li class="chapter" data-level="8.5" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#logit"><i class="fa fa-check"></i><b>8.5</b> Logit</a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#odds-ratio"><i class="fa fa-check"></i><b>8.3.1</b> Odd’s Ratio</a></li>
+<li class="chapter" data-level="8.5.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#odds-ratio"><i class="fa fa-check"></i><b>8.5.1</b> Odd’s Ratio</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="p-test.html"><a href="p-test.html"><i class="fa fa-check"></i><b>9</b> P test</a>
@@ -135,14 +142,19 @@
 <ul>
 <li class="chapter" data-level="11.1" data-path="stationarity.html"><a href="stationarity.html#record-events"><i class="fa fa-check"></i><b>11.1</b> Record Events</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="power-laws.html"><a href="power-laws.html"><i class="fa fa-check"></i><b>12</b> Power laws</a>
+<li class="chapter" data-level="12" data-path="collapse.html"><a href="collapse.html"><i class="fa fa-check"></i><b>12</b> Collapse</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="power-laws.html"><a href="power-laws.html#generative-models"><i class="fa fa-check"></i><b>12.1</b> Generative Models</a></li>
-<li class="chapter" data-level="12.2" data-path="power-laws.html"><a href="power-laws.html#income-distribution-power-law"><i class="fa fa-check"></i><b>12.2</b> Income Distribution Power Law</a></li>
-<li class="chapter" data-level="12.3" data-path="power-laws.html"><a href="power-laws.html#timescaling-rainfall"><i class="fa fa-check"></i><b>12.3</b> Timescaling Rainfall</a></li>
+<li class="chapter" data-level="12.1" data-path="collapse.html"><a href="collapse.html#amoc-collapse-ews-early-warning-signals"><i class="fa fa-check"></i><b>12.1</b> AMOC Collapse EWS (Early Warning Signals)</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="syntetic-control.html"><a href="syntetic-control.html"><i class="fa fa-check"></i><b>13</b> Syntetic Control</a></li>
-<li class="chapter" data-level="14" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>14</b> Econometrics</a></li>
+<li class="chapter" data-level="13" data-path="power-laws.html"><a href="power-laws.html"><i class="fa fa-check"></i><b>13</b> Power laws</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="power-laws.html"><a href="power-laws.html#generative-models"><i class="fa fa-check"></i><b>13.1</b> Generative Models</a></li>
+<li class="chapter" data-level="13.2" data-path="power-laws.html"><a href="power-laws.html#income-distribution-power-law"><i class="fa fa-check"></i><b>13.2</b> Income Distribution Power Law</a></li>
+<li class="chapter" data-level="13.3" data-path="power-laws.html"><a href="power-laws.html#timescaling-rainfall"><i class="fa fa-check"></i><b>13.3</b> Timescaling Rainfall</a></li>
+<li class="chapter" data-level="13.4" data-path="power-laws.html"><a href="power-laws.html#billionaire-power-law"><i class="fa fa-check"></i><b>13.4</b> Billionaire Power Law</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="syntetic-control.html"><a href="syntetic-control.html"><i class="fa fa-check"></i><b>14</b> Syntetic Control</a></li>
+<li class="chapter" data-level="15" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>15</b> Econometrics</a></li>
 <li class="part"><span><b>I Appendices</b></span></li>
 <li class="appendix"><span><b>Appendices</b></span></li>
 <li class="chapter" data-level="A" data-path="about.html"><a href="about.html"><i class="fa fa-check"></i><b>A</b> About</a></li>
@@ -168,8 +180,8 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="fat-tails" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Fat Tails</h1>
+<div id="fat-tails" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Fat Tails<a href="fat-tails.html#fat-tails" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <pre><code>Extremes      
     Catastrophe Principle  
 Statistical Consequences of Fat Tails  
@@ -188,8 +200,8 @@ It’s fundamentally disconfirmatory.
 Stat. “evidence” is inherently probabilistic and
 cannot be “degenerate” (i.e. provide certainties).
 (Taleb)</p>
-<div id="extremes" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Extremes</h2>
+<div id="extremes" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Extremes<a href="fat-tails.html#extremes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The field of Extreme Value Theory focuses on tail properties,
 not the mean or statistical inference.</p>
 <p>It is vastly more effective
@@ -198,8 +210,8 @@ than try to figure them out in the required details
 (the inferential errors under fat tails are huge).
 So it is more solid, much wiser, more ethical, and more effective to focus on
 detection heuristics and policies rather than fabricate statistical properties.</p>
-<div id="catastrophe-principle" class="section level3" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> Catastrophe Principle</h3>
+<div id="catastrophe-principle" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Catastrophe Principle<a href="fat-tails.html#catastrophe-principle" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><em>Memo Taleb (DarwinCollege):</em></p>
 <p>Where a Pareto distribution
 prevails (among many), and randomly select two people with
@@ -382,8 +394,8 @@ This is much, much simpler than probability.</p>
 <p><a href="/pdf/Taleb_2017_Extremes_DarwinCollege.pdf">Taleb (2017) Darwin Colleges(pdf)</a></p>
 </div>
 </div>
-<div id="statistical-consequences-of-fat-tails" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Statistical Consequences of Fat Tails</h2>
+<div id="statistical-consequences-of-fat-tails" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Statistical Consequences of Fat Tails<a href="fat-tails.html#statistical-consequences-of-fat-tails" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
 <p>Conventional statistics fail to cover fat tails;
 physicists who use power laws do not usually produce statistical estimators.</p>
@@ -412,10 +424,10 @@ that moments <span class="math inline">\(E[X^p]\)</span> are no longer finite.</
 <p>The Lucretius fallacy is when one assumes the worst event experienced in the past is the worst event that can happen in the future. Because an empirical distribution is necessarily censured by x_min and x_max, the empirical distribution is not empirical. Beyond the observed max, there is a hidden portion of the distribution not shown in past samples whose moments are unknown (and do not converge via the Glivenko-Cantelli theorem). This is a problem for Kolmogorov-Smirnoff tests. It is better to use MLE to get the ‘excess’ or ‘shadow’ mean (the mean beyond the sample max). Assuming you can estimate the tail exponent, this approach works better for out-of-sample inference than use of the sample mean (biased under thick tails). The lower the tail exponent and smaller the sample, the more the tail is hidden.</p>
 <p>The precautionary principle is necessary for higher order units (ecosystem, humanity, etc.) that do not “renew” the way lower order units do (individual people, animals, goods, etc.). With repeated exposure to a low-probability event, its probability of occurrence will approach 1 over time. If one’s exposure f(x) has an absorbing barrier, they must focus on time probability (path dependence) rather than ensemble probability (path independence). Since financial asset prices, particularly equities, are non-ergodic (time average &lt;&gt; ensemble average due to fat tails), one is not guaranteed the return of the market unconditionally. Hence the myopic loss aversion explanation (increased sensitivity to losses and less willingness to accept risk the more often you check performance) of the equity risk premium puzzle falls apart. Risks accumulate for individuals, making it rational to be loss averse and avoid tail risks.</p>
 <p><a href="https://www.amazon.com/review/RMD3OUG0WQWWY/ref=cm_cr_srp_d_rdp_perm?ie=UTF8&amp;ASIN=1544508050">Zweig: Suimmary of Talebs ‘Fat Tails’</a></p>
-<div id="power-law-distributions" class="section level3" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> Power Law Distributions</h3>
-<div id="pareto-distribution" class="section level4" number="4.2.1.1">
-<h4><span class="header-section-number">4.2.1.1</span> Pareto Distribution</h4>
+<div id="power-law-distributions" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Power Law Distributions<a href="fat-tails.html#power-law-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="pareto-distribution" class="section level4 hasAnchor" number="4.2.1.1">
+<h4><span class="header-section-number">4.2.1.1</span> Pareto Distribution<a href="fat-tails.html#pareto-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Pareto discovered that 20% percent of taxpayers had 80% of the income across countries in Europe.
 One parameter of the Pareto power law distribution is α, which is known as the <em>tail index</em>.
 Pareto’s 80-20 example corresponds to α = 1.16.
@@ -434,8 +446,8 @@ The tails get thicker as α gets smaller.</p>
 </div>
 </div>
 </div>
-<div id="lindy-effect" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Lindy Effect</h2>
+<div id="lindy-effect" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Lindy Effect<a href="fat-tails.html#lindy-effect" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><em>Increasing lifetime expections</em></p>
 <blockquote>
 <p>If a book has been in print for forty years, I can expect it to be in print for another forty years. But, and that is the main difference, if it survives another decade, then it will be expected to be in print another fifty years. This, simply, as a rule, tells you why things that have been around for a long time are not “aging” like persons, but “aging” in reverse. Every year that passes without extinction doubles the additional life expectancy. This is an indicator of some robustness. The robustness of an item is proportional to its life! (<em>Taleb</em>)</p>
@@ -466,8 +478,8 @@ the usefulness of which decreases as if you acquire additional relevant informat
 <p><a href="https://alevchuk.medium.com/statistical-testing-of-the-lindy-effect-with-real-data-4f55a5a9a2f0">Levchuk: Testing Lindy</a></p>
 
 </div>
-<div id="reinsurance" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> Reinsurance</h2>
+<div id="reinsurance" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Reinsurance<a href="fat-tails.html#reinsurance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><em>Policy Tensor</em></p>
 <p>Reinsurers are basically giant pools of capital that agree to absorb catastrophe losses from the insurers in exchange for ceded premium. This allows the insurers to compete for market share without worrying too much about the buildup of risks on their balance sheets. This is what allows you to buy insurance on your house or car cheaply, quickly, and rather effortlessly.</p>
 <p>The crucial assumption that allows reinsurance to work is that insured catastrophes are “acts of god” that are basically uncorrelated. So, in any given year, you might have to shell out money for a hurricane here, a flooding there, a wildfire somewhere else. This is a profitable business only as long as the joint probability of all risks for which you’re on the hook is roughly the product of the probability of individual catastrophes—and the product of small fractions is a very small fraction indeed. This crucial assumption is now breaking down.</p>
@@ -485,8 +497,8 @@ Existential risks to our civilization are now all anthropogenic: nuclear war, gl
 <p><a href="https://policytensor.substack.com/p/notes-on-the-polycrisis">Policy Tensor (2022) Notes on the Polycrisis</a></p>
 
 </div>
-<div id="superspreaders" class="section level2" number="4.5">
-<h2><span class="header-section-number">4.5</span> Superspreaders</h2>
+<div id="superspreaders" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Superspreaders<a href="fat-tails.html#superspreaders" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><em>Wong</em></p>
 <p>Superspreading has been recognized as an important phenomenon arising from heterogeneity in individual disease transmission patterns (1). The role of superspreading as a significant source of disease transmission has been appreciated in outbreaks of measles, influenza, rubella, smallpox, Ebola, monkeypox, SARS, and SARS-CoV-2 (1, 2). A basic definition of an nth-percentile superspreading event (SSE) has been proposed to be any infected individual who infects more people than does the nth-percentile of other infected individuals (1). Hence, if the number of secondary cases is randomly distributed, then for large n, SSEs can be viewed as right-tail events. A natural language for understanding the tail events of random distributions is extreme value theory, which has been applied to contexts as diverse as insurance (3) and contagious diseases (4). Here, we apply extreme value theory to empirical data on superspreading in order to gain insight into this critical phenomenon impacting the current COVID-19 pandemic.</p>
 <p><img src="fig/Wong_Superspreader.jpg" /></p>
@@ -546,8 +558,8 @@ These considerations provide additional evidence suggesting that Z is not negati
 <a href="pdf/Wong_2021_Corona_Superspreader_Fat-tailed_SM.pdf">(pdf SM)</a></p>
 
 </div>
-<div id="vaccine" class="section level2" number="4.6">
-<h2><span class="header-section-number">4.6</span> Vaccine</h2>
+<div id="vaccine" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> Vaccine<a href="fat-tails.html#vaccine" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><em>Madhi</em></p>
 <p>A multicenter, double-blind, randomized, controlled trial to assess the safety and efficacy of the ChAdOx1 nCoV-19 vaccine (AZD1222) in people not infected with the human immunodeficiency virus (HIV) in South Africa. Participants 18 to less than 65 years of age were assigned in a 1:1 ratio to receive two doses of vaccine containing 5×1010 viral particles or placebo (0.9% sodium chloride solution) 21 to 35 days apart. Serum samples obtained from 25 participants after the second dose were tested by pseudovirus and live-virus neutralization assays against the original D614G virus and the B.1.351 variant. The primary end points were safety and efficacy of the vaccine against laboratory-confirmed symptomatic coronavirus 2019 illness (Covid-19) more than 14 days after the second dose.</p>
 <p>Between June 24 and November 9, 2020, we enrolled 2026 HIV-negative adults (median age, 30 years); 1010 and 1011 participants received at least one dose of placebo or vaccine, respectively. Both the pseudovirus and the live-virus neutralization assays showed greater resistance to the B.1.351 variant in serum samples obtained from vaccine recipients than in samples from placebo recipients. In the primary end-point analysis, mild-to-moderate Covid-19 developed in 23 of 717 placebo recipients (3.2%) and in 19 of 750 vaccine recipients (2.5%), for an efficacy of 21.9% (95% confidence interval [CI], −49.9 to 59.8). Among the 42 participants with Covid-19, 39 cases (92.9%) were caused by the B.1.351 variant; vaccine efficacy against this variant, analyzed as a secondary end point, was 10.4% (95% CI, −76.8 to 54.8). The incidence of serious adverse events was balanced between the vaccine and placebo groups.</p>
@@ -568,7 +580,6 @@ These considerations provide additional evidence suggesting that Z is not negati
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -609,7 +620,7 @@ gitbook.start({
 },
 "download": ["rsts.pdf", "rsts.epub", "rsts.mobi"],
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
@@ -625,7 +636,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7 Causation | Statistics</title>
   <meta name="description" content="7 Causation | Statistics" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7 Causation | Statistics" />
   <meta property="og:type" content="book" />
-  
   
   
   <meta name="github-repo" content="dyrehaugen/rsts" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Dyrehaugen Web Notebook" />
 
 
-<meta name="date" content="2022-12-04" />
+<meta name="date" content="2023-09-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="autocorrelation.html"/>
 <link rel="next" href="hypothesis-testing.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,13 +49,16 @@
 
 
 
-
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -110,15 +112,20 @@
 <ul>
 <li class="chapter" data-level="7.1" data-path="causation.html"><a href="causation.html#liang-causality"><i class="fa fa-check"></i><b>7.1</b> Liang Causality</a></li>
 <li class="chapter" data-level="7.2" data-path="causation.html"><a href="causation.html#causation-in-chaotic-dynamic-systems"><i class="fa fa-check"></i><b>7.2</b> Causation in Chaotic Dynamic Systems</a></li>
-<li class="chapter" data-level="7.3" data-path="causation.html"><a href="causation.html#causal-inference"><i class="fa fa-check"></i><b>7.3</b> Causal Inference</a></li>
+<li class="chapter" data-level="7.3" data-path="causation.html"><a href="causation.html#causal-inference"><i class="fa fa-check"></i><b>7.3</b> Causal Inference</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="causation.html"><a href="causation.html#causal-inference-with-spatio-temporal-data"><i class="fa fa-check"></i><b>7.3.1</b> Causal Inference with Spatio-Temporal Data</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>8</b> Hypothesis Testing</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#connecting-to-theory"><i class="fa fa-check"></i><b>8.1</b> Connecting to Theory</a></li>
-<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#glmm"><i class="fa fa-check"></i><b>8.2</b> GLMM</a></li>
-<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#logit"><i class="fa fa-check"></i><b>8.3</b> Logit</a>
+<li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#r-testing"><i class="fa fa-check"></i><b>8.1</b> R Testing</a></li>
+<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#connecting-to-theory"><i class="fa fa-check"></i><b>8.2</b> Connecting to Theory</a></li>
+<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#placebo-powerless"><i class="fa fa-check"></i><b>8.3</b> Placebo Powerless</a></li>
+<li class="chapter" data-level="8.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#glmm"><i class="fa fa-check"></i><b>8.4</b> GLMM</a></li>
+<li class="chapter" data-level="8.5" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#logit"><i class="fa fa-check"></i><b>8.5</b> Logit</a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#odds-ratio"><i class="fa fa-check"></i><b>8.3.1</b> Odd’s Ratio</a></li>
+<li class="chapter" data-level="8.5.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#odds-ratio"><i class="fa fa-check"></i><b>8.5.1</b> Odd’s Ratio</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="p-test.html"><a href="p-test.html"><i class="fa fa-check"></i><b>9</b> P test</a>
@@ -135,14 +142,19 @@
 <ul>
 <li class="chapter" data-level="11.1" data-path="stationarity.html"><a href="stationarity.html#record-events"><i class="fa fa-check"></i><b>11.1</b> Record Events</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="power-laws.html"><a href="power-laws.html"><i class="fa fa-check"></i><b>12</b> Power laws</a>
+<li class="chapter" data-level="12" data-path="collapse.html"><a href="collapse.html"><i class="fa fa-check"></i><b>12</b> Collapse</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="power-laws.html"><a href="power-laws.html#generative-models"><i class="fa fa-check"></i><b>12.1</b> Generative Models</a></li>
-<li class="chapter" data-level="12.2" data-path="power-laws.html"><a href="power-laws.html#income-distribution-power-law"><i class="fa fa-check"></i><b>12.2</b> Income Distribution Power Law</a></li>
-<li class="chapter" data-level="12.3" data-path="power-laws.html"><a href="power-laws.html#timescaling-rainfall"><i class="fa fa-check"></i><b>12.3</b> Timescaling Rainfall</a></li>
+<li class="chapter" data-level="12.1" data-path="collapse.html"><a href="collapse.html#amoc-collapse-ews-early-warning-signals"><i class="fa fa-check"></i><b>12.1</b> AMOC Collapse EWS (Early Warning Signals)</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="syntetic-control.html"><a href="syntetic-control.html"><i class="fa fa-check"></i><b>13</b> Syntetic Control</a></li>
-<li class="chapter" data-level="14" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>14</b> Econometrics</a></li>
+<li class="chapter" data-level="13" data-path="power-laws.html"><a href="power-laws.html"><i class="fa fa-check"></i><b>13</b> Power laws</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="power-laws.html"><a href="power-laws.html#generative-models"><i class="fa fa-check"></i><b>13.1</b> Generative Models</a></li>
+<li class="chapter" data-level="13.2" data-path="power-laws.html"><a href="power-laws.html#income-distribution-power-law"><i class="fa fa-check"></i><b>13.2</b> Income Distribution Power Law</a></li>
+<li class="chapter" data-level="13.3" data-path="power-laws.html"><a href="power-laws.html#timescaling-rainfall"><i class="fa fa-check"></i><b>13.3</b> Timescaling Rainfall</a></li>
+<li class="chapter" data-level="13.4" data-path="power-laws.html"><a href="power-laws.html#billionaire-power-law"><i class="fa fa-check"></i><b>13.4</b> Billionaire Power Law</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="syntetic-control.html"><a href="syntetic-control.html"><i class="fa fa-check"></i><b>14</b> Syntetic Control</a></li>
+<li class="chapter" data-level="15" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>15</b> Econometrics</a></li>
 <li class="part"><span><b>I Appendices</b></span></li>
 <li class="appendix"><span><b>Appendices</b></span></li>
 <li class="chapter" data-level="A" data-path="about.html"><a href="about.html"><i class="fa fa-check"></i><b>A</b> About</a></li>
@@ -168,8 +180,8 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="causation" class="section level1" number="7">
-<h1><span class="header-section-number">7</span> Causation</h1>
+<div id="causation" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> Causation<a href="causation.html#causation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><em>Altman Abstract</em></p>
 <p>Correlation implies association, but not causation.
 Conversely, causation implies association, but not correlation.</p>
@@ -178,8 +190,8 @@ absence (i.e., they have a common cause) of a causal relationship</p>
 <p>In everyday language, dependence, association and correlation are used interchangeably. Technically, however, association is synonymous with dependence and is different from correlation</p>
 <p><a href="https://www.nature.com/articles/nmeth.3587">Altman (2015) Association Correlation Causation</a>
 <a href="pdf/Altman_2015_Association_Correlation_and_Causation.pdf">(pdf)</a></p>
-<div id="liang-causality" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Liang Causality</h2>
+<div id="liang-causality" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Liang Causality<a href="causation.html#liang-causality" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Information Flow-Based Causality</strong></p>
 <p><em>Liang (2016) Abstract</em></p>
 <p>Information flow or information transfer the widely applicable
@@ -258,8 +270,8 @@ of uncertainty from the Indian Ocean.</p>
 <a href="pdf/Hagan_2019_Causality_Formalism.pdf">(pdf)</a></p>
 <p>(See also rclm/CO2-lag: Stips)</p>
 </div>
-<div id="causation-in-chaotic-dynamic-systems" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> Causation in Chaotic Dynamic Systems</h2>
+<div id="causation-in-chaotic-dynamic-systems" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Causation in Chaotic Dynamic Systems<a href="causation.html#causation-in-chaotic-dynamic-systems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><em>Palus Abstract</em></p>
 <p>Using several methods for detection of causality in time series we show in a numerical study that coupled
 chaotic dynamical systems violate the first principle of Granger causality that the cause precedes the effect.
@@ -342,8 +354,8 @@ between different time scales of multiscale processes</p>
 <p><a href="https://www.researchgate.net/publication/326475420_Causality_dynamical_systems_and_the_arrow_of_time">Palus (2018) Causality, dynamical systems and the arrow of time</a>
 <a href="pdf/Palus_2018_Causality_Dynamical_Systems_Time_Arrow.pdf">(pdf)</a></p>
 </div>
-<div id="causal-inference" class="section level2" number="7.3">
-<h2><span class="header-section-number">7.3</span> Causal Inference</h2>
+<div id="causal-inference" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Causal Inference<a href="causation.html#causal-inference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><em>Cunningham</em></p>
 <p>Causal inference encompasses the tools that allow social scientists to determine what causes what. In a messy world, causal inference is what helps establish the causes and effects of the actions being studied—for example, the impact (or lack thereof) of increases in the minimum wage on employment, the effects of early childhood education on incarceration later in life, or the influence on economic growth of introducing malaria nets in developing regions. Scott Cunningham introduces students and practitioners to the methods necessary to arrive at meaningful answers to the questions of causation, using a range of modeling techniques and coding instructions for both the R and the Stata programming languages.</p>
 <p>A readable introductory book with programming examples, data, and detailed exposition.</p>
@@ -352,7 +364,56 @@ between different time scales of multiscale processes</p>
 A correlation, in order to be a measure of a causal effect, must be based on a choice that was made independent of the potential outcomes under consideration. Yet if the person is making some choice based on what she thinks is best, then it necessarily is based on potential outcomes, and the correlation does not remotely satisfy the conditions we need in order to say it is causal. To put it as bluntly as I can, economic theory says choices are endogenous, and therefore since they are, the correlations between those choices and outcomes in the aggregate will rarely, if ever, represent a causal effect.</p>
 <p>A generically important contribution to our understanding of causal inference is the notion of comparative statics. Comparative statics are theoretical descriptions of causal effects contained within the model. These kinds of comparative statics are always based on the idea of ceteris paribus—or “all else constant.” When we are trying to describe the causal effect of some intervention, for instance, we are always assuming that the other relevant variables in the model are not changing. If they were changing, then they would be correlated with the variable of interest and it would confound our estimation.</p>
 <p><a href="https://mixtape.scunning.com/">Cunningham (2021) Causal Inference - The Mixtape</a></p>
+<div id="causal-inference-with-spatio-temporal-data" class="section level3 hasAnchor" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> Causal Inference with Spatio-Temporal Data<a href="causation.html#causal-inference-with-spatio-temporal-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>Papadogeorgou Abstract</em></p>
+<p>Many causal processes have spatial and temporal dimensions. Yet the classic causal inference
+framework is not directly applicable when the treatment and outcome variables are generated by
+spatio-temporal point processes. We extend the potential outcomes framework to these settings by
+formulating the treatment point process as a stochastic intervention. Our causal estimands include
+the expected number of outcome events in a specified area under a particular stochastic treatment
+assignment strategy. Our methodology allows for arbitrary patterns of spatial spillover and temporal
+carryover effects. Using martingale theory, we show that the proposed estimator is consistent and
+asymptotically normal as the number of time periods increases. We propose a sensitivity analysis for
+the possible existence of unmeasured confounders, and extend it to the Hájek estimator. Simulation
+studies are conducted to examine the estimators’ finite sample performance. Finally, we illustrate
+the proposed methods by estimating the effects of American airstrikes on insurgent violence in Iraq
+from February 2007 to July 2008. Our analysis suggests that increasing the average number of daily
+airstrikes for up to one month may result in more insurgent attacks. We also find some evidence that
+airstrikes can displace attacks from Baghdad to new locations up to 400 kilometers away.</p>
+<p><em>Papadogeorgou Conclusion</em></p>
+<p>In this paper, we provide a framework for causal inference with spatio-temporal point process treatments
+and outcomes. We illustrate the flexibility of this proposed methodology by applying it to the estimation
+of airstrike effects on insurgent violence in Iraq. Our central idea is to use a stochastic intervention that
+represents a distribution of treatments rather than the standard causal inference approach that estimates
+the average potential outcomes under some fixed treatment values. A key advantage of our approach is
+its flexibility: it permits unstructured patterns of both spatial spillover and temporal carryover effects.
+This flexibility is crucial since for many spatio-temporal causal inference problems, including our own
+application, little is known about how the treatments in one area affect the outcomes in other areas across
+different time periods.
+The estimands and methodology presented in this paper can be applied in a number of settings to
+estimate the effect of a particular stochastic intervention strategy. There are several considerations that
+may be useful when defining a stochastic intervention of interest. First, the choice of intervention should
+be guided by pressing policy questions or important academic debates where undetected spillover might
+frustrate traditional methods of causal inference. Second, stochastic interventions should satisfy the
+overlap assumption (Assumption 2). Researchers should not define a stochastic intervention that gener-
+ates treatment patterns that appear to be far different from those of the observed treatment events. In our
+application, we achieve this by constructing the stochastic interventions based on the estimated density
+of point patterns obtained from the past data and the observed number of airstrikes per day.
+The proposed framework can also be applied to other high-dimensional, and possibly unstructured,
+treatments. The standard approach to causal inference, which estimates the causal effects of fixed treat-
+ment values, does not perform well in such settings. Indeed, the sparsity of observed treatment patterns
+alone makes it difficult to satisfy the required overlap assumption (Imai and Jiang, 2019). We believe
+that the stochastic intervention approach proposed here offers an effective solution to a broad class of
+causal inference problems.
+Future research should further develop the methodology for stochastic interventions. In particular,
+it is important to consider an improved weighting method that explicitly targets covariate balance. This
+might be challenging in the spatiotemporal setting where the notion of covariate balance is not yet well
+understood. Finally, it is crucial to extend the stochastic intervention framework to adaptive strategies
+over multiple time periods that might be more reflective of realistic assignments.</p>
+<p><a href="Papadogeorgou_2022_Causal_Inference_with_Spatio-Temporal_Data.pdf">Papadogeorgou_2022_Causal_Inference_with_Spatio-Temporal_Data (pdf)</a></p>
 
+</div>
 </div>
 </div>
             </section>
@@ -365,7 +426,6 @@ A correlation, in order to be a measure of a causal effect, must be based on a c
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -406,7 +466,7 @@ gitbook.start({
 },
 "download": ["rsts.pdf", "rsts.epub", "rsts.mobi"],
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
@@ -422,7 +482,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

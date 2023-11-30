@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8 Hypothesis Testing | Statistics</title>
   <meta name="description" content="8 Hypothesis Testing | Statistics" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8 Hypothesis Testing | Statistics" />
   <meta property="og:type" content="book" />
-  
   
   
   <meta name="github-repo" content="dyrehaugen/rsts" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Dyrehaugen Web Notebook" />
 
 
-<meta name="date" content="2022-12-04" />
+<meta name="date" content="2023-09-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="causation.html"/>
 <link rel="next" href="p-test.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,13 +49,16 @@
 
 
 
-
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -110,15 +112,20 @@
 <ul>
 <li class="chapter" data-level="7.1" data-path="causation.html"><a href="causation.html#liang-causality"><i class="fa fa-check"></i><b>7.1</b> Liang Causality</a></li>
 <li class="chapter" data-level="7.2" data-path="causation.html"><a href="causation.html#causation-in-chaotic-dynamic-systems"><i class="fa fa-check"></i><b>7.2</b> Causation in Chaotic Dynamic Systems</a></li>
-<li class="chapter" data-level="7.3" data-path="causation.html"><a href="causation.html#causal-inference"><i class="fa fa-check"></i><b>7.3</b> Causal Inference</a></li>
+<li class="chapter" data-level="7.3" data-path="causation.html"><a href="causation.html#causal-inference"><i class="fa fa-check"></i><b>7.3</b> Causal Inference</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="causation.html"><a href="causation.html#causal-inference-with-spatio-temporal-data"><i class="fa fa-check"></i><b>7.3.1</b> Causal Inference with Spatio-Temporal Data</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>8</b> Hypothesis Testing</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#connecting-to-theory"><i class="fa fa-check"></i><b>8.1</b> Connecting to Theory</a></li>
-<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#glmm"><i class="fa fa-check"></i><b>8.2</b> GLMM</a></li>
-<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#logit"><i class="fa fa-check"></i><b>8.3</b> Logit</a>
+<li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#r-testing"><i class="fa fa-check"></i><b>8.1</b> R Testing</a></li>
+<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#connecting-to-theory"><i class="fa fa-check"></i><b>8.2</b> Connecting to Theory</a></li>
+<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#placebo-powerless"><i class="fa fa-check"></i><b>8.3</b> Placebo Powerless</a></li>
+<li class="chapter" data-level="8.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#glmm"><i class="fa fa-check"></i><b>8.4</b> GLMM</a></li>
+<li class="chapter" data-level="8.5" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#logit"><i class="fa fa-check"></i><b>8.5</b> Logit</a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#odds-ratio"><i class="fa fa-check"></i><b>8.3.1</b> Odd’s Ratio</a></li>
+<li class="chapter" data-level="8.5.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#odds-ratio"><i class="fa fa-check"></i><b>8.5.1</b> Odd’s Ratio</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="p-test.html"><a href="p-test.html"><i class="fa fa-check"></i><b>9</b> P test</a>
@@ -135,14 +142,19 @@
 <ul>
 <li class="chapter" data-level="11.1" data-path="stationarity.html"><a href="stationarity.html#record-events"><i class="fa fa-check"></i><b>11.1</b> Record Events</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="power-laws.html"><a href="power-laws.html"><i class="fa fa-check"></i><b>12</b> Power laws</a>
+<li class="chapter" data-level="12" data-path="collapse.html"><a href="collapse.html"><i class="fa fa-check"></i><b>12</b> Collapse</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="power-laws.html"><a href="power-laws.html#generative-models"><i class="fa fa-check"></i><b>12.1</b> Generative Models</a></li>
-<li class="chapter" data-level="12.2" data-path="power-laws.html"><a href="power-laws.html#income-distribution-power-law"><i class="fa fa-check"></i><b>12.2</b> Income Distribution Power Law</a></li>
-<li class="chapter" data-level="12.3" data-path="power-laws.html"><a href="power-laws.html#timescaling-rainfall"><i class="fa fa-check"></i><b>12.3</b> Timescaling Rainfall</a></li>
+<li class="chapter" data-level="12.1" data-path="collapse.html"><a href="collapse.html#amoc-collapse-ews-early-warning-signals"><i class="fa fa-check"></i><b>12.1</b> AMOC Collapse EWS (Early Warning Signals)</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="syntetic-control.html"><a href="syntetic-control.html"><i class="fa fa-check"></i><b>13</b> Syntetic Control</a></li>
-<li class="chapter" data-level="14" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>14</b> Econometrics</a></li>
+<li class="chapter" data-level="13" data-path="power-laws.html"><a href="power-laws.html"><i class="fa fa-check"></i><b>13</b> Power laws</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="power-laws.html"><a href="power-laws.html#generative-models"><i class="fa fa-check"></i><b>13.1</b> Generative Models</a></li>
+<li class="chapter" data-level="13.2" data-path="power-laws.html"><a href="power-laws.html#income-distribution-power-law"><i class="fa fa-check"></i><b>13.2</b> Income Distribution Power Law</a></li>
+<li class="chapter" data-level="13.3" data-path="power-laws.html"><a href="power-laws.html#timescaling-rainfall"><i class="fa fa-check"></i><b>13.3</b> Timescaling Rainfall</a></li>
+<li class="chapter" data-level="13.4" data-path="power-laws.html"><a href="power-laws.html#billionaire-power-law"><i class="fa fa-check"></i><b>13.4</b> Billionaire Power Law</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="syntetic-control.html"><a href="syntetic-control.html"><i class="fa fa-check"></i><b>14</b> Syntetic Control</a></li>
+<li class="chapter" data-level="15" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>15</b> Econometrics</a></li>
 <li class="part"><span><b>I Appendices</b></span></li>
 <li class="appendix"><span><b>Appendices</b></span></li>
 <li class="chapter" data-level="A" data-path="about.html"><a href="about.html"><i class="fa fa-check"></i><b>A</b> About</a></li>
@@ -168,13 +180,23 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="hypothesis-testing" class="section level1" number="8">
-<h1><span class="header-section-number">8</span> Hypothesis Testing</h1>
-<p>Some text here …</p>
+<div id="hypothesis-testing" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">8</span> Hypothesis Testing<a href="hypothesis-testing.html#hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><em>Cook</em></p>
+<p>In his paper <a href="library.mpib-berlin.mpg.de/ft/gg/GG_Mindless_2004.pdf">Mindless statistics (pdf)</a>, Gerd Gigerenzer uses a Freudian analogy to describe the mental conflict researchers experience over statistical hypothesis testing. He says that the “statistical ritual” of NHST (null hypothesis significance testing) “is a form of conflict resolution, like compulsive hand washing.”</p>
+<p>In Gigerenzer’s analogy, the id represents Bayesian analysis. Deep down, a researcher wants to know the probabilities of hypotheses being true. This is something that Bayesian statistics makes possible, but more conventional frequentist statistics does not.</p>
+<p>The ego represents R. A. Fisher’s significance testing: specify a null hypothesis only, not an alternative, and report a p-value. Significance is calculated after collecting the data. This makes it easy to publish papers. The researcher never clearly states his hypothesis, and yet takes credit for having established it after rejecting the null. This leads to feelings of guilt and shame.</p>
+<p>The superego represents the Neyman-Pearson version of hypothesis testing: pre-specified alternative hypotheses, power and sample size calculations, etc. Neyman and Pearson insist that hypothesis testing is about what to do, not what to believe. [1]</p>
+<p>I assume Gigerenzer doesn’t take this analogy too seriously. In context, it’s a humorous interlude in his polemic against rote statistical ritual.</p>
+<p>But there really is a conflict in hypothesis testing. Researchers naturally think in Bayesian terms, and interpret frequentist results as if they were Bayesian. They really do want probabilities associated with hypotheses, and will imagine they have them even though frequentist theory explicitly forbids this. The rest of the analogy, comparing the ego and superego to Fisher and Neyman-Pearson respectively, seems weaker to me. But I suppose you could imagine Neyman and Pearson playing the role of your conscience, making you feel guilty about the pragmatic but unprincipled use of p-values.</p>
+<p><a href="https://www.johndcook.com/blog/2017/03/23/freudian-hypothesis-testing/">Cook (2017) Freudian hypothesis testing</a></p>
+<div id="r-testing" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> R Testing<a href="hypothesis-testing.html#r-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><a href="https://cran.r-project.org/web/packages/distributions3/vignettes/intro-to-hypothesis-testing.html">Cran: Intro Hyp in R</a></p>
 <p><a href="https://www.andrew.cmu.edu/user/achoulde/94842/lectures/lecture07/lecture07-94842.html">Chouldechova: Hyp in R</a></p>
-<div id="connecting-to-theory" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Connecting to Theory</h2>
+</div>
+<div id="connecting-to-theory" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Connecting to Theory<a href="hypothesis-testing.html#connecting-to-theory" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><em>Memo</em></p>
 <p>In order to bound the probability of Type 2 errors below a small value
 we may have to accept a high probability of making a Type 1 error.</p>
@@ -222,11 +244,75 @@ bridge these gaps, the researcher cannot be sure how
 their test result informs the theory.</p>
 <p><a href="https://journals.sagepub.com/doi/full/10.1177/1745691620966795">Scheel(2020) Less Hypothesis Testing</a>
 <a href="pdf/Scheel_2020_Less_Hypothesis_Testing.pdf">(pdf)</a></p>
+</div>
+<div id="placebo-powerless" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Placebo Powerless<a href="hypothesis-testing.html#placebo-powerless" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Pallesen</em></p>
+<p>Incredibly, the placebo effect is (mostly) not real.</p>
+<p>It is a result of statistical confusion. Whenever you have a group with extreme values, they tend to exhibit regression to the mean. Eg. on average, sick people tend to become more healthy over time.</p>
+<p>Thus if you give one group medicine, and one group placebo, the placebo group will also tend to get better over time, because of regression to the mean.</p>
+<p>People have then misinterpreted this to think that it is the placebo pill that actively does this.</p>
+<p>If you want to demonstrate a placebo effect, you have to construct a study where there are three groups:
+• A. treatment
+• B. placebo
+• C. no treatment, no placebo</p>
+<p>If B and C get different outcomes, that would demonstrate a placebo effect.</p>
+<p>When this has been tried, mainly there has been no provable placebo effect. See the paper in the screenshot. (There is some evidence for an effect for pain, but this get’s into a slightly different debate.)</p>
+<p>The fact that the placebo effect is mainly not real, fortunately frees us from having to come up with convoluted explanations, as to why the placebo effect would work even when we tell the patient that it is a placebo, as in the quoted tweet.</p>
+<p>(Quoted tweet): what are your wildest ideas as to why the placebo effect has an effect even when you explicitly tell them it’s a placebo)</p>
+<p><a href="https://twitter.com/jonatanpallesen/status/1693622595793334512">Pallesen 82023) X thread</a></p>
+<p><em>Hrobjatsson Abstract</em></p>
+<p>A systematic review with 52 new randomized trials comparing placebo
+with no treatment.</p>
+<p>Background. It is widely believed that placebo
+interventions induce powerful effects. We could not
+confirm this in a systematic review of 114
+randomized trials that compared placebo-treated
+with untreated patients.
+Aim. To study whether a new sample of trials would
+reproduce our earlier findings, and to update the
+review.
+Methods. Systematic review of trials that were
+published since our last search (or not previously
+identified), and of all available trials.
+Results. Data was available in 42 out of 52 new
+trials (3212 patients). The results were similar to our
+previous findings. The updated review summarizes
+data from 156 trials (11 737 patients). We found no
+statistically significant pooled effect in 38 trials with
+Background
+Within a few years in the 1950s it became a
+common conception that effects of placebo interven-
+tions were large, and that numerous randomized
+trials had reliably documented these effects in a wide
+Ó 2004 Blackwell Publishing Ltd
+binary outcomes, relative risk 0.95 (95% confidence
+interval 0.89–1.01). The effect on continuous
+outcomes decreased with increasing sample size,
+and there was considerable variation in effect also
+between large trials; the effect estimates should
+therefore be interpreted cautiously. If this bias is
+disregarded, the pooled standardized mean difference
+in 118 trials with continuous outcomes was )0.24
+()0.31 to )0.17). For trials with patient-reported
+outcomes the effect was )0.30 ()0.38 to )0.21), but
+only )0.10 ()0.20 to 0.01) for trials with observer-
+reported outcomes. Of 10 clinical conditions
+investigated in three trials or more, placebo had a
+statistically significant pooled effect only on pain or
+phobia on continuous scales.
+Conclusion. We found no evidence of a generally
+large effect of placebo interventions. A possible small
+effect on patient-reported continuous outcomes,
+especially pain, could not be clearly distinguished
+from bias.</p>
+<p><a href="https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1365-2796.2004.01355.x">Hrobjartsson (2004) Is the placebo powerless?</a></p>
+<p><a href="pdf/Hrobjartsson_2004_Placebo_Powerless.pdf">(pdf)</a></p>
 
 </div>
-<div id="glmm" class="section level2" number="8.2">
-<h2><span class="header-section-number">8.2</span> GLMM</h2>
-<p>The advent of generalized linear models has allowed us to build regression-type models of data when the distribution of the response variable is non-normal–for example, when your DV is binary. (If you would like to know a little more about GLiMs, I wrote a fairly extensive answer here, which may be useful although the context differs.) However, a GLiM, e.g. a logistic regression model, assumes that your data are independent. For instance, imagine a study that looks at whether a child has developed asthma. Each child contributes one data point to the study–they either have asthma or they don’t. Sometimes data are not independent, though. Consider another study that looks at whether a child has a cold at various points during the school year. In this case, each child contributes many data points. At one time a child might have a cold, later they might not, and still later they might have another cold. These data are not independent because they came from the same child. In order to appropriately analyze these data, we need to somehow take this non-independence into account. There are two ways: One way is to use the generalized estimating equations (which you don’t mention, so we’ll skip). The other way is to use a generalized linear mixed model. GLiMMs can account for the non-independence by adding random effects (as <span class="citation">(<span class="citeproc-not-found" data-reference-id="MichaelChernick"><strong>???</strong></span>)</span> notes). Thus, the answer is that your second option is for non-normal repeated measures (or otherwise non-independent) data. (I should mention, in keeping with <span class="citation">(<span class="citeproc-not-found" data-reference-id="Macro"><strong>???</strong></span>)</span>’s comment, that general-ized linear mixed models include linear models as a special case and thus can be used with normally distributed data. However, in typical usage the term connotes non-normal data.)</p>
+<div id="glmm" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> GLMM<a href="hypothesis-testing.html#glmm" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The advent of generalized linear models has allowed us to build regression-type models of data when the distribution of the response variable is non-normal–for example, when your DV is binary. (If you would like to know a little more about GLiMs, I wrote a fairly extensive answer here, which may be useful although the context differs.) However, a GLiM, e.g. a logistic regression model, assumes that your data are independent. For instance, imagine a study that looks at whether a child has developed asthma. Each child contributes one data point to the study–they either have asthma or they don’t. Sometimes data are not independent, though. Consider another study that looks at whether a child has a cold at various points during the school year. In this case, each child contributes many data points. At one time a child might have a cold, later they might not, and still later they might have another cold. These data are not independent because they came from the same child. In order to appropriately analyze these data, we need to somehow take this non-independence into account. There are two ways: One way is to use the generalized estimating equations (which you don’t mention, so we’ll skip). The other way is to use a generalized linear mixed model. GLiMMs can account for the non-independence by adding random effects (as <span class="citation">(<a href="#ref-MichaelChernick" role="doc-biblioref"><strong>MichaelChernick?</strong></a>)</span> notes). Thus, the answer is that your second option is for non-normal repeated measures (or otherwise non-independent) data. (I should mention, in keeping with <span class="citation">(<a href="#ref-Macro" role="doc-biblioref"><strong>Macro?</strong></a>)</span>’s comment, that general-ized linear mixed models include linear models as a special case and thus can be used with normally distributed data. However, in typical usage the term connotes non-normal data.)</p>
 <p>Update: (The OP has asked about GEE as well, so I will write a little about how all three relate to each other.)</p>
 <p>Here’s a basic overview:</p>
 <ul>
@@ -273,8 +359,8 @@ n linear models the requirements are easy to outline: linear in the parameters, 
 <p><a href="https://www.theanalysisfactor.com/regression-diagnostics-glmm/">TheAnalysisFactor</a></p>
 
 </div>
-<div id="logit" class="section level2" number="8.3">
-<h2><span class="header-section-number">8.3</span> Logit</h2>
+<div id="logit" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> Logit<a href="hypothesis-testing.html#logit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Possible Analysis methods:</p>
 <p>Below is a list of some analysis methods you may have encountered. Some of the methods listed are quite reasonable while others have either fallen out of favor or have limitations.</p>
 <ul>
@@ -285,8 +371,8 @@ n linear models the requirements are easy to outline: linear in the parameters, 
 <li>Hotelling’s T2. The 0/1 outcome is turned into the grouping variable, and the former predictors are turned into outcome variables. This will produce an overall test of significance but will not give individual coefficients for each variable, and it is unclear the extent to which each “predictor” is adjusted for the impact of the other “predictors.”</li>
 </ul>
 <p><a href="https://stats.idre.ucla.edu/r/dae/logit-regression/">ucla</a></p>
-<div id="odds-ratio" class="section level3" number="8.3.1">
-<h3><span class="header-section-number">8.3.1</span> Odd’s Ratio</h3>
+<div id="odds-ratio" class="section level3 hasAnchor" number="8.5.1">
+<h3><span class="header-section-number">8.5.1</span> Odd’s Ratio<a href="hypothesis-testing.html#odds-ratio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If you want to interpret the estimated effects as relative odds ratios,
 just do <code>exp(coef(x))</code> (gives you <span class="math inline">\(e^β\)</span>,
 the multiplicative change in the odds ratio for <span class="math inline">\(y=1\)</span>
@@ -312,7 +398,6 @@ the predicted classification according to some probability threshold that needs 
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -353,7 +438,7 @@ gitbook.start({
 },
 "download": ["rsts.pdf", "rsts.epub", "rsts.mobi"],
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
@@ -369,7 +454,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

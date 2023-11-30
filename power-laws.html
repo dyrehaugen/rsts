@@ -4,19 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>12 Power laws | Statistics</title>
-  <meta name="description" content="12 Power laws | Statistics" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <title>13 Power laws | Statistics</title>
+  <meta name="description" content="13 Power laws | Statistics" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="12 Power laws | Statistics" />
+  <meta property="og:title" content="13 Power laws | Statistics" />
   <meta property="og:type" content="book" />
-  
   
   
   <meta name="github-repo" content="dyrehaugen/rsts" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="12 Power laws | Statistics" />
+  <meta name="twitter:title" content="13 Power laws | Statistics" />
   
   
   
@@ -24,17 +23,17 @@
 <meta name="author" content="Dyrehaugen Web Notebook" />
 
 
-<meta name="date" content="2022-12-04" />
+<meta name="date" content="2023-09-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="stationarity.html"/>
+<link rel="prev" href="collapse.html"/>
 <link rel="next" href="syntetic-control.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,13 +49,16 @@
 
 
 
-
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -110,15 +112,20 @@
 <ul>
 <li class="chapter" data-level="7.1" data-path="causation.html"><a href="causation.html#liang-causality"><i class="fa fa-check"></i><b>7.1</b> Liang Causality</a></li>
 <li class="chapter" data-level="7.2" data-path="causation.html"><a href="causation.html#causation-in-chaotic-dynamic-systems"><i class="fa fa-check"></i><b>7.2</b> Causation in Chaotic Dynamic Systems</a></li>
-<li class="chapter" data-level="7.3" data-path="causation.html"><a href="causation.html#causal-inference"><i class="fa fa-check"></i><b>7.3</b> Causal Inference</a></li>
+<li class="chapter" data-level="7.3" data-path="causation.html"><a href="causation.html#causal-inference"><i class="fa fa-check"></i><b>7.3</b> Causal Inference</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="causation.html"><a href="causation.html#causal-inference-with-spatio-temporal-data"><i class="fa fa-check"></i><b>7.3.1</b> Causal Inference with Spatio-Temporal Data</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>8</b> Hypothesis Testing</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#connecting-to-theory"><i class="fa fa-check"></i><b>8.1</b> Connecting to Theory</a></li>
-<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#glmm"><i class="fa fa-check"></i><b>8.2</b> GLMM</a></li>
-<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#logit"><i class="fa fa-check"></i><b>8.3</b> Logit</a>
+<li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#r-testing"><i class="fa fa-check"></i><b>8.1</b> R Testing</a></li>
+<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#connecting-to-theory"><i class="fa fa-check"></i><b>8.2</b> Connecting to Theory</a></li>
+<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#placebo-powerless"><i class="fa fa-check"></i><b>8.3</b> Placebo Powerless</a></li>
+<li class="chapter" data-level="8.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#glmm"><i class="fa fa-check"></i><b>8.4</b> GLMM</a></li>
+<li class="chapter" data-level="8.5" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#logit"><i class="fa fa-check"></i><b>8.5</b> Logit</a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#odds-ratio"><i class="fa fa-check"></i><b>8.3.1</b> Odd’s Ratio</a></li>
+<li class="chapter" data-level="8.5.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#odds-ratio"><i class="fa fa-check"></i><b>8.5.1</b> Odd’s Ratio</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="p-test.html"><a href="p-test.html"><i class="fa fa-check"></i><b>9</b> P test</a>
@@ -135,14 +142,19 @@
 <ul>
 <li class="chapter" data-level="11.1" data-path="stationarity.html"><a href="stationarity.html#record-events"><i class="fa fa-check"></i><b>11.1</b> Record Events</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="power-laws.html"><a href="power-laws.html"><i class="fa fa-check"></i><b>12</b> Power laws</a>
+<li class="chapter" data-level="12" data-path="collapse.html"><a href="collapse.html"><i class="fa fa-check"></i><b>12</b> Collapse</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="power-laws.html"><a href="power-laws.html#generative-models"><i class="fa fa-check"></i><b>12.1</b> Generative Models</a></li>
-<li class="chapter" data-level="12.2" data-path="power-laws.html"><a href="power-laws.html#income-distribution-power-law"><i class="fa fa-check"></i><b>12.2</b> Income Distribution Power Law</a></li>
-<li class="chapter" data-level="12.3" data-path="power-laws.html"><a href="power-laws.html#timescaling-rainfall"><i class="fa fa-check"></i><b>12.3</b> Timescaling Rainfall</a></li>
+<li class="chapter" data-level="12.1" data-path="collapse.html"><a href="collapse.html#amoc-collapse-ews-early-warning-signals"><i class="fa fa-check"></i><b>12.1</b> AMOC Collapse EWS (Early Warning Signals)</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="syntetic-control.html"><a href="syntetic-control.html"><i class="fa fa-check"></i><b>13</b> Syntetic Control</a></li>
-<li class="chapter" data-level="14" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>14</b> Econometrics</a></li>
+<li class="chapter" data-level="13" data-path="power-laws.html"><a href="power-laws.html"><i class="fa fa-check"></i><b>13</b> Power laws</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="power-laws.html"><a href="power-laws.html#generative-models"><i class="fa fa-check"></i><b>13.1</b> Generative Models</a></li>
+<li class="chapter" data-level="13.2" data-path="power-laws.html"><a href="power-laws.html#income-distribution-power-law"><i class="fa fa-check"></i><b>13.2</b> Income Distribution Power Law</a></li>
+<li class="chapter" data-level="13.3" data-path="power-laws.html"><a href="power-laws.html#timescaling-rainfall"><i class="fa fa-check"></i><b>13.3</b> Timescaling Rainfall</a></li>
+<li class="chapter" data-level="13.4" data-path="power-laws.html"><a href="power-laws.html#billionaire-power-law"><i class="fa fa-check"></i><b>13.4</b> Billionaire Power Law</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="syntetic-control.html"><a href="syntetic-control.html"><i class="fa fa-check"></i><b>14</b> Syntetic Control</a></li>
+<li class="chapter" data-level="15" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>15</b> Econometrics</a></li>
 <li class="part"><span><b>I Appendices</b></span></li>
 <li class="appendix"><span><b>Appendices</b></span></li>
 <li class="chapter" data-level="A" data-path="about.html"><a href="about.html"><i class="fa fa-check"></i><b>A</b> About</a></li>
@@ -168,8 +180,8 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="power-laws" class="section level1" number="12">
-<h1><span class="header-section-number">12</span> Power laws</h1>
+<div id="power-laws" class="section level1 hasAnchor" number="13">
+<h1><span class="header-section-number">13</span> Power laws<a href="power-laws.html#power-laws" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <blockquote>
 <p>Recent advances in
 network science show that many growing associations – including those whose evolution is
@@ -181,8 +193,8 @@ dicates that the size of the nodes, measured by the number of their connections,
 number of very large hubs dominating a countless mass of smaller nodes. So here too we have
 hierarchy. (Bichler &amp; Nitzan (2021) Growing through Sabotage)</p>
 </blockquote>
-<div id="generative-models" class="section level2" number="12.1">
-<h2><span class="header-section-number">12.1</span> Generative Models</h2>
+<div id="generative-models" class="section level2 hasAnchor" number="13.1">
+<h2><span class="header-section-number">13.1</span> Generative Models<a href="power-laws.html#generative-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><em>Mitzenmacher Abstract</em></p>
 <p>Recently, I became interested in a current debate over whether file size
 distributions are best modelled by a power law distribution or a lognormal distribution.
@@ -196,8 +208,8 @@ have arisen as a possible alternative to power law distributions across many fie
 <p><em>Mitzenmacher Memo</em></p>
 <p><a href="pdf/Mitzenmacher_2004_Generative_Models_Power_Law.pdf">Mitzenmacher(2004) A Brief History of Generative Models for Power Law and Lognormal Distributions (pdf)</a></p>
 </div>
-<div id="income-distribution-power-law" class="section level2" number="12.2">
-<h2><span class="header-section-number">12.2</span> Income Distribution Power Law</h2>
+<div id="income-distribution-power-law" class="section level2 hasAnchor" number="13.2">
+<h2><span class="header-section-number">13.2</span> Income Distribution Power Law<a href="power-laws.html#income-distribution-power-law" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><em>Fix Abstract</em></p>
 <p>Although the determinants of income are complex, the results are surprisingly uniform. To a first approximation, top incomes follow a power-law distribution, and the redistribution of income corresponds to a change in the power-law exponent. Given the messiness of the struggle for resources, why is the outcome so simple?</p>
 <p>This paper explores the idea that the (re)distribution of top incomes is uniform because it is shaped by a ubiquitous feature of social life, namely hierarchy. Using a model first developed by Herbert Simon and Harold Lydall, I show that hierarchy can explain the power-law distribution of top incomes, including how income gets redistributed as the rich get richer.</p>
@@ -228,8 +240,8 @@ The more despotic the hierarchy becomes, the more rapidly income will increase w
 <p>In large hierarchies, the value of <span class="math inline">\(D\)</span> affects top incomes dramatically. For instance, when <span class="math inline">\(D=0.1\)</span> , a CEO with one million subordinates will earn only about 4 times more than a bottom-ranked worker. But when <span class="math inline">\(D=1\)</span> , the same CEO will earn a million times more than an entry-level employee.</p>
 <p><a href="https://economicsfromthetopdown.com/2021/10/24/redistributing-income-through-hierarchy/">Fix (2021) Redistributing Income Through Hierarchy</a></p>
 </div>
-<div id="timescaling-rainfall" class="section level2" number="12.3">
-<h2><span class="header-section-number">12.3</span> Timescaling Rainfall</h2>
+<div id="timescaling-rainfall" class="section level2 hasAnchor" number="13.3">
+<h2><span class="header-section-number">13.3</span> Timescaling Rainfall<a href="power-laws.html#timescaling-rainfall" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><em>Abstract Benestad</em></p>
 <p>Abstract
 A simple formula for estimating approximate values of return levels for sub-daily rainfall is
@@ -246,6 +258,25 @@ projecting IDF curves for a future climate.</p>
 <p><img src="fig/Benestad_Timescaling.jpg" /></p>
 <p><a href="https://iopscience.iop.org/article/10.1088/1748-9326/abd4ab">Benestad (2021) Intensity-Duration-frequency Rainfall</a>
 <a href="pdf/Benestad_2021_Intensity_Duration_Frequency.pdf">(pdf)</a></p>
+</div>
+<div id="billionaire-power-law" class="section level2 hasAnchor" number="13.4">
+<h2><span class="header-section-number">13.4</span> Billionaire Power Law<a href="power-laws.html#billionaire-power-law" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Fix</em></p>
+<p>If we carry out the extrapolation shown in the figure (below), we predict that the US had about 7 billionaires per million people. That’s not far from the Forbes billionaire count — which is around 2.2 billionaires per million people (in 2021).</p>
+<p>Of course, the ‘not far’ has to be judged in context. Yes, we’re off by a factor three. But across countries, the billionaire headcount varies by a factor of <em>ten thousand</em>.</p>
+<p>The ritual of capitalization provides a simple way to convert income into wealth. And that means we have a path for using income data to directly predict the number of billionaires.</p>
+<p>The steps are nearly the same as before. We fit a distribution of wealth with a power law, and then use this power law to predict the number of billionaires. The difference now is that we derive our wealth data by capitalizing income.</p>
+<p>By looking at the distribution of income, we can predict the presence of billionaires with startling accuracy.</p>
+<p><img src="fig/billionaire_power_law.png" /></p>
+<p><em>Fig: Extrapolating the wealth distribution into the billionaire zone. This figure illustrates how we can use the tail of the wealth distribution to predict the number of billionaires. First, we fit the distribution tail with a power law. Then we extrapolate this power law into the region where billionaires live. Finally, we predict the number of billionaires by calculating the area of the purple shaded region.</em></p>
+<p><img src="fig/billionaire_income.png" /></p>
+<p><em>Fig: Predicting the number of billionaires from the power-law distribution of income. This figure illustrates what happens when we use income data from the World Inequality Database to predict the density of billionaires in various countries. The prediction works as follows. First, I fit a power law to the top 0.1% of the income distribution in each country. Then I use this power law to predict the number of billionaires. (Note that to convert income into wealth, I capitalize income using a discount rate of 5%.) I’ve plotted billionaire predictions on the vertical axis. Forbes billionaire counts appear on the horizontal axis. Perfect predictions fall on the dashed red line.</em></p>
+<p>What the figure shows is that billionaires are <em>socially</em> made.</p>
+<p>Suppose that apologists for the über rich are right when they assert that most billionaires are ‘self made’. If this claim were true, then their ascent to outrageous wealth shouldn’t depend on the social context. No, by shear force of will, each billionaire bootstraps himself/herself into existence. So if we want to predict the presence of billionaires, we should look at their individual characteristics.</p>
+<p>Now to the flaw in this reasoning. In the figure, individual characteristics are nowhere to be seen. Instead, we’ve predicted billionaire headcounts by looking at the social environment — the distribution of income. The unavoidable conclusion is that billionaires overwhelmingly owe their existence not to themselves, but to everyone else.</p>
+<p>There’s something delightfully satisfying about using Forbes data to show that billionaires are socially made. That’s because, perhaps more than any other publication, Forbes loves to swoon over the ‘self-made’ status of the über rich.</p>
+<p>We can accurately predict the presence of billionaires using a social criteria — namely, the distribution of income.</p>
+<p><a href="https://economicsfromthetopdown.com/2023/09/03/billionaires-are-so-predictable/">Fix (2023) Billionaires are so predictable</a></p>
 
 </div>
 </div>
@@ -254,12 +285,11 @@ projecting IDF curves for a future climate.</p>
           </div>
         </div>
       </div>
-<a href="stationarity.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="collapse.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="syntetic-control.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -300,7 +330,7 @@ gitbook.start({
 },
 "download": ["rsts.pdf", "rsts.epub", "rsts.mobi"],
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
@@ -316,7 +346,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5 Inequality | Statistics</title>
   <meta name="description" content="5 Inequality | Statistics" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5 Inequality | Statistics" />
   <meta property="og:type" content="book" />
-  
   
   
   <meta name="github-repo" content="dyrehaugen/rsts" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Dyrehaugen Web Notebook" />
 
 
-<meta name="date" content="2022-12-04" />
+<meta name="date" content="2023-09-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="fat-tails.html"/>
 <link rel="next" href="autocorrelation.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,13 +49,16 @@
 
 
 
-
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -110,15 +112,20 @@
 <ul>
 <li class="chapter" data-level="7.1" data-path="causation.html"><a href="causation.html#liang-causality"><i class="fa fa-check"></i><b>7.1</b> Liang Causality</a></li>
 <li class="chapter" data-level="7.2" data-path="causation.html"><a href="causation.html#causation-in-chaotic-dynamic-systems"><i class="fa fa-check"></i><b>7.2</b> Causation in Chaotic Dynamic Systems</a></li>
-<li class="chapter" data-level="7.3" data-path="causation.html"><a href="causation.html#causal-inference"><i class="fa fa-check"></i><b>7.3</b> Causal Inference</a></li>
+<li class="chapter" data-level="7.3" data-path="causation.html"><a href="causation.html#causal-inference"><i class="fa fa-check"></i><b>7.3</b> Causal Inference</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="causation.html"><a href="causation.html#causal-inference-with-spatio-temporal-data"><i class="fa fa-check"></i><b>7.3.1</b> Causal Inference with Spatio-Temporal Data</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>8</b> Hypothesis Testing</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#connecting-to-theory"><i class="fa fa-check"></i><b>8.1</b> Connecting to Theory</a></li>
-<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#glmm"><i class="fa fa-check"></i><b>8.2</b> GLMM</a></li>
-<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#logit"><i class="fa fa-check"></i><b>8.3</b> Logit</a>
+<li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#r-testing"><i class="fa fa-check"></i><b>8.1</b> R Testing</a></li>
+<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#connecting-to-theory"><i class="fa fa-check"></i><b>8.2</b> Connecting to Theory</a></li>
+<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#placebo-powerless"><i class="fa fa-check"></i><b>8.3</b> Placebo Powerless</a></li>
+<li class="chapter" data-level="8.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#glmm"><i class="fa fa-check"></i><b>8.4</b> GLMM</a></li>
+<li class="chapter" data-level="8.5" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#logit"><i class="fa fa-check"></i><b>8.5</b> Logit</a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#odds-ratio"><i class="fa fa-check"></i><b>8.3.1</b> Odd’s Ratio</a></li>
+<li class="chapter" data-level="8.5.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#odds-ratio"><i class="fa fa-check"></i><b>8.5.1</b> Odd’s Ratio</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="p-test.html"><a href="p-test.html"><i class="fa fa-check"></i><b>9</b> P test</a>
@@ -135,14 +142,19 @@
 <ul>
 <li class="chapter" data-level="11.1" data-path="stationarity.html"><a href="stationarity.html#record-events"><i class="fa fa-check"></i><b>11.1</b> Record Events</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="power-laws.html"><a href="power-laws.html"><i class="fa fa-check"></i><b>12</b> Power laws</a>
+<li class="chapter" data-level="12" data-path="collapse.html"><a href="collapse.html"><i class="fa fa-check"></i><b>12</b> Collapse</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="power-laws.html"><a href="power-laws.html#generative-models"><i class="fa fa-check"></i><b>12.1</b> Generative Models</a></li>
-<li class="chapter" data-level="12.2" data-path="power-laws.html"><a href="power-laws.html#income-distribution-power-law"><i class="fa fa-check"></i><b>12.2</b> Income Distribution Power Law</a></li>
-<li class="chapter" data-level="12.3" data-path="power-laws.html"><a href="power-laws.html#timescaling-rainfall"><i class="fa fa-check"></i><b>12.3</b> Timescaling Rainfall</a></li>
+<li class="chapter" data-level="12.1" data-path="collapse.html"><a href="collapse.html#amoc-collapse-ews-early-warning-signals"><i class="fa fa-check"></i><b>12.1</b> AMOC Collapse EWS (Early Warning Signals)</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="syntetic-control.html"><a href="syntetic-control.html"><i class="fa fa-check"></i><b>13</b> Syntetic Control</a></li>
-<li class="chapter" data-level="14" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>14</b> Econometrics</a></li>
+<li class="chapter" data-level="13" data-path="power-laws.html"><a href="power-laws.html"><i class="fa fa-check"></i><b>13</b> Power laws</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="power-laws.html"><a href="power-laws.html#generative-models"><i class="fa fa-check"></i><b>13.1</b> Generative Models</a></li>
+<li class="chapter" data-level="13.2" data-path="power-laws.html"><a href="power-laws.html#income-distribution-power-law"><i class="fa fa-check"></i><b>13.2</b> Income Distribution Power Law</a></li>
+<li class="chapter" data-level="13.3" data-path="power-laws.html"><a href="power-laws.html#timescaling-rainfall"><i class="fa fa-check"></i><b>13.3</b> Timescaling Rainfall</a></li>
+<li class="chapter" data-level="13.4" data-path="power-laws.html"><a href="power-laws.html#billionaire-power-law"><i class="fa fa-check"></i><b>13.4</b> Billionaire Power Law</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="syntetic-control.html"><a href="syntetic-control.html"><i class="fa fa-check"></i><b>14</b> Syntetic Control</a></li>
+<li class="chapter" data-level="15" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>15</b> Econometrics</a></li>
 <li class="part"><span><b>I Appendices</b></span></li>
 <li class="appendix"><span><b>Appendices</b></span></li>
 <li class="chapter" data-level="A" data-path="about.html"><a href="about.html"><i class="fa fa-check"></i><b>A</b> About</a></li>
@@ -168,8 +180,8 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="inequality" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> Inequality</h1>
+<div id="inequality" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Inequality<a href="inequality.html#inequality" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><img src="fig/fix_inequality.png" width="480" height="360" /></p>
 <p><em>Figure: How the US distribution of income has changed since 1970.
 Probability density of US income in 1970 and 2012.
@@ -210,7 +222,6 @@ the ubiquity of hierarchical organization in human societies.</p>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -251,7 +262,7 @@ gitbook.start({
 },
 "download": ["rsts.pdf", "rsts.epub", "rsts.mobi"],
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
@@ -267,7 +278,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

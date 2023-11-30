@@ -23,8 +23,11 @@ causation
 liang-causality
 causation-in-chaotic-dynamic-systems
 causal-inference
+causal-inference-with-spatio-temporal-data
 hypothesis-testing
+r-testing
 connecting-to-theory
+placebo-powerless
 glmm
 logit
 odds-ratio
@@ -36,10 +39,13 @@ spurious-correlation
 trending-variables
 stationarity
 record-events
+collapse
+amoc-collapse-ews-early-warning-signals
 power-laws
 generative-models
 income-distribution-power-law
 timescaling-rainfall
+billionaire-power-law
 syntetic-control
 econometrics
 about
