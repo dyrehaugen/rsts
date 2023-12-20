@@ -13,6 +13,7 @@ statistical-consequences-of-fat-tails
 power-law-distributions
 pareto-distribution
 lindy-effect
+r-programming-language
 reinsurance
 superspreaders
 vaccine
