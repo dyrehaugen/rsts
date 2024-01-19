@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>12 Stationarity | Statistics</title>
-  <meta name="description" content="12 Stationarity | Statistics" />
+  <title>E Identification | Statistics</title>
+  <meta name="description" content="E Identification | Statistics" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="12 Stationarity | Statistics" />
+  <meta property="og:title" content="E Identification | Statistics" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="dyrehaugen/rsts" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="12 Stationarity | Statistics" />
+  <meta name="twitter:title" content="E Identification | Statistics" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="spurious-correlation.html"/>
-<link rel="next" href="collapse.html"/>
+<link rel="prev" href="sitelog.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -186,35 +186,25 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="stationarity" class="section level1 hasAnchor" number="12">
-<h1><span class="header-section-number">12</span> Stationarity<a href="stationarity.html#stationarity" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="record-events" class="section level2 hasAnchor" number="12.1">
-<h2><span class="header-section-number">12.1</span> Record Events<a href="stationarity.html#record-events" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Whenever there is a new record-breaking weather event, such as record-high temperatures, it is natural to ask whether the occurrence of such an event is due to a climate change. Before we proceed, it may be useful to define the term ‘statistically stationary’, the meaning here being that statistical aspects of the weather (means, standard deviation etc.) aren’t changing. In statistics, there is a large volume of literature on record-breaking behaviour, and statistically stationary systems will produce new record-breaking events from time to time. On the other hand, one would expect to see more new record-breaking events in a changing climate: when the mean temperature level rises new temperatures will surpass past record-highs.</p>
-<p><a href="https://www.realclimate.org/index.php/archives/2005/08/on-record-high-temperatures/">Benestad (2005) On record-breaking events (RealClimate.org)</a></p>
-<p>*Abstract Benestad)</p>
-<p>This study applies a simple framework for analysing the incidence of record events. A
-test of this method on the global mean temperature yields results consistent with a global warming,
-where record-warm events are more frequent than for a stationary series. The record event analysis
-suggests that the number of record-warm monthly global mean temperatures is higher than
-expected, and that the number of record events in the absolute monthly maximum and minimum
-temperatures in the Nordic countries is slightly higher than expected from a null hypothesis of a sta-
-tionary behaviour. Because the different station series are not strictly independent, it is difficult to
-resolve whether there is a significant trend in the warmest absolute monthly minimum temperatures
-in the Nordic countries. The behaviour of the maximum monthly 24 h precipitation is not distin-
-guishable from the null hypothesis that the series consists of independent and identically distributed
-random variables.</p>
-<p><a href="pdf/Benestad_2003_How_often_record_event.pdf">Benestad (2003) How often can we expect a record event? (Climate Resarch) (pdf)</a></p>
+<div id="identification" class="section level1 hasAnchor" number="21">
+<h1><span class="header-section-number">E</span> Identification<a href="identification.html#identification" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><em>Nick HK</em></p>
+<p>Since I’m a causal inference guy, I want to be clear: what I mean by identification in this section is not causal identification (although that would be a subset). I don’t think we need to teach high school students matching estimators or RDD or whatever. Nor is it statistical identification (too much math!). By “identification” I mean the much broader concept of: “we did a calculation in order to answer a question. Does this calculation actually answer that question?”</p>
+<p>As an example of what I mean, and how this concept applies in a non-causal way:2 let’s say that you’re trying to decide whether to open up a Taco Bell franchise location. You look at the data and notice that Taco Bell’s total revenue has gone up for the past few years.3 Seems like Taco Bell is doing well. Does this tell you anything about whether you should open a Taco Bell? No! You’re not going to own all of Taco Bell, you’re going to own a single store. You should instead look at revenue per location. Perhaps revenues are going up because they opened a bunch of new locations, and each individual store is actually doing worse!</p>
+<p>The calculation that identifies how much a Taco Bell location is likely to sell is sales per-store, not total Taco Bell sales.</p>
+<p>My verdict: Yes. I think that this kind of identification is both teachable and highly useful in the real world, even in cases where you don’t have your own hands on data and are just seeing someone talk about data, or just seeing someone make a claim based on their own observations and no data at all.</p>
+<p>How is identification teachable? I think most errors of identification tend to be obvious after they’re pointed out, so giving students practice carefully considering whether a given measure actually relates to a question, a set of questions to ask themselves when evaluating a data-backed claim, and even a checklist of common ways that identification goes wrong would actually go a long way and be of everyday use.</p>
+<p>That checklist include: construct validity (does the data we have actually represent the concept we’re interested in, for example in a study on “happiness levels”), selection bias (as economists use the term; basically, the presence of confounders that make a correlation not represent a causal effect of interest, for example whenever we hear about something rich people do being correlated with good health outcomes), appropriately scaled comparisons (figuring out whether a 50% increase is big or small depends on the base rate and what variable we’re talking about, and a claim of “outcome Y just fell, this must be the fault of policy X I don’t like” should probably check whether Y also fell in areas that don’t have policy X) and appropriate transformation (is the data calculated in the right format or observation level to answer the question we have, such as in the Taco Bell example above, or in choosing an absolute vs. relative increase in a rate). Some of these terms would probably be renamed into less-wonky terminology.</p>
+<p><a href="https://nickchk.substack.com/p/what-should-school-teach-teenagers">Nick HK (2024) What Should School Teach Teenagers About Statistics?</a></p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="spurious-correlation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="collapse.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="sitelog.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -245,7 +235,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dyrehaugen/rsts/edit/master/202-stationarity.Rmd",
+"link": "https://github.com/dyrehaugen/rsts/edit/master/identification.Rmd",
 "text": "Edit"
 },
 "history": {
